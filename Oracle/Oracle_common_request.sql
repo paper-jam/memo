@@ -1,7 +1,7 @@
 
 -- la date du jour
-SELECT CURRENT_DATE from dual;                          -- date courante
-SELECT nvl(NULL, 'bonjour') FROM dual;                                    -- retourne bonjour
+SELECT CURRENT_DATE from dual;                                  -- date courante
+SELECT nvl(NULL, 'bonjour') FROM dual;                          -- retourne bonjour
 SELECT ... FROM ... ORDER BY ... FETCH NEXT 5 ROWS ONLY;        -- les 5 premières lignes
 SELECT ... FROM ... ORDER BY ... FETCH NEXT 5 ROWS WITH TIES;   -- les 5 premières lignes + ... voir doc
 SELECT ... FROM ... ORDER BY ... FETCH FIRST 5 PERCENT ROWS ONLY;  -- 5% des lignes
@@ -11,7 +11,7 @@ SELECT ... FROM .... WHERE order_date BETWEEN DATE '2016-12-01' AND DATE '2016-1
 SELECT ... FROM ... WHERE UPPER(first_name) LIKE 'JE_%';    -- prenom commence par JE
 SELECT ... FROM ... WHERE salesman_id IS NULL
 
--- comment dedoublonner
+-- comment dedoublonner plusieurs champs
 SELECT   COUNT(*) AS nbr_doublon, champ1, champ2, champ3
 FROM     table
 GROUP BY champ1, champ2, champ3
