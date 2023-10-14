@@ -1,0 +1,162 @@
+
+-- --------------------------- commandes diverses
+hx --health
+hx --health typescript
+hx . 		
+
+-- avec Helix : 1 selection puis 2 actions
+1 - on 
+
+----- =========== 6  modes 
+- NORmal	- space
+- INSert	- match
+- visual	- goto
+
+
+-- ===== TODO
+-- reste à voir sur le tutor : 10.4 splitting selection
+
+
+git clone https://github.com/helix-editor/helix
+cd helix
+cargo install --locked --path helix-term
+
+argo install --locked --path helix-term
+
+pip install python-lsp-server
+pip install tree_sitter
+
+
+-- =========== dev
+gd 				Goto definition
+gp 				previous buffer
+space + k 		show documentation for a function
+space + r 		rename symbol
+space + d 		debug
+
+
+
+-- ============== manipulation windows
+
+
+:vs filename	vertical split
+ctrl +w         me,
+
+Goto next function
+
+
+-- ============ in file picker 
+ctl +v (in ) 	open in vertical split
+
+-- ============ normal
+
+- nx 			select n lines
+d 			    delete char
+w/W 			move forward to before the beginning of the next word
+e               move forward to the end of the current word
+b/B 			move backward to the end of the current word
+-> eb 			select world under cursor
+
+O/o 			insère ligne avant/aprés -> INS
+A/I             insère fin/debut de ligne  -> INS
+a/i 			insère après/avant posit curseur -> INS
+
+------ copier coller
+y 				copy sel
+p/P 			paste after/fefore the cursor
+space + y/p     copy/paste to/from windows cliboard
+
+----- search
+/ n N			search next previous
+?  				search backward
+space / 		global search
+
+---- find
+f/F/t/T <ch>    find a <ch>, inclunding or not, forward or backward
+r<ch>			replace all selected characters with <ch>.
+R 				replace with yanked text
+
+----- repeat
+. 			repeat last insert
+alt . 		repeat last f/t selection
+
+
+------ SEL
+% 			select the whole file
+v2w 		sélectionne les 2 prochains mots
+v2b			sélectionne les 2 mots précédents
+; 			deselect without moving cursor
+s       	search in selection (, to evacuate multiple cursor)
+s apples <╝ c bananes	 : search replace apples with bananes
+
+----- align / split selection
+&			to align a selection in column mode
+alt-s 		to split a N-line sselection into N selections of one line
+
+
+------  divers
+ctrl+c 		commentaire
+u U 		undo redo
+C 			multiple cursor (, to remove the cursor)
+J 			Join lines
+< or >      indent lines
+ctrl + a/x  increment/ decrement number
+~    		switch lower/upper case
+altGr + `  	switch to lower case
+alt   + `   switch to upper case ==> ne fonctionne pas
+
+
+----- register
+"ay         yank in register a
+"by         yank in register b
+"bR         replace sel from register B
+
+------- jump list
+ctrl + s    mark a position
+ctrl + i/o  move forward and backwards in the jumplist
+
+
+-- ============ command
+
+
+-- space 
+S + f : file picker 
+
+
+
+
+
+-- ===========selection 
+x x x       selectionne 3 lignes
+
+t + x 		selectionne et se deplace juste avant la première lettre x
+f + x 		selectionne et se deplace juste après la première lettre x
+
+-- supression 
+d - supprime la selection 
+
+-- copier - coller 
+y 		copie
+p/P 	colle après/AVANt le curseur
+??
+
+-- multiple curosor
+, 		back to one cursor
+
+
+-- python configuration
+apk add py3-lsp-server
+
+
+
+-------
+
+-------
+
+-------
+
+
+
+
+
+

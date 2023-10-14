@@ -1,0 +1,98 @@
+-- === A VOIR =============
+
+- clic sur un coin du cube d'orientation -> vue isométrique
+- fix : green = verrou
+- qd tt les traits sont noir, l esquisse est terminée
+- join : only joins two components
+
+-- ===== fusion 360 raccourci ====
+
+q   quitter l'esquisse
+
+-- view F
+F6              zoom to fit (or double-clic mouse wheel)
+maj !           Plusieurs vues (quand ca marche)
+ctrl+maj+f      plein ecran
+
+--
+l       line
+l + maj line avec tangente
+e       extrusion
+d       dimension
+f       fillet
+m       move
+i       inspecter (mesurer)
+d       mesurer (mode esquisse)
+v       toggle Visibility
+k       create sketch
+o       offset
+s       esquisse raccourci
+t       ajuster (couper des lignes) trim
+x       transforme en ligne de construction
+h       hole
+a       apparence
+j       joint - liaison
+maj + j joint - liaison réelle
+
+orbite : shift + middle mouse button
+
+
+-- ===== exportation 
+- obj : arbre conservé aussi les propriétés des matières 
+- fichiers stl : une seule entité, matières non conservées 
+
+
+
+======================================================== REPRENDRE A 26min 20 sec
+
+MAJ + n Toggle Component Color Cycling
+shift + clic    permet de trouver le milieur d'une arrête
+
+- Quand on déplace des composants au sein d'un assemblage, on peut utiliser RETABLIR, pour les remettre à l'endroit initial.
+- rigid group : groupe 2 composants rigide ensemble.
+- liaison : are different from liaison relle : le premier composant selectionné ne bouge pas !
+- linked component can be modified outside. The update is automatic
+- possibilité d'isoler /déisoler des composants au lieu de les cacher
+- 2 type de matériaux : matériaux physiques (impact le poids...), matériaux visuels
+
+
+--- mo
+
+
+---- Animate Workspace Commands
+
+U   Auto Explode All Levels
+E   Manual Explode
+P   Publish Video
+M   Transform Components
+C   View
+
+
+-----------------------
+Regarder : permet de reprendre la vue originale
+
+
+------ comment déplacer un
+
+----- non body
+    -- mode esquisse
+        - souris : impossible de déplacement par le seléction d'une surface, il faut attraper une ligne ou un point
+        - clavier : sélection souris puis M
+
+    -- hors esquisse --> idem
+
+-- BODY
+    -- mode esquisse : idem non body
+    -- node non esquisse : possibilité de modifier l'esquisse, les modifs sont répercutées de suite.
+
+
+-- =========== composant : 
+-> clic droit -> activate
+
+
+
+
+
+
+
+

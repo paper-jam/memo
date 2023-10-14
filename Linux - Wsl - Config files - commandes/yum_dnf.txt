@@ -1,0 +1,35 @@
+
+-- ================ DNF package manager (Dandified Yum)
+# https://dnf.readthedocs.io/en/latest/command_ref.html
+# rpm base package manager
+
+dnf repolist all
+dnf list available | more
+dnf list installed
+
+dnf remove <package>
+dnf upgrade --refresh    # updae all packages
+dnf update <package>
+dnf info 
+
+dnf autoremove          # remove orphan packages
+dnf help 
+
+dnf list recent         # mis à jour récemment
+
+
+
+
+-- ================ YUM package manager
+
+yum repolist all        # liste de tous les repo
+yum list                # liste de tous les packages dispo
+
+
+- sur un package
+yum deplist nomPackage  # liste des dépendances
+yum info    nomPackage  # info 
+
+yum search 
+
+

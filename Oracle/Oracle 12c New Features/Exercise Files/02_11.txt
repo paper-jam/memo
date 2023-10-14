@@ -1,0 +1,24 @@
+sqlplus salesadm/password@localhost:1521/salespdb
+
+COLUMN TABLE_NAME FORMAT A20
+select table_name, inmemory from user_Tables where table_name = 'SALES_DATA';
+
+explain plan for select /*+ NO_INMEMORY */ avg(quantity) from sales_data;
+select plan_table_output from table(dbms_xplan.display('plan_table',null,'basic'));
+
+explain plan for select /*+ INMEMORY */ avg(quantity) from sales_data;
+select plan_table_output from table(dbms_xplan.display('plan_table',null,'basic'));
+
+alter session set inmemory_query=disable;
+
+explain plan for select avg(quantity) from sales_data;
+select plan_table_output from table(dbms_xplan.display('plan_table',null,'basic'));
+
+alter session set inmemory_query=enable;
+
+explain plan for select avg(quantity) from sales_data;
+select plan_table_output from table(dbms_xplan.display('plan_table',null,'basic'));
+
+
+
+

@@ -1,0 +1,63 @@
+-- ========== ZSH ============
+sudo apk add zsh
+sudo apk add shadow 	#  contient chsh
+
+#-- se connecter en tant que bob
+chsh --shell /bin/zsh bob
+
+# install nerd fonts
+apt install fontconfig-config
+bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
+
+# install de ZAP le plugin manager
+sudo apt install git
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
+
+
+# pour
+apk add python3
+apk add python3-dev
+apk add py3-lsp-server
+
+
+-- plugin : 
+https://github.com/unixorn/awesome-zsh-plugins#plugins
+
+
+-- dans ~.zprofile, placer
+# zsh config dir
+export ZDOTDIR=$HOME/.config/zsh
+
+-- install ZAP
+sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
+
+
+*************** voir ce site https://doc.ubuntu-fr.org/zsh, notamment pour les alias
+
+-- divers 
+zsh --version
+
+
+
+# Git Aliases
+alias gs="git status"
+alias gc="git commit"
+alias gca="git commit --amend"
+alias gco="git checkout"
+alias gcom="git checkout master"
+alias gap="git add -p"
+alias gpl="git pull"
+alias gr="git rebase"
+alias gst="git stash"
+alias gw="git web"
+alias gwu="git web upstream"
+alias gwi="git web --issues"
+alias gwp="git web --pulls"
+alias gwup="git web upstream --pull-request"
+alias gpum="git pull upstream master"
+alias gpoh="git push -u origin HEAD"
+alias gri="git rebase -i \$(git merge-base HEAD master)"
+alias gd="git diff"
+alias gcb="git clean-branches"
+alias gpohw="gpoh && git web --pull-request"
+

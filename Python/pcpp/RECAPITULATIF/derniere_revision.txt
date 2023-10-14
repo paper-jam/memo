@@ -1,0 +1,188 @@
+
+# -- ============== PCPP : finitions
+
+-- ==== a revoir
+    - xpath                                 OK
+    - metaclass                             OK
+    - json : quotes in string
+    - revoir difference is et id()          OK
+    - revoir les méthodes magiques : les imprimer , lire https://rszalski.github.io/magicmethods/
+    - se refaire un schém avec un héritage et des __variables mais aussi des méthodes
+    - http code                             OK 
+    - socket (liste des méthodes côtés serveur aussi )
+    - exception __context __cause__
+    - relire PEP8
+
+
+-- ===== HTTP code
+1XX - informational message : the request was received and understood
+
+2XX - action requested by the client was received, understood and accepted.
+    204 : Requête traitée avec succès mais pas d’information à renvoyer.
+
+3XX - client must take additional action to complete the request.
+    301/302 : redirection permanente temporaire
+
+4XX - error seems to have been caused by the client.
+    401 : utilisateur non identifié
+    403 : acces refusé
+    404 : not found : ressource non trouvé
+    418 : i'm a tea pot :)
+
+5XX - the server fails to fulfill a request
+    500 : internal server error
+    504 : le serveur n'a pas répondu
+
+
+
+
+
+
+
+-- ================= à apprendre par coeur
+
+
+-- ========== 1 - OOP
+
+-- hasattr
+
+
+-- instanciation
+    __new__ is the first method called on instanciation
+    __init__ is the second
+
+
+-- les KWARGS doivent être passés avec leur keyword : keyword=val
+
+-- abstract class
+    import abc
+    class inherit from abc.ABC,
+    method is decorated with @abc.abstractmethod
+
+-- heriting abstracted class -> TypeError exception
+
+-- __bases__
+    tuple qui contient la liste des classes héritées de premier niveau !
+
+-- copy
+    var = title[:]  --> is a shallow copy ! not deep !
+    copy.deepcopy est une methode peu performante
+
+-- metaclass
+    type(name_class, inherited classes, dict for definitions and vars)
+
+
+-- protected var
+    _protectedVar : use one underscore only
+
+--for defining an interator
+    __iter__ and __next__ :
+
+-- OOP
+    isinstance : test on the class of the instance, but also all inherited class
+    isinstance(True, int) => True -- The bool class is the subclass of the int class
+
+-- OOP
+    __mro__ : sorted list of class from which inheritance performs
+
+-- OOP
+    is      check if two variables points to the same objects
+            will return True if two references point to the same object
+    id()    memory adress
+
+-- OOP
+    if Laptop has a protected variable __price, a way to get around
+    x = getattr(laptop, "_Laptop__price")
+    x = laptop._Laptop__price
+
+-- OOP
+    __call__ permet d'appelr une classe comme une fonction
+
+-- OOP
+    x ** y =======> x.__pow__(y)
+
+-- OOP
+    <=  __le__(self, other)   # et non pas lte : Less than equal
+
+-- OOP
+    __dict__ contient les va
+
+-- copy
+
+
+-- =========== 2 - PEP
+
+
+-- module name
+    undercore can be use to improve readabitlity ex : my_module_name
+
+-- docstings
+    shoud use """ """ double quotes
+
+
+
+-- =========== 3 - GUI programming
+-- en TK
+app.title("mon titre")
+
+
+-- =========== 4 - Network programming
+
+
+-- HTTP header and security
+    => field 'Authorization 'should be used to include the API key
+
+-- socket
+    c'est socket.sendto(..) et non pas socket.send()
+
+-- =========== 5 - File Processing : sql / xml / csv / log / config
+
+-- en SQLite
+    create table .. champ1 TEXT   -- et non pas STRING
+    create table ...  FOREIGN KEY (PersonID) REFERENCES Persons(PersonID) -- parenthesis around first parameter
+    delete from table (ne pas oublier le from)
+
+
+-- xml
+    findall : first level
+    iter : all level
+    find :
+    tree.write('movies.xml', 'UTF-8', True)     - True is for adding adding the prolog
+    subelement has 3 parameters (root, tag, attrib) - attrib is opt
+
+-- xml
+    parser dispo :
+        - xml.dom.minidom :  tree structure in which each node is an object
+        - xml.etree.ElementTree
+        - xml.sax simple API for SAX : Simple API for XML, for event-driven XML document analysis
+
+    xpath : year > 2022     --    and no year > '2022'
+
+
+-- csv quotechar='"', quoting=csv.QUOTE_MINIMAL
+    csv.QUOTE_MINIMAL : def
+    csv.QUOTE_ALL – quotes all values
+    csv.QUOTE_NONNUMERIC – quotes only non-numeric values
+    csv.QUOTE_NONE
+    dictWriter parameter fieldnames is not optional
+
+-- logger
+    one logger =  one or more handler (FileHandler, )
+     logger.addHandler(handler)
+     a handler ,has is own level
+     on peut créer un formater et l'associer à un handler
+
+
+     -- attention aux noms des variables disponible
+    name
+    levelname (et non pas level !)
+    asctime
+    message
+
+
+-- configparser
+    config.sections() will not show the default section
+    config.read_dict(dict) crée une config à partir d'un string
+
+
+

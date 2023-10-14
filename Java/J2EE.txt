@@ -1,0 +1,387 @@
+-- install
+asadmin start-domain
+asadmin stop-domain
+
+Java Web -> présentation (JSP / JSF)
+Java EE -> une partie web + app + bdd
+
+-- == partie présentation
+
+-- == servlet
+    public class MonServlet extends HttpServlet {}
+
+    la servlet est déclarée dans le web.xml
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>biz.ei6.Login</servlet-class>
+    </servlet>
+
+    et utilisable dans un HTML
+
+    <form action="nomServlet" method="POST">
+
+-- == redirection
+    response.sendRedirect("index.html") // (redirection visible du client)
+ou
+    RequestDispatcher rs = request.getRequestDispatcher("index.html");
+
+-- == ServletConfig
+
+    dans le Web.xml
+        <init-param>
+                    <param-name>formation</param-name>
+                    <param-value>Bienvenue chez LinkedIn Learning</param-value>
+        </init-param>
+
+    dans la servlet :
+        out.println("<title>"+getServletConfig().getInitParameter("formation")+"</title>");
+
+    Un servletContext est partagée par tous les servlet de l'application
+    dans une servlet
+        getServletContext().setAttribute("pn1", "Fabien");
+    est réutilisable dans une autre
+        out.println("<td>"+getServletContext().getAttribute("pn1")+"</td>");
+
+-- == parameters
+    html -> <input type="text" name="login" value="fabien6668"/>
+    servlet -> request.getParameter("login")
+
+-- == session
+    request.getSession().setAttribute("utilisateur", "Fabien Brissonneau");
+    request.getSession().getAttribute("utilisateur")
+
+-- == fichier web.xml
+welcome-file-list   page accuil
+servlet
+serlet-mapping
+
+-- == page JSP
+    page html ds laquelle on peut placer du java entre <% %>
+    <%= %>    trasnforme en chaîne de caratères pour afichage
+    <%! String prenomTitre = "Prénom"%> // déclaration de variable ou méthode
+    <%=prenomTitre%> utilisation de variable
+
+    <%@page contentType="text/html" pageEncoding="UTF-8"%> // type du retour et encodage
+    <%@page import="java.util.Locale"%> // import lib
+
+    <%@include file="entete.html" %>    // inclusion fic. html
+
+    // bibliothèque balise
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <c:set var="compteur" value="42"/>
+
+-- == ACTION et BEAN
+    <jsp:include page="entete.html" />
+    <jsp:forward page="index.html"/>
+    <jsp:useBean class="biz.ei6.Personne" id="utilisateur" scope="session"/>
+    <jsp:setProperty name="utilisateur" property="*"/>
+
+    <%@page isErrorPage="true"%> => ajout <error-page> ds web.xml
+
+    <td><%=application.getAttribute("pn1")%></td>
+
+
+-- == srvlet mapping
+<servlet>
+    <servlet-name>GererLesPersonnes</servlet-name>
+    <jsp-file>/gererLesPersonnes.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>GererLesPersonnes</servlet-name>
+    <url-pattern>/ListerLesPersonnes</url-pattern>
+</servlet-mapping>
+
+-- == cookie
+    - définir un cookie
+    Cookie ck = new Cookie("login",utilisateur.getNomComplet());
+    response.addCookie(ck);
+
+    - tester les cookies
+    Cookie[] cks = request.getCookies();
+    ...  if(ck.getName().equals("login")) {
+
+-- == filter : intervient en amont et en aval
+    <filter>
+        <filter-name>MonFiltre</filter-name>
+        <filter-class>biz.ei6.FiltreServeur</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>MonFiltre</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+-- == listener : ecoute sur création / suppression ... servlet / session
+    <listener>
+        <listener-class>biz.ei6.MonListener</listener-class>
+    </listener>
+
+
+-- == JSP EL et JSTL
+    Map<String, String> lesNoms = new HashMap<>();
+    <c:forEach items="${noms}" var="personne">
+        ${personne.key}
+        ${personne.value}
+    </c:forEach>
+
+-- == JSP EL :
+    <title>${formation}</title>
+    <%@page isELIgnored="false"%>
+
+    // il y a des objects implicites
+    pageScope
+    requestScope
+    sessionScope
+    applicationScope
+    param
+    paramValues
+    header
+    headerValues
+    initParam
+    cookie
+    pageContext
+
+    ${sessionScope.utilisateur.nomComplet}
+
+-- == tag JSTL
+
+    <c:if test="${utilisateur.verifie()}"
+
+    <c:choose>
+            <c:when test="${pageContext.request.method=='GET'}">
+                .. html ...<table>
+                    <c:forEach items="${noms}" var="personne">
+                        ... html ...
+                    </c:forEach>
+               </c:when>
+            <c:otherwise>
+                <div>Enregistrement bien pris en compte</div>
+            </c:otherwise>
+        </c:choose>
+
+-- == JSF
+
+
+    <html xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:h="http://xmlns.jcp.org/jsf/html">
+        <h:head>
+            <title>Vérification de l'utilisateur</title>
+        </h:head>
+        <h:body>
+            <h:form>
+                <h3>Vérification de l'utilisateur</h3>
+                <h:panelGrid columns="2">
+
+        <h:commandButton action="listerLesPersonnes" value="Login"></h:commandButton>
+
+-- == managedBean
+
+    - dans la classe JAVA, il faut utiliser le decorateur
+    @Named("personnes")
+    @ApplicationScoped
+
+-- == JSF core Tags : listener, validation ...
+
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:f="http://xmlns.jcp.org/jsf/core"
+
+
+    <f:validateLength minimum="6" maximum="10"/>
+    <h:message for="login"></h:message>
+    <f:validateRequired/>
+
+-- == service web JAX RS
+    - dans la classe JAVA
+
+    @Path("/personnes")
+    public class Personnes {
+
+    @GET
+    public List<Personne> getPersonnes()
+
+    @POST
+    public void ajouteUnePersonne
+
+    - dans web.xml
+      <servlet-mapping>
+        <servlet-name>Jersey REST Service</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+      </servlet-mapping>
+
+-- ==  websocket
+
+    sur la classe
+        @ClientEndpoint
+
+    sur les méthodes
+      @OnOpen
+      @onMessage
+
+      -> et sur le serveur
+      @ServerEndPoint
+
+      url en ws :
+      ws://localhost:8080/chapitre_07_03/infos
+
+-- == sécurité
+    - dans web.xml
+    //
+        <login-config>
+            <auth-method>FORM</auth-method>
+            <realm-name>file</realm-name>
+            <form-login-config>
+
+    // creation de rôle
+     <security-role>
+            <role-name>admin</role-name>
+     </security-role>
+
+     // mapping role ressource
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>HTML</web-resource-name>
+            <url-pattern>*.xhtml</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+-- == EJB : la lagique métier est embarquée sur une autre application
+    type EJB :
+    - stateless : EJB géré par container, aucune connaissance du cleint
+    - stateful : EJB maintenu par le client
+    - singleton : unique
+
+    @EJB
+    injecte accès vers EJB
+
+-- ==  JDBC
+
+glassfish-ressources.xml
+
+<resources>
+  <jdbc-resource enabled="true" jndi-name="jdbc/participantsDS" object-type="user" pool-name="participants">
+    <description/>
+  </jdbc-resource>
+  <jdbc-connection-pool allow-non-component-callers="false" associate-with-thread="false" connection-creation-retry-attempts="0" connection-creation-retry-interval-in-seconds="10" connection-leak-reclaim="false" connection-leak-timeout-in-seconds="0" connection-validation-method="auto-commit" datasource-classname="org.apache.derby.jdbc.ClientDataSource" fail-all-connections="false" idle-timeout-in-seconds="300" is-connection-validation-required="false" is-isolation-level-guaranteed="true" lazy-connection-association="false" lazy-connection-enlistment="false" match-connections="false" max-connection-usage-count="0" max-pool-size="32" max-wait-time-in-millis="60000" name="participants" non-transactional-connections="false" pool-resize-quantity="2" res-type="javax.sql.ConnectionPoolDataSource" statement-timeout-in-seconds="-1" steady-pool-size="8" validate-atmost-once-period-in-seconds="0" wrap-jdbc-objects="false">
+    <property name="URL" value="jdbc:derby://localhost:1527/sample"/>
+    <property name="serverName" value="localhost"/>
+    <property name="PortNumber" value="1527"/>
+    <property name="DatabaseName" value="sample"/>
+    <property name="User" value="app"/>
+    <property name="Password" value="app"/>
+  </jdbc-connection-pool>
+</resources>
+
+
+-- == JPA
+
+    EclipseLink ou Hibernate
+
+    // unite de persistance defini presistence.xml
+    @PersistenceUnit(unitName="chapitre_09")
+
+    // sur une table
+    @Entity
+
+    //sur les champs
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+
+      EntityManager em = emf.createEntityManager();
+
+        em.getTransaction().begin();
+        List<Personne> retval = em.createQuery("SELECT p FROM Personne p").getResultList();
+        em.getTransaction().commit();
+
+        em.close();
+
+
+        EntityManager em = emf.createEntityManager();
+
+        em.getTransaction().begin();
+        try {
+            em.persist(pers);
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            em.getTransaction().rollback();
+        } finally {
+            em.close();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

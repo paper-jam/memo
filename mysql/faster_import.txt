@@ -1,0 +1,54 @@
+ --initialize-insecure,
+
+ bin\mysqld --basedir=C:\appli\mysql\mysql5736\  --initialize --console --initialize-insecure --explicit_defaults_for_timestamp 
+
+
+https://dba.stackexchange.com/questions/83125/mysql-any-way-to-import-a-huge-32-gb-sql-dump-faster
+
+ 4 194 304
+--innodb-doublewrite=0
+
+-- === dectivate redo log
+ALTER INSTANCE DISABLE INNODB REDO_LOG;
+SHOW GLOBAL STATUS LIKE 'Innodb_redo_log_enabled';
+ALTER INSTANCE enable INNODB REDO_LOG;
+SET unique_checks=0;
+
+
+innodb_buffer_pool_size..... 805306368
+
+SET autocommit=0;
+ALTER INSTANCE DISABLE INNODB REDO_LOG
+SET FOREIGN_KEY_CHECKS=0
+set max_allowed_packet = 256M
+ALTER INSTANCE DISABLE INNODB REDO_LOG
+
+innodb_buffer_pool_size = 12G    134 217 728
+innodb_log_buffer_size = 256M
+innodb_log_file_size = 2G
+innodb_write_io_threads = 32
+innodb_flush_log_at_trx_commit = 0
+innodb_doublewrite = 0
+
+innodb_buffer_pool_size = 4G
+innodb_log_buffer_size = 256M
+innodb_log_file_size = 1G
+innodb_write_io_threads = 16
+innodb_flush_log_at_trx_commit = 0
+
+-- premier import :  67min 37sec sur mysql 
+
+22:27:26 Restoring C:\work\import\STYXSAV_BASE202204140.SQL
+Running: mysql.exe --defaults-file="C:\Users\Francis\AppData\Local\Temp\tmpoxf9m93d.cnf"  --protocol=tcp --host=127.0.0.1 --user=root --port=3306 --default-character-set=utf8 --comments --database=cc_val_essone  < "C:\\work\\import\\STYXSAV_BASE202204140.SQL"
+23:35:00 Import of C:\work\import\STYXSAV_BASE202204140.SQL has finished
+
+
+-- deuxième import  mysql 8
+22:55:02 Restoring C:\work\import\STYXSAV_BASE202204140.SQL
+Running: mysql.exe --defaults-file="C:\Users\Francis\AppData\Local\Temp\tmpf88ebmfn.cnf"  --protocol=tcp --host=127.0.0.1 --user=root --port=8028 --default-character-set=utf8 --comments --database=cc_val_essonne  < "C:\\work\\import\\STYXSAV_BASE202204140.SQL"
+23:38:32 Import of C:\work\import\STYXSAV_BASE202204140.SQL has finished
+
+
+SET AUTOCOMMIT = 0; SET FOREIGN_KEY_CHECKS=0
+
+

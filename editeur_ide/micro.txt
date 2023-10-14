@@ -1,0 +1,41 @@
+-- ====== editeur micro
+
+https://micro-editor.github.io/
+
+
+
+-- heys bindings
+
+alt /  : comment
+
+ctrl b 	: run shell command
+ctrl l  : goto line 
+
+
+-- find
+ctrl + f/n/p : find/next/previous
+
+-- file
+ctrl q/o/s  : quit/open/save
+
+-- editor
+alt   bs 		: delete left word
+ctrl   d 		: delete current line 
+
+-- navigation 
+alt up/down    : paragraph next / previous
+
+
+--- sample python code
+# Import os module to read directory
+import os
+
+# Set the directory path
+path = '/home/fahmida/projects/bin'
+
+# Read the content of the file
+files = os.listdir(path)
+
+# Print the content of the directory
+for file in files:
+    print(file)

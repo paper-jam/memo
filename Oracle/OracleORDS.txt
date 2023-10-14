@@ -1,0 +1,54 @@
+
+-- ===== Oracle Rest Data Service Developpement
+
+-- Oracle Application Express is not a prerequisite for using Oracle REST Data Services.
+
+
+--
+ords acts as a web listener for application express
+GET     /ords/hr/employees
+DELETE  /ords/hr/employees
+
+GET, POST, PUT, DELETE, OPTIONS, HEAD
+
+https://example.com/ords/resteasy/hr/employees      -- tous les employéss
+https://example.com/ords/resteasy/hr/employees/:id  -- un employé
+
+
+
+
+
+-- ====== Oracle CDB & PDB
+    - depuis Oracle 12
+    - CDB : contains Oracle Metadata (Container DB)
+    - PDB : contains User data (Pluggable Metada)
+    - one instance = 1 CDB + max 252 PDB
+    - a seed is a template for cretaing new PDB
+    - il est possible de débrancher un PDB pour le rebrancher sur une autre CDB
+    - il est possible de cloner (ex : prod vers DEV)
+    - créer une nouvelle PDB (se fera à partir du seed)
+
+    - ORDS : 19.2.0
+    - ORDS_PUBLIC_USER / pass
+    - SYS AS SYSDBA
+    - ORDS port autonomous port: 8080
+    - users for admin et dev :
+        - ords_admin / pass
+        - ords_dev / pass
+
+-- ========= USERS
+    - ORDS_METADATA     :
+
+    - ORDS_PUBLIC_USER  : User for invoking RESTful Services in the Oracle REST Data Services-enabled schemas.
+
+
+-- ========== command line :
+
+java -jar ords.war help                 -- aide
+java -jar ords.war install advanced     -- installation en ligne de commande
+java -jar ords.war version              -- version
+java -jar ords.war uninstall            -- version
+
+
+
+

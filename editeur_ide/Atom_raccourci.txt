@@ -1,0 +1,62 @@
+-- ========= Raccourci Atom
+
+-- ??
+ctrl+b            : list open files
+ctrl+m            : go to matching bracket
+ctrl+alt+m        : select code inside bracket
+
+- déplacement curseur ligne
+alt+backspace     : supprime jusqu'au début du mot
+alt+d             : supprime jusqu'à la fin du mot
+ctrl + right/left : début/fin de mot
+
+-- ligne
+ctrl+g            : aller à la ligne
+ctrl+j            : join line
+shift+home/end    : selection jusqu'au début/fin de ligne
+ctrl+l            : selection de toute la ligne
+ctrl+Up/down      : déplace la ligne en haut
+ctrl+/            : ajout/retire commentaire
+ctrl+enter        : insère une ligne en dessous
+ctrl+shift+enter  : insère une ligne au dessus
+ctrl+shift+k      : supprime une ligne
+ctrl+shift+d      : duplique une ligne vers le bas
+
+-- bookmark
+ctrl+alt+f2       : toogle bookmark
+ctrl+f2           : view all bookmark
+ctrl+shift+f2     : clear all bookmark
+f2                : jump to next bookmark
+shift+f2          : jump to previous bookmark
+
+-- editor advanced
+ctrl+d            : selection multiple
+alt+mouse left    : column selection
+alt+t             : transpose
+
+-- find replace
+ctrl+f            : find/replace
+f3                : next
+shift+f3          : previous
+ctrl+shift+f      : find in project
+
+-- plugin
+ctrl+alt+c      : color picker
+
+-- navigation
+alt         : show toolbar
+alt *       : toggle treview <-> editor
+ctrl *      : show/hide treeview
+alt 1       : 1er onglet, etc
+ctrl+cmd+p  : command palette
+ctrl+,      : settings
+
+-- treeview
+left/right      : collapse/expand all dir
+alt+left/right  : collapse/expand all dir
+a               : add file
+shift + a       : add dir
+m               : move file/dir
+del             : remove file/dir !
+ctrl+c/v        : copy/paste file/dir
+d               : duplicate file/dir

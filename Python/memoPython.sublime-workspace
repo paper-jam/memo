@@ -1,0 +1,781 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cal",
+				"calc_cube"
+			],
+			[
+				"th",
+				"Thread"
+			],
+			[
+				"cac",
+				"calc_square"
+			],
+			[
+				"fa",
+				"factorial"
+			],
+			[
+				"pop",
+				"popitem"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"googl",
+				"googletrans"
+			],
+			[
+				"de",
+				"detect_language"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"a",
+				"ascii_letters"
+			],
+			[
+				"is",
+				"isdir"
+			],
+			[
+				"co",
+				"count"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Memo",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Python Terminus.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Python Terminus.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Python Terminus.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Python_terminus.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python_terminus.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Python_terminus.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packe",
+				"Package Control: Remove Package"
+			],
+			[
+				"vpf",
+				"View Package File"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"pack remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"vpf ",
+				"View Package File"
+			],
+			[
+				"package con",
+				"Package Control: List Packages"
+			],
+			[
+				"vpg",
+				"View Package File"
+			],
+			[
+				"python",
+				"Build With: Python Terminus"
+			],
+			[
+				"vp",
+				"View Package File"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pack lis",
+				"Package Control: List Packages"
+			],
+			[
+				"v",
+				"View Package File"
+			],
+			[
+				"key bin",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"terminus ope",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"wpf",
+				"View Package File"
+			],
+			[
+				"ter",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"buil",
+				"Build With: Python"
+			],
+			[
+				"terminus",
+				"Preferences: Terminus Command Palette"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"keys",
+				"Preferences: Key Bindings"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"terminus li",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"control ",
+				"Package Control: Install Package"
+			],
+			[
+				"packa remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"packe ins",
+				"Package Control: Install Package"
+			],
+			[
+				"discove",
+				"Package Control: Discover Packages"
+			],
+			[
+				"or",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"ori",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"key ",
+				"Preferences: Key Bindings"
+			],
+			[
+				"terminu",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"termin",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"tab new",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"tab",
+				"View: Toggle Tabs"
+			],
+			[
+				"black",
+				"python-black: Format the selected code or the code of the entire file"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pyli",
+				"Preferences: LSP-pyright Settings"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"fold",
+				"Code Folding: Fold"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"lsp",
+				"LSP: Format File"
+			],
+			[
+				"forma",
+				"python-black: Format the selected code or the code of the entire file"
+			],
+			[
+				"line",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"split ",
+				"Selection: Split into Lines"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"termi",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"spli",
+				"File: Split View"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"ui sel",
+				"UI: Select Color Scheme"
+			],
+			[
+				"istall",
+				"Package Control: Install Package"
+			],
+			[
+				"ui se",
+				"UI: Select Theme"
+			],
+			[
+				"ui",
+				"UI: Select Theme"
+			],
+			[
+				"ui ",
+				"UI: Select Theme"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"ui select",
+				"UI: Select Color Scheme"
+			],
+			[
+				"list pac",
+				"Package Control: List Packages"
+			],
+			[
+				"set syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"ui : se",
+				"UI: Select Theme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"prefe",
+				"Preferences: Settings"
+			],
+			[
+				"vie pa",
+				"View Package File"
+			],
+			[
+				"pvf",
+				"Plugin Development: Profile Events"
+			],
+			[
+				"terminus open",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"vfp",
+				"View Package File"
+			],
+			[
+				"term",
+				"Preferences: Terminus Settings"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 249.0,
+		"history":
+		[
+			"x=1",
+			"exit()",
+			"x=1",
+			"x",
+			"dir",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test.py",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/python-black/python-black.sublime-commands",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Terminus.sublime-settings",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/LSP-pyright/syntaxes/Python.sublime-syntax",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Python.sublime-package",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/memoPython.sublime-project",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Python Terminus.sublime-build",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Log/python-black.log",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/python-black.sublime-settings",
+		"/C/Users/Francis/Desktop/sav_memePython.sublime-project.txt",
+		"/C/Users/Francis/Desktop/bourse.txt",
+		"/C/Users/Francis/AppData/Local/Temp/Temp1_HistoriqueOperations_014877503441.zip/HistoriqueOperations_014877503441_du_01_01_2023_au_04_04_2023.csv",
+		"/C/Users/Francis/Desktop/memoPython.sublime-project",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/136_list_comprehension.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/135_list.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/SublimeText.txt",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Python/Python.sublime-build",
+		"/C/appli/sublime/Packages/Python.sublime-package",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Terminus/Terminus.hidden-color-scheme",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/LSP-pyright.sublime-settings",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/310_os_path_file_handling.py",
+		"/C/appli/sublime/Packages/Matlab.sublime-package",
+		"/C/appli/sublime/Lib/python33/sublime.py",
+		"/?wsl.localhost/Debian/home/bob/dev/test/test.py",
+		"/?wsl.localhost/Debian/home/bob/dev/test/test2.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/160_set.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/100_python_basics.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test4.py",
+		"/C/Users/Francis/Desktop/Certif_python/progression.txt",
+		"/C/Users/Francis/Google Drive/Perso/Papier Identite/permisConduireETcni.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/temp6.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/150_tuples.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/tes5.py",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Origami/Default (Windows).sublime-keymap",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Terminus/Default.sublime-keymap",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/140_dictionnaries.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/300_Oop_module_package.py",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/python-black/python-black.sublime-settings",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/000_divers.txt",
+		"/C/Users/Francis/Google Drive/Perso/jobCVDiplome/job.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/130_date.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/400_lib_translation.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/400_lib_textBlob.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test1.json",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Installed Packages/LSP-json.sublime-package",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Cao-metal/fusion360_raccourci.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/110_string.py",
+		"/C/Users/Francis/Google Drive/Perso/Banque/Fortuneo/fortuneo.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/170_lib_zip_function.py",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Terminus/Terminus.sublime-settings",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/test2.html",
+		"/C/Users/Francis/AppData/Local/Sublime Text/Package Storage/LSP-pyright/18.12.1/language-server/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+		"/C/Users/Francis/Downloads/sample html file download for testing.html",
+		"/C/Users/Francis/Downloads/sample html file download.html",
+		"/C/Users/Francis/Downloads/large sample html file download for testing.html",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/udemy/exercice-04_fonctions-lambdas-avec-pyside-2/enonce.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/udemy/exercice-06_les-operateurs-ternaires/enonce.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/udemy/exercice-06_les-operateurs-ternaires/solution.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/udemy/exercice-07_la-fonction-zip/enonce.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/SublimeText_raccourci.txt",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/LSP/Default.sublime-keymap",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/helixEditor.txt",
+		"/C/Users/Francis/Desktop/PythonMp4/progression.txt",
+		"/C/Users/Francis/Desktop/unsubscribe.txt",
+		"/C/Users/Francis/Desktop/IsolationCombles.txt",
+		"/C/Users/Francis/Desktop/install_sketchup.txt",
+		"/C/Users/Francis/Desktop/MOCK_DATA.json",
+		"/C/Users/Francis/Desktop/Planning.txt",
+		"/C/Users/Francis/Desktop/DicoAnglais.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/01_python_basics.py",
+		"/C/Users/Francis/Downloads/security-key.txt",
+		"/C/Users/Francis/Downloads/oscar_age_male.csv",
+		"/C/Users/Francis/Downloads/hw_25000.csv",
+		"/C/Users/Francis/.config/wezterm/wezterm.lua",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/vim_neovim/install_neovim.sh",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/terminal/WindowsTerminal.txt",
+		"/C/Users/Francis/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Linux - Wsl - Config files - commandes/Linux.sh",
+		"/C/Users/Francis/Desktop/PythonMp4/Nouveau document texte.txt",
+		"/C/Users/Francis/Desktop/Muller-cnc-technic/fs3mg/thomas-zietz/Accessoires.txt",
+		"/C/projets/fraiseuse/Muller-cnc-technic/fs3mg.txt",
+		"/C/Users/Francis/Google Drive/todo.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Git/git.sh",
+		"/C/Users/Francis/.ssh/known_hosts",
+		"/C/Users/Francis/Desktop/Planning Amazon.txt",
+		"/C/projets/fraiseuse/Muller-cnc-technic/fs3mg/thomas-zietz/Accessoires.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/vim_neovim/vim_raccourci.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Cloud computing/AWS/AWS_memo.txt",
+		"/C/Users/Francis/Google Drive/Pro/auto-entrepreneur/info.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Cloud computing/snowflake/snowflake.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Linux - Wsl - Config files - commandes/zsh.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Linux - Wsl - Config files - commandes/ssh/info.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/z-divers-old/Couchbase/DataModeling.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/z-divers-old/Couchbase/memoCouchbase.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/venv/udemy/exercice-11_creer-votre-propre-docstring/enonce.py",
+		"/C/Users/Francis/Google Drive/projet/PresseBTC/PresseBTC.txt",
+		"/C/Users/Francis/Desktop/chris/Neovim-from-scratch/lua/user/bufferline.lua",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/certif/pcap_exam.py",
+		"/C/dev/tests/typescript/proj1/package.json",
+		"/C/dev/tests/typescript/proj1/src/index.ts",
+		"/C/Users/Francis/Downloads/playlist.m3u8",
+		"/C/Users/Francis/Downloads/6034.m3u",
+		"/C/Users/Francis/Downloads/internet-radio.com.playlist(1).pls",
+		"/C/Users/Francis/Downloads/internet-radio.com.playlist(2).pls",
+		"/C/Users/Francis/Downloads/internet-radio.com.playlist.pls",
+		"/C/Users/Francis/Desktop/neovim_jose/dev-environment-files/.zshrc",
+		"/C/Users/Francis/Desktop/neovim_jose/dev-environment-files/.config/nvim/lua/josean/plugins-setup.lua",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/01_python_basics.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/pcap_exam.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Cao-metal/Sketchup_raccourci.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/.vscode/launch.json",
+		"/C/Users/Francis/Google Drive/projet/pdm/pdm.txt",
+		"/C/Users/Francis/Google Drive/projet/pdm/oxalis/Formation_23_25_FEV.txt",
+		"/C/Users/Francis/Google Drive/projet/pdm/PARTAGES_UZUME/BATCHBLOCK_V1/02_MEDI_BATCHBLOCK/semi-masse/V4/2020-09-08_B14_semi-masse_historique_des_versions.txt",
+		"/C/dev/tmp/nvim-basic-ide/init.lua",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Linux - Wsl - Config files - commandes/apt.sh",
+		"/C/Users/Francis/Google Drive/projet/pdm/Formation.txt",
+		"/C/Users/Francis/Desktop/FactOrm.txt",
+		"/C/Users/Francis/Google Drive/projet/TestCenterDiv.html",
+		"/C/dev/tmp/nvim-basic-ide/lua/user/plugins.lua",
+		"/C/Users/Francis/Desktop/Soleil/sample.txt",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Default/Preferences.sublime-settings",
+		"/C/dev/tmp/dotfiles/phpactor.yml",
+		"/C/Users/Francis/AppData/Local/Temp/Temp1_UbuntuMono.zip/LICENCE-FAQ.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Flask/memoFlask.txt"
+	],
+	"find":
+	{
+		"height": 48.8
+	},
+	"find_in_files":
+	{
+		"height": 129.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 49.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 157.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.Terminus":
+	{
+		"height": 270.0
+	},
+	"output.Terminus 2":
+	{
+		"height": 169.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 380.0
+	},
+	"output.diagnostics":
+	{
+		"height": 169.0
+	},
+	"output.exec":
+	{
+		"height": 554.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "memoPython.sublime-project",
+	"replace":
+	{
+		"height": 69.6
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Francis\\Google Drive\\projet\\MemoAndShortkey\\Python\\memoPython.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 495.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 562.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 259.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 3
+	}
+}

@@ -1,0 +1,41 @@
+
+-- ----- emplacement des distro wsl :
+
+
+
+-- ---- sur wsl 
+wsl --list --all            	// toutes les ditributions présentes
+wsl --list --running 			// running distribution
+wsl --list --online 			// liste de toutes les distributions dispo.
+
+wsl --set-default distroName    // definit la distro Debian par défaut.
+wsl --status					// version wsl, distro par defaut, ver. noyau
+wsl --update					// update wsl
+wsl --set-default-version 1 	// repasse sur le version 1
+wsl --set-default-version 2 	// repasse sur le version 2
+
+-- ---- sur une distro 
+wsl --set-version distroName version 			// affecte un version WSL à une distri.
+distroName config --default-user <Username>  	// ex : debian config --default-user bob
+wsl --export distroName nomDeFichierTar 		// Exporte la distribution
+wsl --import Temp . ..\alpine-minirootfs-3.15.0-x86_64.tar.gz 
+
+
+wsl -d distroName			// start and connect into Temp
+wsl --CD ~ 					// positionne l'utilisateur dans son home 
+wsl --user <Username> 		// connect to the defaut distro with <Username>
+wsl --shutdown 				// fin de tts les distro et wsl2
+		
+
+reprendre à BOB : le positionner dans son dossier
+
+
+
+-- == changement de mot de passe
+sudo passwd     // will change the password of the WSL root user.
+passwd          // will change the password of the current WSL user
+passwd [user]   // will change the password of any WSL user
+
+
+
+

@@ -1,0 +1,24 @@
+DynamoDB :
+
+=> important : each table needs a partition key (= primary key)
+	- simple
+	- composed (partition key + sort key)
+
+Data is accessed only by the primary key
+
+=> secondary indexes : recreate a new table
+
+
+Data modeling process 
+1 - ERD : entity relation diagrams 
+- one-to-one 
+- one-to-many 
+- many-to-many
+
+2 - List your access pattern
+You must know ahead of time how dats are needed
+- Projections : fields impacted
+- Frequency : if high make a partition key
+
+3 - GetItem API
+- can return one or multiple key

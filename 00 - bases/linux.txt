@@ -1,0 +1,24 @@
+
+-- ===== File System Structure
+
+FHS : File Hierarchy standard
+
+/bin    : commandes de base (ls, cat, ...)
+/sbin   : commandes systèmes pour admin.
+/boot   : bootloader
+/dev    : devices, drivers, essentiellement drivers hardware
+/etc    : configurations files apt, network, ssh...
+/home   :
+/lib    : librairies
+/media  : montage automatique
+/mnt    : montage manuel
+/opt    : logiciles optionnels pour tous les utilisateurs (pour installtion de logiciles tiers)
+/proc   : files, informations (cpu..) for processus (for developper)
+/root   : homm
+/run    : for processes
+/snap   : info for package (ubuntu)
+/srv    : utilisés pour les applications pour y placer leurs données
+/sys    : interaction with kernel
+/tmp    : utilisé par les applications
+/usr    : appplications de l'utilisateur souvent dans /usr/local
+/var    : données variable, mail, DB, spool

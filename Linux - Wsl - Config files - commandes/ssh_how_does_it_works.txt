@@ -1,0 +1,32 @@
+-- avec un utilitaire ssh-keygen, sur le poste doté du terminal
+on génère deux clés, une privée, une publique
+
+-- sur le client, les deux clés sont générés dans
+c:\users\nomuser\.ssh\id_rsa
+c:\users\nomuser\.ssh\id_rsa.pub
+
+-- sur le serveur, la clé publique est à copier dans :
+scp fichier.pub francis@adresseIPServeur:~/.ssh/authorized_keys
+sudo chmod 700 ~/.ssh/
+sudo chmod 600 ~/.ssh/*
+
+dans sshd_config :
+Port 50702
+permitRootlogin No
+AllowUsers francis
+PasswordAuthentication no
+
+
+-- == on peut utiliser l'utilitaire ssh-copy-id pour faciliter la copie de la clé publique sur le serveur
+
+
+-- ==== SSHD server
+sudo apt install openssh-server
+
+
+
+
+
+
+
+

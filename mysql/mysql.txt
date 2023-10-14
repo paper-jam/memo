@@ -1,0 +1,81 @@
+
+-- Installation with zip file :
+https://dev.mysql.com/doc/refman/5.7/en/windows-install-archive.html
+
+bin\mysqld --basedir=C:\appli\mysql\mysql5736\  --initialize --console --initialize-insecure --explicit_defaults_for_timestamp 
+
+
+-- 8028
+mot de passe temp : _tll8lqH3N*i
+
+
+-- sous windows : 
+ 
+c:\appli\mysql\my.ini
+[mysqld]
+basedir=C:/appli/mysql
+datadir=C:/appli/mysql/data
+
+-- initilisation
+mysqld --defaults-file=C:\appli\mysql\my.ini --initialize
+
+-- check
+type C:\appli\mysql\my.ini\data\DESKTOP-B45RH14.err ()
+
+root@localhost: T75kDL#ORaiw
+
+-- lancement/arrêt du serveur en ligne de commande
+mysqld.exe --console
+(or START /MIN mysqld.exe --console --defaults-file=C:\appli\mysql\mysql5736\my.ini, as a detached mode )
+
+-- shudown
+mysqladmin -u root -p shutdown
+
+
+START /MIN C:\appli\mysql\mysql5736\bin\mysqld.exe --defaults-file=C:\appli\mysql\mysql5736\my.ini
+
+
+-- install mysql as a service (windows)
+mysqld --install
+
+-- connexion
+mysql -u root -p 
+
+-- create user
+user_vvcol
+
+
+
+-- =============== sous linux 
+- install
+sudo apt install mariadb-server mariadb-client
+sudo service mariadb start / stop / reload / force-reload
+sudo mysql_secure_installation (répons)
+->Switch to unix_socket authentication [Y/n] n
+
+-- post install
+mysql -u root -p (ne pas oublier le -p)
+update mysql.user set plugin ='mysql_native_password' where user = 'root' and plugin = 'unix_socket';
+select * from mysql.user where user = 'root' and plugin = 'unix_socket';
+
+
+show databases;
+alter user 'root'@'localhost' identified by 'pass';
+
+-- create database / user 
+create database vvcoldb
+
+-- version
+mariadb --version
+mariadb  Ver 15.1 Distrib 10.5.12-MariaDB, for debian-linux-gnu (x86_64) using  EditLine wrapper
+
+select curent_user() ou \s
+
+
+
+-- ====== probleme de connexion
+sous Windows, ipconfig
+- 192.168.1.23
+
+
+sous linux 

@@ -1,0 +1,51 @@
+# -- ============== FLASK
+# # -- init igration repository -- relies on FLASK_APP
+flask db init
+
+# -- generate the migration script
+flask db migrate -m "users table"
+
+# -- set FLASK_APP=nomFichierLancer.py
+flask shell
+flask db create
+flask db upgrade
+db.create_all()
+
+#-- ========== reverse
+sqlacodegen postgresql://postgres:pass@localhost:5432/vvcol
+
+
+#-- ========== pyjWT web token
+#- https://blog.miguelgrinberg.com/post/json-web-tokens-with-public-key-signatures #
+pip install pyjwt
+token = jwt.encode({'user_id': 123,'username': 'susan','roles': ['user', 'moderator'],'exp': time() + 300}, secret_key, algorithm='HS256').decode('utf-8')
+payload = jwt.decode(token, secret_key, algorithms=['HS256'])
+
+
+#-- ========== lister les routes
+@app.route("/api", methods=["GET"])
+def list_routes():
+  result = []
+  for rt in app.url_map.iter_rules():
+    result.append({
+        "methods": list(rt.methods),
+        "route": str(rt)
+    })
+  return jsonify({"routes": result, "total": len(result)})
+
+#-- ========== ls cookies
+- 4 types of cookies
+    - Secure cookies
+    - HTTP cookies
+    - Session cookies (deleted as the browser close)
+    - Pesistent cookies (with expiration date)
+
+#-- ========= Password
+    - ne jamais les stocker en plain Text => hash code
+    - à stocker dans une BDD différente sur un serveur différent
+    - développer un micro-service pour implémenter l'authentification
+
+
+
+
+

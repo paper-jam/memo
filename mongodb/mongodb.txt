@@ -1,0 +1,202 @@
+-- ============= MONGO 4.05
+-- doc
+production : https://docs.mongodb.com/manual/administration/production-notes/
+conf       : https://docs.mongodb.com/manual/reference/configuration-options/
+
+-- sous windows
+net start/stop MongoDB
+
+-- documentation
+    configuring : https://docs.mongodb.com/manual/reference/configuration-options/
+
+-- outils
+    - mongos : sharding : redirecteur de requêtes, répartition sur plusieurs noeuds
+    - mongofiles : permet d'importer des fichiers pdf,word,txt,etc
+    - mongoimport, mongoexport, mongodump, mongorestore,
+    - mongosniff : n'est pas ibstallé par défaut
+
+-- instance
+    - 1 instance = plusieurs BDD, dont admin (metadata)
+    - 1 BDD = des collections (table) qui comprennent des données au format BSON
+    - db.shutdownServer() à partir du client et la base Admin
+    - sous windows : net start / net stop si le service a été crée
+    - instance par defaut
+        config files : /etc/mogod.conf
+        data files : /var/lib/mongodb
+        log files  : /var/log/mongodb
+
+-- méthode authentification
+   - SCRAM windows : dans le mongod.conf, à la rubrique security
+     security.authorization: enabled
+
+-- ============= création instance
+    mkdir /var/lib/mongo2                   // création répertoire
+    sudo chown -R mongodb:mongodb mongo2    //
+    mongod --help
+    mongod --port 27018 dbpath /var/lib/mongo2 --logpath /var/lib/mongo2/mongo2.log --fork
+
+
+-- comparatif SQL -> mmongoDB
+    - base -> base
+    - table  -> collection
+    - enregistrement (row)-> document
+
+-- shell
+
+    mongosh --host localhost:27017 --authenticationDatabase "admin" -u "myUserAdmin" -p pass
+    mongosh --port 27017 --authenticationDatabase "admin" -u "myUserAdmin" -p pass
+    db.help()
+    db.version()
+    db.adminCommand({shutdown: 1})
+
+    -  exemple de code, pour modifier le prompt
+    {const utilisateur = db.runCommand( { connectionStatus: 1, showPrivileges: false } ).authInfo.authenticatedUsers[0].user
+    prompt = () => (`${utilisateur}@${db.getName()}>`)}
+
+
+-- user & roles
+    
+    show users          // list des utilisateurs de la bdd
+    db.getUsers()       // idem
+    show roles          // list des roles de ... ?
+    db.runCommand( { connectionStatus: 1, showPrivileges: false } ) //whoami
+
+    db.auth("francis", "pass")  // changer d'utilisateur
+    db.auth("vvcol", "pass")  // changer d'utilisateur
+    db.runCommand({connectionStatus : 1}).authInfo.authenticatedUsers[0];  // utilisateur en cours
+
+    use admin;
+    db.createUser({user: "vvcolUser", pwd: "pass", roles: [ { role: "readWrite", db: "vvcol" } ] } );
+    db.createUser({user: "francis", pwd: "pass", roles: [ { role: "root", db: "admin" } ] } );
+
+    db.createUser({user: "francis", pwd: "pass", roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ] } )
+    --->  l'utilisateur est crée dans une BDD, il devra indiquer cette BDD lors de la connexion !!
+
+    db.updateUser("vvcolUser",{pwd: passwordPrompt(), mechanisms: [ "SCRAM-SHA-256" ]})
+
+
+
+--========  built-in roles (https://docs.mongodb.com/manual/reference/built-in-roles/)
+    
+    -- Database User Roles -> non-system collecti
+    read                //     changeStream collStats dbHash dbStats find killCursors listIndexes listCollections
+    readWrite           //     READ + ... dropCollection    createIndex    dropIndex    find    insert    killCursors    listIndexes    listCollections    remove    renameCollectionSameDB    update
+
+    
+    -- Database Administration Roles
+    dbAdmin             // Provides the ability to perform administrative tasks such as schema-related tasks, indexing, and gathering statistics
+    dbOwner                 // combines readWrite, dbAdmin and userAdmin 
+
+    -- Cluster Administration Roles
+    clusterAdmin            // Provides the greatest cluster-management access. =clusterManager+clusterMonitor+hostManager+dropDatabase commande.
+    clusterManager          // Provides management and monitoring actions on the cluster.
+    clusterMonitor          // Provides read-only access to monitoring tools, such as the MongoDB Cloud Manager and Ops Manager monitoring agent.
+    hostmanager             // Provides the ability to monitor and manage servers.
+
+    userAdmin               // role, when scoped to the admin database
+    userAdminAnyDatabase    // role
+
+    backup                  // Provides minimal privileges needed for backing up data.
+    restore                 // Provides the necessary privileges to restore data from backups
+    
+    -- All-Database Roles
+    The following roles are available on the admin database and provide privileges which apply to all databases except local and config:
+
+    readAnyDatabase         // Provides the same read-only privileges as read on all databases except local and config. The role also provides the listDatabases action on the cluster as a whole.
+    readWriteAnyDatabase    // Provides the same privileges as readWrite on all databases except local and config. The role also provides the listDatabases action on the cluster as a whole.
+    userAdminAnyDatabase    // Provides the same access to user administration operations as userAdmin on all databases except local and config.
+    dbAdminAnyDatabase      // Provides the same privileges as dbAdmin on all databases except local and config. The role also provides the listDatabases action on the cluster as a whole.
+
+    -- Superuser Roles
+    root                    // readWriteAnyDatabase, dbAdminAnyDatabase, userAdminAnyDatabase, clusterAdmin, restore, backup
+    __system                // Do not assign this role to user objects representing applications or human administrators, other than in exceptional circumstances.
+   
+    
+-- database
+    db                  // bdd en cours
+    db.dropDatabase();  // supprime
+    show dbs            // list des bases
+
+-- collections
+    db.getCollectionNames()                     // or  show collections   
+    db.createCollections(<nomCollection>);
+    db.<nomCollection>.find().count();
+    db.<nomCollection>.find().count();
+    db.<nomColleection>.drop();
+    db.<nomCollection>.find();                  // recupère tous les élélements de la collection
+    db.<nomCollection>.countDocuments();    
+
+
+-- documents
+    db.<nomCollection>.insert([{nom:"Durand",prenom:"Colette"}])    // créé
+    db.<nomCollection>.save()                                 // créé ou met à jour ???
+    => crée un champ _id automatiquement, obligatoire, de type primary key non null, un index est crée
+    type dispo : string, number, object, array, true/false, null
+    BSON : enregistrement au format binaire du JSON
+
+
+-- operateur de comparaison
+    $gt $gte $lt $lte
+    $ne                     différend de
+    $all                    comporte toute les valeurs
+    $in                     comporte au moins une valeur
+    $exist:true             le champ doit exister
+    /chpiane caractère /    eq. LIKE en SQL
+
+
+-- ========================== CODE DIVERS
+
+
+
+
+db.posts.insert({title:"title post 7 ", body:"body post 7"});
+db.personnes.insert({nom:"Durand",prenom:"Toto",sexe:"Homme"}
+db.clients.find().pretty();
+db.nomColl.update ({query}{update set/unset/inc...}{options})
+db.clients.update({nom:"Dupont"}, {$set:{voiture:"Fiat"}});
+db.clients.update({nom:"Dupont"}, {$unset:{voiture:1}});
+db.clients.update({nom:"Dupont"}, {$rename:{"prenom":"surnom"}});
+db.clients.remove({nom:"Dupont"});
+db.clients.find({$or[{sexe:"Homme"},{prenom:"toto"}]}).pretty()
+db.clients.find({age:{$lt:26}}).pretty()    // lt : less    than
+db.clients.find({age:{$gt:26}}).pretty()    // gt : greater than
+db.clients.find().sort({prenom:-1}).pretty(); // tri par ordre décroissant / prenom
+
+
+
+-- # installation depuis les sources sur serveur linux
+sudo apt-get install libssl-dev
+
+
+-- ====================== install linux
+
+-- install linux
+echo "deb http://repo.mongodb.org/apt/debian stretch/mongodb-org/4.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+sudo apt-get update
+sudo apt-get install -y --allow-unauthenticated mongodb-org
+sudo systemctl start/stop/restart mongod
+sudo systemctl enable mongod            // active au démarrage
+(utilisateur mongodb créé)
+
+------ pour la prod, pour éviter des MAJ non controlées
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+
+-- tunnel SSH (https://ianlondon.github.io/blog/mongodb-auth/) =====> à revoir
+    - sur le poste client
+    ssh -N -f -L 27018:127.0.0.1:27017 francis@192.168.99.100
+    - puis
+    mongo -u ian -p secretPassword --port 27018
+
+
+
+
+
+
+
+
+
+

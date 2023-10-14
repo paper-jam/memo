@@ -1,0 +1,65 @@
+-- ============ typescript
+
+npm init -y 
+npm i  --save-dev typescript
+npx tsc --init      // create tsconfig.json 
+
+
+npx create-snowpack-app . --template @snowpack/app-template-blank-typescript --force
+
+
+
+
+
+tsc -w --prettyw nomFic.ts --target 'es5'
+
+possibilité de déclarer tous les types
+- de variables
+- de parametres avec choix possible string | number
+- de retour de fonction
+- parametres optionnels ?
+- <> force  le type d'une variable
+
+class
+- possibilit de créer des var/fonctions private/public/protected
+
+compilation
+tsconfig.json
+ compilerOptions / target / pretty / outdir / files / excluse
+=> tsc --watch (prend en compte tsconfig.json)
+
+Interface :
+- définir la structure d'un objet que l'on attend
+ en paramètre
+- pour implémenter une classe
+
+nameSpace nomDuNameSpace {
+  export class Demo {
+     provate ...
+  }
+}
+
+namespace -> évite les conflits de noms
+
+module :
+
+    dans le fichier appelé
+    export default class Demo { ...}
+
+    dans le fichier appelant :
+    import Demo from ''./demo
+
+type ENUM possible (pour les avant apres ...)
+
+Decorator :
+on peut décorer des classes, des functions, ...
+utilité des contrôleur pour les autorisations
+
+
+
+
+
+
+
+
+

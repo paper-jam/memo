@@ -1,0 +1,183 @@
+-- =============== memo PostGresql
+- install sur PC windows
+    port 5432
+    passwd : pass
+    locale : locale par defaut
+
+    -- summary installation
+    summary.installation.directory: C:\app\PostgreSQL\13
+    summary.server.installation.directory: C:\app\PostgreSQL\13
+    summary.data.directory: C:\app\PostgreSQL\13\data
+    summary.database.port: 5432
+    summary.database.superuser: postgres
+    summary.serviceaccount: NT AUTHORITY\NetworkService
+    summary.databaseservice: postgresql-x64-13
+    summary.clt.installation.directory: C:\app\PostgreSQL\13
+    summary.pgadmin.installation.directory: C:\app\PostgreSQL\13\pgAdmin 4
+    summary.sbp.installation.directory: C:\app\PostgreSQL\13
+
+
+-- ========== Initilisation instance
+-  shmmax : segment mémoire partagé : 32 Mo par défaut sur linux (nécessite d'être augmenté)
+-  shamll : nombre maximale de page mémoire partagée
+
+Pour vérifier sous linux et pour modifier
+- sysctl -a | grep kernel.shm | sort
+- ips -m - l
+- vi sysctl.conf (kernel.shmmax et kernel shmall)
+
+Pour initialiser et contrôler
+- initdb -E UTF8 -D $PGDATA	-- lancer la commande avec  le propriétaire de $PGDATA
+- initdb --help 			-- voir toutes les options
+- pg_ctl start/stop/restart/reload/  -l fichier de log -D $PGDATA
+- postmaster.pid contient le PID
+- pg_ctl -D ... status/reload (recharge le fichier de conf)
+- ps -ef | grep postgres  -- pour vérifier que le ou les instances en cours
+
+-- ==== Securisation instance
+- postgresql.conf : port, listen_adresses : liste des @ip authorisées
+- hba_conf : règles d'authenfication des users
+
+-- ==== outil d'administration
+- psql -p port -h @machine -d nombdd -U user
+- psql utilise $PGDATA $PGHOST $PGDATABSE $PGPORT $PGUSER (.bash_profile)
+
+-- ==== transactions
+- par défaut AUTOCOMMIT
+- sinon, BEGIN initialise une transaction, acec ROLLBACK ou COMMIT à la fin
+- isolation :
+	- read uncommited (rarement utilisé): une modif non commitée est tout de suite visible
+	- read commited : une modif n'est visible qui si comitée (défaut)
+	- repeatable read (intéressant): cohérence des données pendant la totalité de la transaction
+	- serializable (rare): les sous-transactions ne voient pas les modifs entre elles
+- les verrous explicites (LOCK, FOR UPDATE) sont utilisables uniq. dans ds transactions.
+- la vue système pg_lock retourne la liste des verrous actifs
+
+-- ==== les logs d'activité
+- méthode privilégiée : stderr
+- logging_collector/log_destination/log_directory/log_filename
+- log_min_messages(enum) : niveau de trace
+- log_error_verbosity : niveau de verbosité
+- log_min_error_statement : les req. SQL gnératrices d'erreurs sont enreg.
+- que tracer : log_chekpoint, log_connections, log_durations, log_statement
+- fichier de trace   log_rotation_age, log_rotaion_size
+- pour visu des params => vue pg_settings (si sighup, un reload suffit en cas de modif)
+- pour modif : postgresql.conf
+- log_lock_waits : suivre les verrous
+
+- ==== LES FICHIERS WAL : les fichiers journaux (ACID)
+- écriture des transactions avant qu'elles ne soient exécutées
+- checkpoint : force l'écriture sur disque
+- les fichiers journaux sont stockés dans pg_xlog
+- fsync, checkpoint_segment (la mettre à 10), checkpoint_timeout
+- chekpoint_warning : mettre 5 min (si trop d'écriture)
+- wal_buffer : taille mémoire pour les fichiers journaux (1mo par défaut, c'est petit)
+- param : archive_mode, archive_command dans postgresql.conf
+- select pg_switch_xlog(); permet de switcher sur un nouveau fichier journal
+
+- ==== LE CACHE DE DONNEES
+- shared_buffers		: zone principale (select, update, insert)
+- wal_buffers			: cache pour les transactions
+- temp_buffers			: pour les tables temporaires locales
+- work_mem				: pour les opérations de tri
+- maintenance_work_mem  : ex : reconstruction d'index, vacuum (defrag, enreg. mort)
+- on peut dynamiquement certaines valeurs
+
+- recommandations pour vvcol
+  - mémoire partagée shared_buffers = 256MO de la RAM du serveur
+  - temp_buffers = 100MB
+  - work_mem = 10MB
+  - wall_buffer = 16 Mo
+  - mémoire par processus workmen = 10 Mo, ne pas dépasser 100 Mo
+  - chekpoinst segments = 10
+  - chekpoint_completion_targer = 0.9 (dilue l'écriture des shared_buffers sur disk)
+  - maintenance_work_mem = 100MB
+
+
+- ==== GESTION DE LA SECURITE
+- notion de rôle : eprésente un rôle ou un utilisateur
+=> propriétaire, droits, membre d'un autre rôle
+- les rôles groupes, sans mot de passe, sans LOGIN, modelise un grp utilisateur
+- pour voir tous les rôles dispo :  SELECT rolname FROM pg_roles;
+- droit : GRANT / REVOKE
+- bonnes pratiques :
+	- associer une BDD à un rôle
+	- associer une BDD à une application
+	- un schéma esta sscié à un rôle utilisateur
+	- les privilèges objets sont donnés à des rôles groupes
+	  et non à des rôles LOGIN
+
+- ==== IMPORT EXPORT
+- ==== SAUVEGARDE A FROID
+- ====  SAUVEGARDE A CHAUD
+
+- ==== LES BASES DE DONEES
+- 1 instance contient une BBD postgres qui est la BDD système
+- pour chaque BDD, il existe :
+	- le schéma PUBLIC,
+	- le catalogue information_schema
+	- le catalogue pg_catalog
+
+- un schéma :
+	- espace de nom logique
+	- la variable search_path defini le chemin de recherche implicite,
+	- on peut affecter un search_path à un rôle
+	- le propriétaire est l'utilisateur connecté
+
+SECURITE : SUPPRIMER l'utilisateur postgres
+
+- ==== LES SATISTIQUES
+- ==== LE VACUUM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ==== plsql
+psql -p port 					-- se connecter sur instance avec le port p
+show port ;						-- affiche le port
+show autocommit;
+show default_transaction_isolation;
+SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION...
+\q 								-- quitter psql
+select current_user;			-- utilisateur actuel
+select current_database();		-- bdd actuel
+select version()				-- version pgsql
+\?								-- aide
+\h create table 				-- aide sur commande
+psql -f /chemin/nom	Script.sql  -- exec script (depuis bash)
+\l 								-- liste des BDD
+\i /chemin/nomScript.sql		-- exec script (depuis psql)
+\o /tmp/logpgsql.log			-- active redirection de toutes les commandes à suivre
+\o 								-- met fin à la redirection
+\! ls -la /tmp					-- appel commande système
+\x 								-- affichage vertical / étendu
+\timing 						-- active / désactive le temps d'exec des requêtes
+
+
+
+
+
+
+
+
+
+
+
+

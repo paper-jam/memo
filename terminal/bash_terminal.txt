@@ -1,0 +1,30 @@
+
+-- terminal
+ctrl + l    : clear
+ctrl + d    : close current terminal
+ctrl + z    : Suspend. "fg" to resume 
+ctrl + s    : suspend output to screen 
+ctrl + q    : resume output to screen 
+
+-- modify
+alt  + t  	: Transpose les deux arguments 
+ctrl + t 	: Transpose deux charactères
+
+-- capitalisation
+alt + c/u/l/	: capitalize/upper/lower 
+
+-- delete
+ctrl/alt + w	: delete world backward/forward
+ctrl + k/u		: delete to end/beginning of line from the cursor
+
+-- history
+ctrl + r        : search in history mode
+ctrl + g        : escape from in history mode
+!! 				: previous command
+!:2				: second argument from the previous command
+!* 				: all arguments from the previous command
+alt + .         : last argument from previous command (or ESC .)
+
+
+
+

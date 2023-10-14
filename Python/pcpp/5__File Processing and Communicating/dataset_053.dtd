@@ -1,0 +1,814 @@
+<!-- edited with XML Spy v4.4 (http://www.xmlspy.com) by Ed Shaya (NASA) -->
+<!--    Astronomical Dataset Markup Language Document Type 
+	Definition DTD - syntax = XML
+	dataset DTD  - Version 0.53
+	Aug 1, 2001
+	This is the Document Type Definition for the data and
+	metadata at the Astronomical Data Center at NASA/GSFC.
+	Within each document is the metadata for a dataset
+	and all of the associated tables, descriptions, and history.
+	This document description is the result of long hard work
+	on the part of the workers at the ADC.  All questions should
+	be addressed to 
+        Ed Shaya, Chief Scientist NASA/Raytheon ITSS.
+	edward.j.shaya.1@gsfc.nasa.gov
+-->
+<!-- =============================================
+		ENUMERATED NOTATIONS
+     ============================================= -->
+<!NOTATION postscript SYSTEM "ghostview">
+<!NOTATION pdf SYSTEM "acroread">
+<!NOTATION xdf SYSTEM "XDFReader">
+<!NOTATION tex SYSTEM "texview">
+<!NOTATION latex SYSTEM "texview">
+<!NOTATION fits SYSTEM "fv">
+<!NOTATION text SYSTEM "">
+<!NOTATION tar SYSTEM "tar">
+<!NOTATION gif SYSTEM "gif">
+<!NOTATION jpeg SYSTEM "jpeg">
+<!NOTATION tgz SYSTEM "tar">
+<!NOTATION misc SYSTEM "">
+<!-- =================================================
+        ENTITIES  
+     ================================================= -->
+<!-- character Entities -->
+<!ENTITY % lat1 SYSTEM
+"http://xml.gsfc.nasa.gov/DTD/entities/XMLlat1.ent">
+<!ENTITY % symbol SYSTEM
+"http://xml.gsfc.nasa.gov/DTD/entities/XMLsymbol.ent">
+<!ENTITY % special SYSTEM
+"http://xml.gsfc.nasa.gov/DTD/entities/XMLspecial.ent">
+<!ENTITY % numbers SYSTEM
+"http://xml.gsfc.nasa.gov/DTD/entities/isonum.ent">
+<!ENTITY % amsr SYSTEM
+"http://xml.gsfc.nasa.gov/DTD/entities/isoamsr.ent">
+<!ENTITY % astroTerms SYSTEM 
+"http://xml.gsfc.nasa.gov/DTD/entities/astroTerms.ent">
+%lat1;%symbol;%special;%astroTerms;%numbers;%amsr;
+<!-- Xlink Entities -->
+<!ENTITY % locator.att "xmlns:xlink         CDATA	#FIXED 'http://www.w3.org/XML/XLink/0.9'
+    xlink:href          CDATA               #REQUIRED">
+<!ENTITY % link-semantics.att "xlink:type  (simple|extended|locator|arc) 'simple'">
+<!ENTITY % simple-link-semantics.att "xlink:type  (simple|extended|locator|arc) #FIXED 'simple'">
+<!ENTITY % extended-link-semantics.att "xlink:type  (simple|extended|locator|arc) #FIXED 'extended'">
+<!ENTITY % remote-resource-semantics.att "xlink:role          CDATA               #IMPLIED
+   xlink:title         CDATA               #IMPLIED
+   xlink:show          (new|parsed|replace) 'replace'
+   xlink:actuate       (auto|user)          'user'">
+<!ENTITY % local-resource-semantics.att "xlink:content-role  CDATA               #IMPLIED
+    xlink:content-title CDATA               #IMPLIED">
+<!-- positive or negative int  -->
+<!ENTITY % integer "CDATA">
+<!-- End Entities -->
+<!-- The root element is dataset.   Its attribute subject specifies 
+		the field of science for this dataset  -->
+<!ELEMENT dataset (title, altname*, references, references?, references?, keywords*, descriptions, astroObjects?, tables?, images?, spectra?, textFile*, footnotes?, history, identifier)>
+<!ATTLIST dataset
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/XML/XLink/0.9"
+	subject CDATA "astronomy"
+>
+<!-- dataset/title is the full title of the dataset. The partNumber is
+   the part number as in part 3 of 4 and links are made to the other
+   parts of the series using a pull down menu. -->
+<!ELEMENT title (#PCDATA | partNumber | sub | sup | footnote)*>
+<!-- PartNumber will have numeric value, plus there should be an extended link document that
+links to all of the other parts of the  multipart series.
+-->
+<!ELEMENT partNumber (#PCDATA | xlink:group)*>
+<!ELEMENT xlink:group (xlink:document*)>
+<!ATTLIST xlink:group
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/XML/XLink/0.9"
+	steps CDATA "2"
+>
+<!ELEMENT xlink:document (#PCDATA)>
+<!ATTLIST xlink:document
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/XML/XLink/0.9"
+	href CDATA #REQUIRED
+>
+<!-- Altnames are other names besides the title by which the
+	dataset may be identified.
+	ADC = Astronomy Data Center (NASA/GSFC)
+	CDS = Centre de Donnees astrophysique de Strasbourg
+-->
+<!ELEMENT altname (#PCDATA)>
+<!ATTLIST altname
+	type (CDS | ADC | brief | common | other) #REQUIRED
+>
+<!-- reference refers to the source of the data.  That source may
+     be a book, a chapter in a book, an article in a journal, or some
+     other source. But reference may refer to some other important
+     source of information about the dataset.  This may be deprecated
+     because of the related below. 
+-->
+<!ELEMENT references (reference*)>
+<!ATTLIST references
+	type (related | source | seeAlso) "source"
+>
+<!ELEMENT reference (title?, altname?, (author+ | editor+), et_al?, (holding | journal | book | inBook | privateCom | other | url | ftp | telnet)+, note*)>
+<!ATTLIST reference
+	referenceId ID #IMPLIED
+>
+<!ELEMENT author ((prefix?, firstName?, (initial* | middleName*)*, (lastName | institution? | team), suffix?), address?, email?, phone?, url?)>
+<!ELEMENT prefix (#PCDATA)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT initial (#PCDATA)>
+<!ELEMENT middleName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT suffix (#PCDATA)>
+<!ELEMENT institution (#PCDATA)>
+<!ELEMENT team (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT et_al EMPTY>
+<!-- altname gives the ADC ID, the CDS ID, the brief title, and
+	other names for this dataset.  Acronyms should go in as a brief
+	title -->
+<!ELEMENT url (#PCDATA)>
+<!ATTLIST url
+	%locator.att; 
+	%remote-resource-semantics.att; 
+	%local-resource-semantics.att; 
+	%simple-link-semantics.att; 
+>
+<!ELEMENT telnet (#PCDATA)>
+<!ATTLIST telnet
+	%locator.att; 
+	%remote-resource-semantics.att; 
+	%local-resource-semantics.att; 
+	%simple-link-semantics.att; 
+>
+<!ELEMENT ftp (#PCDATA)>
+<!ATTLIST ftp
+	%locator.att; 
+	%remote-resource-semantics.att; 
+	%local-resource-semantics.att; 
+	%simple-link-semantics.att; 
+>
+<!ELEMENT holding (#PCDATA | altname)*>
+<!ATTLIST holding
+	role (superseded | supersedes | related | similar) #REQUIRED
+>
+<!-- journal/name is the title of the journal. journal/title
+	is the title of the article within the journal -->
+<!ELEMENT journal (name, volume?, pageno?, date, bibcode?)>
+<!ATTLIST journal
+	status (inPress | submitted | inPreparation) #IMPLIED
+>
+<!ELEMENT name (#PCDATA | footnote)*>
+<!ELEMENT volume (#PCDATA)>
+<!ELEMENT pageno (#PCDATA)>
+<!ELEMENT date (year, month?, day?, (thru, year, month?, day?)?)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT thru EMPTY>
+<!ELEMENT bibcode (#PCDATA | url)*>
+<!ELEMENT book (series?, volume?, publisher, city, date, bibcode?)>
+<!ATTLIST book
+	status (inPress | submitted | inPreparation) #IMPLIED
+>
+<!ELEMENT series (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!-- inBook/name is the title of the book. inBook/title
+	is the title of the article or chapter within the journal -->
+<!ELEMENT inBook (name, series?, volume?, editor*, et_al?, publisher, city?, pageno?, date, bibcode?)>
+<!ATTLIST inBook
+	status (inPress | submitted | inPreparation) #IMPLIED
+	type (proceedings | workshop) #IMPLIED
+>
+<!ELEMENT editor (prefix?, firstName?, (initial | middleName)*, (lastName | software | staff), suffix?, institution?)>
+<!ELEMENT privateCom (#PCDATA | date)*>
+<!ELEMENT other (name?, series?, volume?, editor*, et_al?, publisher?, city?, pageno?, date, bibcode?, url?)>
+<!ATTLIST other
+	type CDATA #IMPLIED
+>
+<!ELEMENT footnote (#PCDATA | author | para)*>
+<!ATTLIST footnote
+	type (nomenclature) #IMPLIED
+	xml:space (default | preserve) #IMPLIED
+	footnoteId ID #IMPLIED
+	footnoteIdRef IDREF #IMPLIED
+	referenceIdRef IDREF #IMPLIED
+>
+<!-- keywords is an xlink:group that several keyword.
+	list gives the parentListURL gives the URL for the
+	list of all keywords from which the keywords were chosen.
+	Since there are several parentLists there can be more than
+	one set of keywords.  That is, keywords groups together those
+	keyword* that are from the same parentList.
+   -->
+<!ELEMENT keywords (keyword*)>
+<!ATTLIST keywords
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/XML/XLink/0.9"
+	xlink:type (group) #FIXED "group"
+	xml:base CDATA #IMPLIED
+	parentListURL CDATA #IMPLIED
+	xlink:steps CDATA "2"
+>
+<!-- Each keyword is a link to a document that links to other
+        datasets that use the same keyword. Since it is inside of an
+        xlink:group it is an xlink:document.
+    -->
+<!ELEMENT keyword (#PCDATA)>
+<!ATTLIST keyword
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/XML/XLink/0.9"
+	xlink:type (document) #FIXED "document"
+	xlink:href CDATA #REQUIRED
+>
+<!-- 
+	DESCRIPTION is information helpful in selection decisions for  
+	this particular dataset.  It can contain an ABSTRACT
+	which is generally the abstract of the article if the tables originate
+	from a journal article.  It also can contain DETAILS which has  more
+	specific information useful to anyone making use of the data.
+    -->
+<!ELEMENT descriptions (((abstract, description?) | description), details?)>
+<!ATTLIST descriptions
+	xml:lang NMTOKEN "en"
+>
+<!ELEMENT description (#PCDATA | heading | para)*>
+<!ELEMENT heading (#PCDATA)>
+<!-- para is a paragraph and this may have all sorts
+	 of  tagged information. To preserve spacing as typed
+	 use the attribute xml:space="preserve". 
+     -->
+<!ELEMENT para (#PCDATA | address | institution | observatory | telescope | instrument | equinox | epoch | reference | database | fileName | hardware | software | project | url | footnote | sub | sup)*>
+<!ATTLIST para
+	xml:space (default | preserve) #IMPLIED
+>
+<!ELEMENT address (#PCDATA | street | postOfficeBox | postcode | city | state | country)*>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT postOfficeBox (#PCDATA)>
+<!ELEMENT postcode (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT equinox (#PCDATA)>
+<!ELEMENT epoch (#PCDATA)>
+<!ELEMENT observatory (#PCDATA | url)*>
+<!ATTLIST observatory
+	base (ground | air | space) "ground"
+>
+<!ELEMENT telescope (#PCDATA | url)*>
+<!ELEMENT project (#PCDATA | url)*>
+<!ELEMENT instrument (#PCDATA | url)*>
+<!ELEMENT database (#PCDATA | url)*>
+<!ELEMENT fileName (#PCDATA | url)*>
+<!ELEMENT hardware (#PCDATA | url)*>
+<!ELEMENT software (#PCDATA | url)*>
+<!ATTLIST software
+	version CDATA #IMPLIED
+>
+<!ELEMENT abstract (para*)>
+<!ELEMENT details ((heading | para)*, astroObject*)>
+<!-- astroObjects provides for a list of astronomical objects that
+	the tables deal with.  This is optional and is probably only useful
+	if the number of astroObjects is small.  
+    -->
+<!ELEMENT sub (#PCDATA)>
+<!ELEMENT sup (#PCDATA)>
+<!ELEMENT astroObjects (astroObject+)>
+<!ELEMENT astroObject ((name+, position?) | position)>
+<!ATTLIST astroObject
+	footnoteIdRef IDREF #IMPLIED
+>
+<!ELEMENT position (coordinates?, (ra | gl | sgl | lon)?, (dec? | gb | sgb | lat)?)>
+<!ATTLIST position
+	footnoteIdRef IDREF #IMPLIED
+>
+<!ELEMENT ra (#PCDATA)>
+<!ELEMENT gl (#PCDATA)>
+<!ELEMENT sgl (#PCDATA)>
+<!ELEMENT lon (#PCDATA)>
+<!ELEMENT dec (#PCDATA)>
+<!ELEMENT gb (#PCDATA)>
+<!ELEMENT sgb (#PCDATA)>
+<!ELEMENT lat (#PCDATA)>
+<!ELEMENT tables ((XDF | fitsFile | textFile)+)>
+<!ELEMENT images ((XDF | fitsFile | graphicsFile)+)>
+<!ELEMENT spectra ((XDF | fitsFile | graphicsFile)+)>
+<!--  XDF.dtd - eXtensible Data Format - version 0.17
+	Date: July 17, 2000
+	XML lanaguage Document Type Definition (DTD).
+
+	An XDF document contains arrays and data structures.  It  is
+	designed to be both an interchange format for scientific data 
+	and to be of archival quality.
+	Multidimensional tables and scalar or vector fields are represented
+	in a consistent way and become thoroughly self describing.
+        Axial information is well described so that the space in which 
+	each part of the data structure resides is fully described.  
+	This means that XDF provides a consistent way to hold spectra 
+	with their wavelength scales, images with coordinate axes, 
+	vector fields with unitDirection, data cubes in complicated 
+	spaces, tables with column headers, and series of tables
+	with each table having a unique name. 
+
+	Recent changes:
+-->
+<!ENTITY newLine "&#10;">
+<!ENTITY carriageReturn "&#13;">
+<!ENTITY space "&#32;">
+<!ELEMENT XDF ((structure | parameter | parameterGroup | array | note)+)>
+<!ATTLIST XDF
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+>
+<!ELEMENT structure ((structure | parameter | parameterGroup | array | note)+)>
+<!ATTLIST structure
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+>
+<!ELEMENT parameter ((units, (value | valueList | valueGroup)+)?, note*)>
+<!ATTLIST parameter
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	paramId ID #IMPLIED
+	paramIdRef IDREF #IMPLIED
+	datatype (integer | float | exponential | string) #IMPLIED
+>
+<!--    The unit strings should be written out without abbreviations to
+	avoid ambiguity, unless system SI units 
+	(http://physics.nist.gov/cuu/Units/index.html) are used.  
+	When non SI are
+	used, the singular form should be chosen.  units="unitless" means
+	unitless, <units><unit></unit></units> means undefined or unknown. 
+	Units are multiplied together (divide by using power="-1").
+	Units can begin with a constant multiplier in
+	F format or in E (exponential) format. 
+	  10^12 kg*m/s^2  is expressed as,
+	<units factor="1E12" > 
+		<unit>kg</unit><unit>m</unit>
+		<unit power="-2">s</unit>
+	</units>
+-->
+<!ELEMENT units (unitless | unit+)>
+<!ATTLIST units
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	factor CDATA #IMPLIED
+	logarithm (natural | base10) #IMPLIED
+>
+<!ELEMENT unit (#PCDATA)>
+<!ATTLIST unit
+	power NMTOKEN #IMPLIED
+	description CDATA #IMPLIED
+>
+<!ELEMENT unitless EMPTY>
+<!--    For the 'value' of the parameter, the attribute special is used
+	to set the data to infinity, negative infinity, noData.  
+        A noData implies that the value is unknown. 
+	When special is used the value element should be empty.
+	The inequality is used to indicate that the parameter is not
+	necessarily equal to the value, but is limited in some way by 
+	this value.  The datatype of the value is set by the attribute, 
+	therefore, when an inequality is used with datatype integer the 
+	parameter is set to all integers satisfying the constraint.
+	A new value for a parameter overrides the previous one
+	A parameter can be constrained to a finite range:
+		<parameter name="x"><value inequality="greaterThan">2</value>
+		<value inequality="lessThan">12</value></parameter>
+
+	In this schema, <anyelement anyelementIDRef="xx" /> means to
+	copy the content of the referenced element to this point.
+-->
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value
+	valueId ID #IMPLIED
+	valueRef IDREF #IMPLIED
+	special (infinite | infiniteNegative | noData) #IMPLIED
+	inequality (lessThan | lessThanOrEqual | greaterThan | greaterThanOrEqual) #IMPLIED
+	upperErrorValue NMTOKEN #IMPLIED
+	lowerErrorValue NMTOKEN #IMPLIED
+>
+<!--
+	One can fill valueList with value elements or a 
+	delimited set of values,  
+	repeatable="yes" would mean that the delimiter can repeat several
+	times in a row and still represent a single demarcation.
+-->
+<!ELEMENT valueList (#PCDATA)>
+<!ATTLIST valueList
+	size NMTOKEN #REQUIRED
+	delimiter CDATA "&space;"
+	repeatable (yes | no) "no"
+	start NMTOKEN "0"
+	step NMTOKEN "1"
+	valueListId ID #IMPLIED
+	valueListIdRef IDREF #IMPLIED
+	infiniteValue CDATA #IMPLIED
+	infiniteNegativeValue CDATA #IMPLIED
+	noDataValue CDATA #IMPLIED
+>
+<!ELEMENT parameterGroup ((parameter | parameterGroup)+)>
+<!ATTLIST parameterGroup
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+>
+<!--  There are several ways to fill the valueList array:
+	1) delimited valueList
+	<valueList size="3">1.3 2.3 3.7</valueList>
+	<valueList size="3" delimiter="|">M31|NGC1316|Milky Way</valueList>
+
+
+	 2) Use built-in facilities
+		<valueList size="601" start="0" step="2" />
+
+	 Hopefully, in the future we will support scripts as well.
+         3) Use a programming script:
+     <valueList size="601">
+          <script type="ECMA"><![CDATA[
+     		for (i=0;i<=1200;i+=2)
+     		{document.write(i + " ");}]]>
+          </script>
+     </valueList>
+	[Note: If using Perl XML::DOM::Parser need KeepCDATA=1]
+	-->
+<!-- 	An array is a set of mixed native datatype data (strings
+	or numbers) that are to be read into an N-dimensioned variable.  
+	It is embedded in a coordinate space and therefore will have 
+	axis information.
+	Only one fieldAxis is permitted otherwise one could have conflicting 
+	data units.
+        array/@appendTo will extend the axis referred to with the current
+        array.  This makes it possible to assemble tiles of data that piece
+        together into a very large array.  It is necessary to use axis/@align
+        on each axis of the current array to properly assemble it.
+
+-->
+<!ELEMENT array ((parameter | parameterGroup)*, axis*, (fieldAxis | (units, dataFormat))?, axis*, read, data, notes?)>
+<!ATTLIST array
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	arrayId ID #IMPLIED
+	appendTo IDREF #IMPLIED
+	lessThanValue NMTOKEN #IMPLIED
+	lessThanOrEqualValue NMTOKEN #IMPLIED
+	greaterThanValue NMTOKEN #IMPLIED
+	greaterThanOrEqualValue NMTOKEN #IMPLIED
+	infiniteValue CDATA #IMPLIED
+	infiniteNegativeValue CDATA #IMPLIED
+	noDataValue CDATA #IMPLIED
+	notANumberValue CDATA #IMPLIED
+	underflowValue CDATA #IMPLIED
+	overflowValue CDATA #IMPLIED
+	disabled CDATA #IMPLIED
+>
+<!--    Each dimension of an N-dimensional structure is introduced by
+	an axis element.  The order is not important because the read element
+	describes the layout of the data.
+ 	axis/valueList is a list of numbers or strings (space delimited with
+	quotes where necessary) that describes one dimension of the array,
+	as in, the wavelength scale of a spectrum, or distance along
+	the width of an image.
+	In curvilinear coordinates the axis can merely 
+	reflect the index number in the array.  A
+	more detailed description of the space coordinates can be accomplished
+	by adding another dimension to a fieldAxis. Two dimensional data 
+	would need two fieldAxis/field/@class="coordinate" maps.  
+        axis/@align should refer to an axisId to indicate that these two axes 
+        runs essentially along the same direction.  It is required
+        to accomplish an array/@apppendTo.
+
+-->
+<!ELEMENT axis (((axisUnits, (value | valueList | valueGroup)+) | unitDirection)*)>
+<!ATTLIST axis
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	axisId ID #IMPLIED
+	axisIdRef IDREF #IMPLIED
+	align IDREF #IMPLIED
+	axisDatatype (integer | float | exponential | string) #IMPLIED
+>
+<!ELEMENT axisUnits (unitless | unit+)>
+<!-- A vector field is represented by an additional axis with components or
+	unitDirection elements.  This could be "x-hat",
+	"y-hat", and "z-hat". When the direction is along one of the
+	other axes, the axisIdRef should refer to that axis.
+	unitDirections can also be used to represent complex number with the 
+	attribute imaginary set to "yes" in the imaginary unitDirection 
+-->
+<!ELEMENT unitDirection EMPTY>
+<!ATTLIST unitDirection
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	complex (real | imaginary) #IMPLIED
+	axisIdRef IDREF #IMPLIED
+>
+<!-- a table or a set of tables can be formatted in XDF. In the same
+	way that axis describes the value for each column in an image,  
+	fieldAxis/field elements are used to describe each column in the 
+	table.
+	
+	Another use for fieldAxis is to hold several images with 
+	different data units. 
+
+	A special field is field/@class="spatial" which is a pixel 
+	mapping of a coordinate for all of the nonspatial slices in
+	the array.  Generally, one spatial map for 
+	each coordinate. Each map is of the same size as 
+	the initial data.
+-->
+<!ELEMENT fieldAxis ((fieldGroup | field)*)>
+<!ATTLIST fieldAxis
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	axisId ID #IMPLIED
+	axisIdRef IDREF #IMPLIED
+>
+<!ELEMENT field (min?, min?, max?, max?, coordinates?, (units, dataFormat)?, relation?, note*)>
+<!ATTLIST field
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	fieldId ID #IMPLIED
+	fieldIdRef IDREF #IMPLIED
+	class (ID | memberId | NumberOf | RA | RAh | RAm | RAs | RAdeg | RAhms | RAbhms | RArad | DE | DEd | DEm | RAhm | DEdm | DEs | DEdeg | DEdms | DEbdms | DErad | PosErr | dRA | dDE | oRA | oDE | ELON | ELAT | GLAT | GLON | SGLON | SGLAT | SGX | SGY | SGZ | Epoch | plx | pmRA | pmDE | pmX | Seq | Name | Diam | MajDiam | MinDiam | Axis | PA | Rad | HRV | RVel | Sep | SpType | MType | mag | Mag | SpPosIndex | SpNegIndex | BibCode | Text | DoF | other | reference | UNKNOWN) #IMPLIED
+	lessThanValue NMTOKEN #IMPLIED
+	lessThanOrEqualValue NMTOKEN #IMPLIED
+	greaterThanValue NMTOKEN #IMPLIED
+	greaterThanOrEqualValue NMTOKEN #IMPLIED
+	infiniteValue CDATA #IMPLIED
+	infiniteNegativeValue CDATA #IMPLIED
+	noDataValue CDATA #IMPLIED
+	notANumberValue CDATA #IMPLIED
+	underflowValue CDATA #IMPLIED
+	overflowValue CDATA #IMPLIED
+	disabled CDATA #IMPLIED
+>
+<!-- Explanation of class tokens =============================
+ID   Primary Identification. 
+memberId  Component or member object name suffix.
+NumberOf Number of members or sub-objects (multiplicity).
+RAh  Part of the right ascension expressed in hours  [0,24[  
+RAm  Part of the right ascension expressed in minutes  [0,60[ 
+RAs  Part of the right ascension expressed in seconds  [0,60[ 
+RAdeg  Right ascension expressed in decimal degrees 
+RAhms could be envisaged for a right ascension expressed in 
+       sexagesimal with no embedded blanks and leading zeroes 
+RAbhms for sexagesimal values with embedded blanks.
+RArad  Right ascension expressed in radians  [0,2{pi}[ 
+DE-  Sign of declination  [+-]  
+DEd  Part of the declination expressed in degrees [0,90] 
+DEm  Part of the declination expressed in arc minutes [0,60[ 
+DEs  Part of the declination expressed in arc seconds [0,60[ 
+DEdeg  Declination expressed in decimal degrees 
+DEdms  Declination expressed in sexagesimal with no embedded blanks
+	and leading zeroes.
+DEbdms Declination expressed in sexagesimal values with embedded blanks.
+DErad  Declination expressed in radians [-{pi}/2,+{pi}/2].
+PosErr  Position mean error  >=0.
+dRA  dDE  Difference in Right Ascension or Declination.
+oRA  oDE  Offset from a reference position in R.A. or Dec.    
+ELON  ecliptic longitude  [0,360[.
+ELAT  ecliptic latitude  [-90,+90].  
+GLON  galactic longitude  [0,360[.
+GLAT  galactic latitude  [-90,+90.
+Epoch  Epoch.
+plx  Parallax.
+pmRA  Proper motion in Right Ascension.
+pmDE  Proper motion in Declination.
+pmX  Proper motion along X direction.
+Seq  a Sequential number used e.g. to number the objects.
+Name  the main name of an object or feature.
+Diam  Diameter >=0.
+MajDiam Major Axis Diameter >=0.
+MinDiam Minor Axis Diameter >=0.
+Axis  Half Diameter >=0.
+PA  Position Angle, normally North to East  [0,360[.
+Rad  Radius  >=0.
+HRV  Heliocentric Radial velocity.
+RVel  Radial velocity.
+Sep  Separation (anglular or linear)  >=0.
+SpType  Spectral type.
+MType  Morphological (Galaxy) type.
+mag  Magnitude (apparent) in some filter.
+Mag  Absolute Magnitude in some filter.
+SpPosIndex  Spectral index ({alpha} in relation S({nu}) = {nu}{alpha}).
+SpNegIndex  Spectral index ({alpha} in relation S({nu}) = {nu}-{alpha}).
+BibCode  The 19-digit bibcode.
+Text  Free-format text like list of authors, titles... 
+DoF   Degrees of Freedom
+-->
+<!-- These min and max, and coordinate are not part of the basic XDF
+-->
+<!-- The minimum value of the field can be recorded here.  @type="legal"
+means allowable, while @type="actual" means the value actually exists in
+the data for this field.  @inclusive="no" would mean that one does not
+allow this exact value but anything up to it is allowed.  As in 60 in
+a minutes column may never be permitted, but 59.999 is allowed.
+-->
+<!ELEMENT min (#PCDATA)>
+<!ATTLIST min
+	type (actual | legal) "legal"
+	inclusive (yes | no) "yes"
+>
+<!ELEMENT max (#PCDATA)>
+<!ATTLIST max
+	type (actual | legal) "legal"
+	inclusive (yes | no) "yes"
+>
+<!ELEMENT coordinates EMPTY>
+<!ATTLIST coordinates
+	system (equatorial | ecliptic | galacticI | galacticII | supergalactic) #IMPLIED
+	reference (FK3 | FK3R | FK4 | FK5 | ICRS) #IMPLIED
+	equinox NMTOKEN #IMPLIED
+	epoch NMTOKEN #IMPLIED
+>
+<!-- Now back to standard XDF
+-->
+<!-- 	Relationships between fields can be expressed with 
+	the field/relation element.  Measurements and their errors could 
+	be linked in this way. 
+-->
+<!ELEMENT relation EMPTY>
+<!ATTLIST relation
+	description CDATA #IMPLIED
+	fieldIdRefs IDREFS #REQUIRED
+	role (precision | positiveErrors | negativeErrors | errors | sensitivity | weights | multiplicity | quality | uncertainty | references | noteMarks) #REQUIRED
+>
+<!--  Each array can contain notes to individual datum.
+-->
+<!ELEMENT notes (locationOrder?, note+)>
+<!ELEMENT locationOrder (index+)>
+<!ELEMENT index EMPTY>
+<!ATTLIST index
+	axisIdRef IDREF #REQUIRED
+>
+<!ELEMENT note (#PCDATA)>
+<!ATTLIST note
+	mark CDATA #IMPLIED
+	noteId ID #IMPLIED
+	noteIdRef IDREF #IMPLIED
+	referenceIdRef IDREF #IMPLIED
+	location CDATA #IMPLIED
+	href CDATA #IMPLIED
+>
+<!-- 
+There are times when two or more of elements need to be logically
+connected into a higher level object. 
+This can be accomplished with the fieldGroup element.
+For instance, two fields, say "longitude" and  "latitude"  may be
+grouped together with name="position".	
+-->
+<!ELEMENT fieldGroup (coordinates?, (field | fieldGroup)+)>
+<!ATTLIST fieldGroup
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+	class (ID | RA | RAh | RAm | RAs | RAdeg | RAhms | RAbhms | RArad | DE | DEd | DEm | RAhm | DEdm | DEs | DEdeg | DEdms | DEbdms | DErad | PosErr | dRA | dDE | oRA | oDE | ELON | ELAT | GLAT | GLON | SGLON | SGLAT | SGX | SGY | SGZ | Epoch | plx | pmRA | pmDE | pmX | Seq | Name | Diam | MajDiam | MinDiam | Axis | PA | Rad | HRV | RVel | Sep | SpType | MType | mag | Mag | SpPosIndex | SpNegIndex | BibCode | Text | DoF | other | reference | UNKNOWN) #IMPLIED
+>
+<!ELEMENT valueGroup ((value | valueList | valueGroup)+)>
+<!ATTLIST valueGroup
+	name CDATA #IMPLIED
+	description CDATA #IMPLIED
+>
+<!-- dataFormat will have a series of text or binary format elements
+	one for each element until the end of a record (at the terminator).
+	Or, if there are no terminators, the set of formats are 
+	repeated until the end of the data. 
+-->
+<!ELEMENT dataFormat (float | integer | string | binaryInteger | binaryFloat)>
+<!ELEMENT read (for | tagToAxis+)>
+<!ATTLIST read
+	encoding (ANSI | ISO-8859-1 | UTF-8 | UTF-16) "ISO-8859-1"
+	endian (BigEndian | LittleEndian) #IMPLIED
+	readId ID #IMPLIED
+	readIdRef IDREF #IMPLIED
+>
+<!--    read/for elements are instructions for reading in the data, 
+	they refer to axis elements. The order 
+	for filling up n-dimensional variables is indicated by the nesing
+	with the most nested being the most rapidly moving index.  
+	The format information and the data appear inside the most 
+	nested read element.  
+-->
+<!ELEMENT for (for | (readCell | skipChars | repeat)+ | textDelimiter)>
+<!ATTLIST for
+	axisIdRef IDREF #REQUIRED
+>
+<!ELEMENT readCell EMPTY>
+<!ELEMENT repeat ((repeat | readCell | skipChars)+)>
+<!ATTLIST repeat
+	count NMTOKEN #REQUIRED
+>
+<!--
+	A skipChars should be added at the end of format statements
+	to skip over the new-Line character.  Two if CR-NL is used.
+	The skipChars/@output should be assigned to the newLine character
+	when you want the output to maintain line breaks.
+-->
+<!ELEMENT skipChars EMPTY>
+<!ATTLIST skipChars
+	count NMTOKEN "1"
+	output CDATA "&space;"
+>
+<!ELEMENT float EMPTY>
+<!ATTLIST float
+	width NMTOKEN #REQUIRED
+	precision NMTOKEN #REQUIRED
+	exponent NMTOKEN #IMPLIED
+>
+<!ELEMENT integer EMPTY>
+<!ATTLIST integer
+	type (decimal | octal | hexadecimal) "decimal"
+	width NMTOKEN #REQUIRED
+>
+<!ELEMENT string EMPTY>
+<!ATTLIST string
+	length NMTOKEN #REQUIRED
+>
+<!ELEMENT binaryInteger EMPTY>
+<!ATTLIST binaryInteger
+	signed (yes | no) "yes"
+	bits NMTOKEN #REQUIRED
+>
+<!-- floats will need to conform to the IEEE-754 standard.  
+	However, only real*4 and real*8 are universally accepted (real*10 and
+	real*16 are common but not everywhere).
+        1 bit is used for the sign and 8(11) bits for exponent.  
+	1.mantissa * 2^(exponent-bias) where the bias is 127(1023).
+-->
+<!ELEMENT binaryFloat EMPTY>
+<!ATTLIST binaryFloat
+	bits (32 | 64) #REQUIRED
+>
+<!ELEMENT textDelimiter EMPTY>
+<!ATTLIST textDelimiter
+	delimiter CDATA "&space;"
+	repeatable (yes | no) "yes"
+	recordTerminator CDATA "&newLine;"
+>
+<!-- repeatable attribute (above) means that one or more of the delimiter 
+     may occur as a single delimiter.  Here, especially, one must use
+     a noData-value to indicate null. -->
+<!--  If the data is tagged, use tagToAxis to associate the tag with 
+the particular axis.  For now, one is restricted to use d0...d7 for tagnames.
+-->
+<!ELEMENT tagToAxis EMPTY>
+<!ATTLIST tagToAxis
+	tag (d0 | d1 | d2 | d3 | d4 | d5 | d6 | d7) #REQUIRED
+	axisIdRef IDREF #REQUIRED
+>
+<!ELEMENT d0 (#PCDATA | d1)*>
+<!ELEMENT d1 (#PCDATA | d2)*>
+<!ELEMENT d2 (#PCDATA | d3)*>
+<!ELEMENT d3 (#PCDATA | d4)*>
+<!ELEMENT d4 (#PCDATA | d5)*>
+<!ELEMENT d5 (#PCDATA | d6)*>
+<!ELEMENT d6 (#PCDATA | d7)*>
+<!ELEMENT d7 (#PCDATA)>
+<!-- The Data element is a very general container for data.
+	It could be marked up with d0...dN for N+1 dimensional data.
+	It can be fixed-width format, or delimited data.  If it is not tagged data
+	it can begin with a <![CDATA[ and end with ]]>.  
+	However, a data element may contain data elements
+	within it.  For instance, an animation would be a set of frames
+	and it may be convenient to bracket each frame with a data tag.
+	These data tags are not needed to build the structure because the
+	structure is prescribed by the axis element.  Nevertheless,
+	an application can use the nested data tags to indicate exactly
+	where a problem lies in the data and aid in editing.  
+	Also, the application 
+	can use parts of the structure as soon as it hits some closed
+	data tags.  The parser can pass the images to the display applet
+	rather than waiting for the entire data set to arrive.	Of course,
+	external entities can be used, so that the data
+	may resides in one or several separate physical files. -->
+<!ELEMENT data (#PCDATA | data | d0)*>
+<!ATTLIST data
+	href ENTITY #IMPLIED
+	size CDATA #IMPLIED
+	checksum NMTOKEN #IMPLIED
+	encoding (uuencoded | base64) #IMPLIED
+	compression (zip | gzip | bzip2 | XMILL | compress) #IMPLIED
+>
+<!-- End of XDF.dtd -->
+<!ELEMENT fitsFile (name, description)>
+<!ATTLIST fitsFile
+	type CDATA #IMPLIED
+	size CDATA #IMPLIED
+	href ENTITY #REQUIRED
+>
+<!ELEMENT textFile (name, description)>
+<!ATTLIST textFile
+	type (text | postscript | pdf | tex | latex | misc) #REQUIRED
+	size CDATA #IMPLIED
+	href ENTITY #REQUIRED
+>
+<!ELEMENT graphicsFile (name, description)>
+<!ATTLIST graphicsFile
+	type (jpeg | postscript | gif | pdf | misc) #REQUIRED
+	href ENTITY #REQUIRED
+>
+<!ELEMENT footnotes (footnote+)>
+<!-- history contains information on who wrote the document, when, and
+	who helped.  It also contains an identifier which gives the
+	URL for the original version of this document -->
+<!ELEMENT history (ingest?, revisions?)>
+<!ELEMENT ingest (creator+, date, acknowledgement?, para*)>
+<!ELEMENT creator (prefix?, firstName?, initial*, middleName?, (lastName | software | staff), suffix?, institution?)>
+<!ELEMENT staff EMPTY>
+<!ELEMENT acknowledgement (#PCDATA)>
+<!-- REVISIONS are intended to take the place of .history files -->
+<!ELEMENT revisions (revision+)>
+<!ELEMENT revision (editor+, date, para+)>
+<!ELEMENT identifier (#PCDATA)>

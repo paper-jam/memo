@@ -1,0 +1,73 @@
+sous windows
+
+start nginx
+tasklist /fi "imagename eq nginx.exe"   // pour voir
+nginx -s stop       fast shutdown
+nginx -s quit       graceful shutdown
+nginx -s reload     changing configuration, starting new worker processes with a new configuration, graceful shutdown of old worker processes
+nginx -s reopen     re-opening log files
+nginx -t            test syntax ok for nginx.cong
+nginx -V
+
+
+
+-- problèmes liés à systemd
+sudo journalctl -xe
+
+-- ======== Nginx as a service with WinSW
+    - avec l'utilisation de WinSW
+    - nginx-service status
+    - nginx-service start
+    - nginx-service stop
+
+-- ========  SSL
+openssl req -sha256 -nodes -newkey rsa:2048 -keyout vvcol.key -out vvcol.csr
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
+
+openssl
+    req                 ==> x.509
+    -x509               ==> x.509 self signed
+    -nodes              ==> no passphrase
+    -days 365           ==> valide pdt 1 an
+    -newkey rsa:2048    ==> generate certificate + key .... REPRENDRE ICI
+    -keyout /etc/ssl/private/nginx-selfsigned.key
+    -out /etc/ssl/certs/nginx-selfsigned.crt
+
+-- ======== nginx.conf 
+worker_processes  -> devrait être égale au nombre de core (cat /proc/cpuinfo)
+
+
+
+-- ======= tuto nginx 
+https://www.youtube.com/watch?v=D5grhfkjjXE
+
+-- can do 
+- web servicing / reverse proxing / caching / load balancing / media streaming
+- Proxy server -> Email Service POP3 IMAP SMTP
+- HTTP video streaming  MP4 FLV HDS HLS
+
+-- 
+- modular design (httpd_ssl ...)
+- asynchronous web server
+- SSL Termination
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

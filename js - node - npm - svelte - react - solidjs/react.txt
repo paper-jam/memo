@@ -1,0 +1,80 @@
+-- ===== REACT
+- librairie JS
+- permet la manipulation du DOM directement dans le browser
+
+
+- Pour créer une appplicatio vierge
+npx create-react-app my-app
+cd my-app
+npm start
+
+
+
+
+Section 2
+	- let/const : forget about var
+	- arrow function : const multiply = number => value*2;
+	- import/export : default / named 
+	- classes : class Person extends Master (ne pas oublier super dans le constructeur)
+		- classes are used by React for component
+	- classes properties and methods
+		- ES7 -> pas besoin de constructeur
+	- Spread & Rest Operators 
+		spread ... split up array or obkets elements 
+		rest ... used to merge a list of fucntion argument into an array 
+		-- spread 
+		const N2 = [...N1,5,6,7]
+	- destructuring : extract array or objects elements  and store them into variables
+		-- const [N1,N2] = [1,2,3,4]; 
+	- Reference and Primitiv
+		- number, string, boolean are primitive type
+		- array and objects are reference type
+	- Refreshing array .map((el) => {return el*2})
+
+
+Section 3 (24-39)	- React Core & JSX / Components / data
+	- React is all about components => reusable building blocks
+	- one component = html + css + js code => declarative approach
+	- create app
+		- npx create-react-app my-app / cd my-app / npm start
+	- JSX : JavaScript Xml 
+	- 32 : with React, we build our own html elements
+	- a component in React in just a javascript function
+	- Html Element starting with lower case -> native html element
+	- Html Element starting with upper case -> react element
+	- The function must return only one html element root
+	- calling a CSS class : className and not class 
+	- Props
+	- Splitting components
+	- ne pas loublier le return (du html code)
+
+	- 40
+	const classes = 'card ' + props.className;
+  	return <div className={classes}>{props.children}</div>;
+
+  	- 42
+  	sur les anciens projets , il fallait importer react sur tous les projets
+  	import React from React;
+  	React.createElement('h2',{}, "") ...
+
+  	- 43 Organizing Componet file
+
+  	- 44 alternative 
+
+
+en cours : 49
+
+
+
+
+
+
+
+
+--------------------- Parcours
+-- Section 1 OK
+-- Section 2 OK
+
+
+
+

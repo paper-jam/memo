@@ -1,0 +1,12 @@
+sqlplus salesadm/password@localhost:1521/salespdb
+
+COLUMN SEGMENT_NAME FORMAT A10
+select segment_name, bytes, bytes_not_populated, populate_status from v$im_segments;
+
+select count(*) from sales_data;
+
+COLUMN SEGMENT_NAME FORMAT A10
+select segment_name, bytes, bytes_not_populated, populate_status from v$im_segments;
+
+
+

@@ -1,0 +1,22 @@
+sqlplus "/as sysdba"
+
+create user C##BACKUP_DBA identified by password;
+
+grant SYSBACKUP to C##BACKUP_DBA;
+
+quit;
+
+rman
+
+connect target "c##backup_dba/password@orcl as sysbackup"
+ 
+BACKUP DATABASE PLUS ARCHIVELOG;
+
+BACKUP DATABASE demo_pdb;
+
+quit;
+
+sqlplus C##BACKUP_DBA/password
+
+sqlplus C##BACKUP_DBA/password@localhost:1521/demo_pdb
+

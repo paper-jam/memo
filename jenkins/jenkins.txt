@@ -1,0 +1,52 @@
+-- ======= tuto jenkins
+-- https://www.udemy.com/course/jenkins-cicd-pour-devops/learn/
+
+
+-- alternative
+    - sur AWS : AWS CodePipeline
+    - Gitlab
+
+
+-- acces jenkins sur vps OVH
+
+http://152.228.175.133:8080/
+
+curl "www.vvcol.com/test" | grep  -q "janvier"
+
+
+à l'aide de plugin, il est possible de
+- webhooks (github -> repository -> webhook) : provoque le lancement d'un job Jenkins sur modification d'un repo git
+- construire des images docker et les uploader sur github
+
+Notification :
+    - slack
+    - badges : plugin Badge
+    - jmeter
+
+Shared library :
+    permet de factoriser l'étape de notification slack
+
+Securité
+    - notion d'utilisateur, pas de groupe
+    - notion de role avec authorisation sur les  Credentials/Job/Run/SCM
+
+
+
+-- == avis laissé sur udemy
+Des soucis de montage de la vidéo, qui amène des longueurs (ré-installation jenkins), des décalages entre les saisies clavier et la vidéo.
+
+Une manque d'aisance dans le langage et l'élocution, et une qualité de l'audio moyenne, qui rendent l'audition parfois un peu difficile.
+
+J'ai tout de même suivi le cours en entier, parce que je l'ai payé, et qu'au niveau du contenu, c'est juste correct, pour un débutant sur Jenkins.
+
+Je me rends compte que le badge "meilleur vente" sur Udemy n'est pas gage d'une bonne vidéo.
+
+Je soupçonne aussi, mais c'est mon avis personnel, que certains avis positifs avec 5 étoiles sont des fakes.
+
+
+
+
+
+
+
+

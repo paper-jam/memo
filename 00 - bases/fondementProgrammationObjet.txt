@@ -1,0 +1,34 @@
+
+-- === Découvrir les principes généraux des patrons de conception
+
+-- classe abstraite :
+    - n'est jamais instantié
+    - sert de base aux enfants
+
+-- polymophisme
+    - ad hoc : des classes différentes comportent des fonctions avec le même nom
+    - paramétrique : deux fonctions d'une classe ont le m^me nom, mais avec des paramètres différents.
+    - d'héritage : c'est la spécialisation : redéfinir une classe daans une classe enfant
+
+- les interfaces
+    - une classe avec seulement des noms de méthodes (les signatures)
+
+- agrégation : "une classe a plusieurs étudiants",
+- composition : idem, mais le lien est plufort "un doc. a plusieurs pages"
+    -> la suppression du doc. entraîne la suppression des pages
+    -> la composition induit la notion dr propriété
+
+- design patterns
+    - creation : singleton /abstract / factory / builder Factory / Prototype
+    - structural : adaptateur bridge / composition / Facade ..
+    - behavioral : Iterator / memento/ visitor / Observer
+
+- Memento (ex do/redo pour les applis)
+        - un gardien /
+        - un créateur : état d'origine / souvenir
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+sqlplus demo_pdb_admin/password@localhost:1521/demo_pdb
+
+
+delete from TEST_TABLE_PART;
+commit;
+select count(*) from TEST_TABLE_PART;
+
+quit;
+
+rman target=/
+
+connect target "sys/oracle@demo_pdb as SYSDBA"
+
+SELECT DBMS_FLASHBACK.get_system_change_number FROM dual;
+
+RECOVER TABLE 'DEMO_PDB_ADMIN'.'TEST_TABLE_PART' OF PLUGGABLE DATABASE demo_pdb
+UNTIL SCN xxxxx
+AUXILIARY DESTINATION '/backups'  
+REMAP TABLE 'DEMO_PDB_ADMIN'.'TEST_TABLE_PART':'TEST_TABLE_PART_PREV'
+
+quit;
+
+sqlplus demo_pdb_admin/password@localhost:1521/demo_pdb
+
+
+select count(*) from TEST_TABLE_PART_PREV;

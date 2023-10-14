@@ -1,0 +1,111 @@
+
+-- requirements for Oracle database 18
+https://docs.oracle.com/en/database/oracle/oracle-database/18/ladbi/operating-system-checklist-for-oracle-database-installation-on-linux.html#GUID-E5C0A90E-7750-45D9-A8BC-C7319ED934F0
+
+Oracle Linux 7.5 with the Unbreakable Enterprise Kernel 5:
+4.14.35-1818.5.3.el7uek.x86_64 or later
+
+-- repositories
+http://yum.oracle.com/repo/OracleLinux/OL7/UEKR5/x86_64
+
+-- divers
+yum update
+yum install kernel-uek-devel-$(uname -r)
+
+-- configuration réseau
+-- https://oracle-base.com/articles/linux/linux-network-configuration
+ifconfig -a
+ip address show
+ifup enp0s3
+ifdown enp0s3
+nmcli device status -- liste des devices et de leur état
+service network restart
+
+-- mount cd or DVD
+ls /dev/sr0
+mount /dev/sr0 /media/dvd
+
+-- ========YUM --- https://www.cyberciti.biz/faq/rhel-centos-fedora-linux-yum-command-howto/
+
+yum install net-tools (pour ifconfig)
+yum list update
+yum list all      -- all package available
+yum check-update  --find out whether updates exist for packages that are already installed on my system
+yum update
+yum update {package-name-1} -- update only package name
+yum list installed  -- liste des packages installés
+rpm -qa | grep httpd*   -- est ce que httpd est installé ?
+yum list available | grep nginx -- est ce que nginx est disponible pour l'installation
+
+-- Yum recherce
+yum list {package-name}
+yum list {regex}
+yum list httpd
+yum list perl*
+yum search {package-name}
+yum search nginx
+yum search nginx*
+
+-- detail info about package
+yum info {pkg-1} {pkg-2}
+yum info htop
+yum info nginx htop
+
+-- show dependencies for a package
+yum deplist {pkg}
+yum deplist htop    -- show for htop pkg
+
+-- (re)install/remove a package
+yum install {package-name-1} {package-name-2}
+yum install httpd
+yum install nginx mariadb-server php-fpm
+yum install htop
+yum reinstall {pkg}
+yum autoremove
+
+-- group of software
+yum grouplist
+yum groupinfo 'Development Tools' -- info sur un groupe
+
+-- provenance fichier / package
+yum whatprovides /etc/passwd
+
+-- clean
+yum clean all
+
+-- list repositories
+yum repolist
+yum repoinfo nginx -- info about nginx repo
+
+--
+id oracle -- infos selon identifiant utilisateur
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+export ORACLE_SID=orcl
+
+BACKUP DATABASE PLUS ARCHIVELOG;
+
+BACKUP DATABASE ROOT;
+
+BACKUP PLUGGABLE DATABASE demo_pdb, salespdb;
+
+backup database;
+
+backup pluggable database salespdb;
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+ps -eaf | grep -i pmon
+
+export ORACLE_SID=orcl
+
+sqlplus "/as sysdba"
+
+show con_name
+
+show con_id
+
+quit;
+
+sqlplus sys/oracle@localhost:1521/orcl as sysdba
+
+show con_name
+
+show con_id
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,431 @@
+<?xml version='1.0' ?>
+<!DOCTYPE root SYSTEM "http://www.cs.washington.edu/research/projects/xmltk/xmldata/data/auctions/321gone.dtd">
+<root>
+ <listing>
+     <seller_info>
+         <seller_name type="public">537_sb_3 </seller_name>
+         <seller_rating> 0</seller_rating>
+     </seller_info>
+     <payment_types>Visa, Mastercard, , , , 0, Discover, American Express
+     </payment_types>
+     <shipping_info>siteonly, Buyer Pays Shipping Costs
+     </shipping_info>
+     <buyer_protection_info>
+     </buyer_protection_info>
+     <auction_info>
+       <current_bid> $839.93</current_bid>
+       <time_left> 1 Day, 6 Hrs</time_left>
+       <high_bidder>
+        <bidder_name> </bidder_name>
+        <bidder_rating> </bidder_rating>
+    </high_bidder>
+    <num_items> 5</num_items>
+    <num_bids>  0</num_bids>
+    <started_at> $839.93</started_at>
+    <bid_increment> </bid_increment>
+    <location> Englewood , Utah, United States</location>
+    <opened> 11/25/00 7:46:16 PM</opened>
+    <closed> 11/28/00 7:46:16 PM</closed>
+    <id_num> 315914 </id_num>
+    <notes> </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>839.93
+ </highest_bid_amount>
+ <quantity>0 </quantity>
+</bid_history>
+<item_info>
+  <memory> </memory>
+  <hard_drive> </hard_drive>
+  <cpu> </cpu>
+  <brand> </brand>
+  <description>AMD Athlon 900 Mhz Processor.</description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="public"> lapro8</seller_name>
+     <seller_rating> 0</seller_rating>
+ </seller_info>
+ <payment_types>Money Order
+ </payment_types>
+ <shipping_info>International Shipping, See Shipping Description
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid> $210.00</current_bid>
+   <time_left> 4 Days, 21 Hrs</time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items> 1</num_items>
+<num_bids>  0</num_bids>
+<started_at> $210.00</started_at>
+<bid_increment> $5.00</bid_increment>
+<location>Cherkasy, Ukraine </location>
+<opened> 11/27/00 11:15:34 AM</opened>
+<closed> 12/2/00 11:15:34 AM</closed>
+<id_num> 320761</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>$210.00
+ </highest_bid_amount>
+ <quantity>0 </quantity>
+</bid_history>
+<item_info>
+  <memory> 64MB Ram(Maximum - 256 MB)</memory>
+  <hard_drive> 4 GB  Removable Hard Drive</hard_drive>
+  <cpu> Intel Pentium II 266MHZ MMX</cpu>
+  <brand> Compaq</brand>
+  <description> Compaq Armada 7400</description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="public"> aboutlaw</seller_name>
+     <seller_rating> 0</seller_rating>
+ </seller_info>
+ <payment_types>American Express, Discover, MasterCard, Visa
+ </payment_types>
+ <shipping_info>Other Shipping Service, UPS
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid>  $1,049.00 </current_bid>
+   <time_left> 5 Days, 20 Hrs</time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items> 9</num_items>
+<num_bids> 0 </num_bids>
+<started_at>$1,049.00 </started_at>
+<bid_increment> </bid_increment>
+<location> seattel, Washington, United States</location>
+<opened> 11/18/00 9:42:39 AM</opened>
+<closed> 12/3/00 9:42:39 AM</closed>
+<id_num> 299664</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>$1,049.00
+ </highest_bid_amount>
+ <quantity> 0</quantity>
+</bid_history>
+<item_info>
+  <memory> 64MB</memory>
+  <hard_drive> 20GB</hard_drive>
+  <cpu> Celeron 600MHz</cpu>
+  <brand> </brand>
+  <description> Computers, desktops, printers, software</description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="public" >1137_sb_8 </seller_name>
+     <seller_rating> 0</seller_rating>
+ </seller_info>
+ <payment_types>Visa, Mastercard, Personal Check, MOney Order, , 0, , American Express
+ </payment_types>
+ <shipping_info>Irving, Utah, United States
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid> No Bids</current_bid>
+   <time_left> 1 Day, 2 Hrs</time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items> 1</num_items>
+<num_bids>  0</num_bids>
+<started_at> $650.00</started_at>
+<bid_increment> $10.00</bid_increment>
+<location> Irving, Utah, United States</location>
+<opened> 11/25/00 3:42:50 PM</opened>
+<closed> 11/28/00 3:42:50 PM</closed>
+<id_num> 314115</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>No Bids
+ </highest_bid_amount>
+ <quantity> 0</quantity>
+</bid_history>
+<item_info>
+  <memory> 32MB RAM</memory>
+  <hard_drive> 2.1GB hard driv</hard_drive>
+  <cpu> Pentium 166</cpu>
+  <brand> </brand>
+  <description> Pentium 166, 32MB RAM, 2.1GB hard drive, cd-rom drive, Floppy drive, 12.1' TFT Color Screen, Battery and AC Adapter, 28.8K integrated modem. Fully licensed Windows 95 pre-installed for your convenience. This usedl aptop is Internet Ready. Add 16MB for $48 and 32MB more for $110. Upgrade to 56K modem for $65.
+
+
+  </description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="public"> 537_sb_3</seller_name>
+     <seller_rating> 0</seller_rating>
+ </seller_info>
+ <payment_types>Visa, Mastercard, , , , 0, Discover, American Express
+ </payment_types>
+ <shipping_info>siteonly, Buyer Pays Shipping Costs
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid> $657.52</current_bid>
+   <time_left> 1 Day, 4 Hrs</time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items> 5</num_items>
+<num_bids>  0</num_bids>
+<started_at> $657.52</started_at>
+<bid_increment> </bid_increment>
+<location> Englewood , Utah, United States</location>
+<opened> 11/25/00 5:24:20 PM</opened>
+<closed> 11/28/00 5:24:20 PM</closed>
+<id_num> 314815</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>$657.52 </highest_bid_amount>
+ <quantity>0 </quantity>
+</bid_history>
+<item_info>
+  <memory> </memory>
+  <hard_drive> </hard_drive>
+  <cpu> </cpu>
+  <brand> </brand>
+  <description>
+    We gladly accept:
+    Not quite what you are looking for? See our similar products currently up for bid.
+    Have a question about Shipping, Returns Policy, Our Company or anything else? Click Here.
+</description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="public">42_sb_691 </seller_name>
+     <seller_rating> 1</seller_rating>
+ </seller_info>
+ <payment_types>Visa, Mastercard, Personal Check, , , 0, Discover, American Express
+ </payment_types>
+ <shipping_info>International Shipping, Buyer Pays Shipping Costs
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid> $2,631.00</current_bid>
+   <time_left> 1 Day, 4 Hrs</time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items>3</num_items>
+<num_bids>0</num_bids>
+<started_at> $2,631.00</started_at>
+<bid_increment> </bid_increment>
+<location> Indianapolis, Utah, United States</location>
+<opened> 11/25/00 5:54:53 PM</opened>
+<closed> 11/28/00 5:54:53 PM</closed>
+<id_num> 315092</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>$2,631.00
+ </highest_bid_amount>
+ <quantity> 0</quantity>
+</bid_history>
+<item_info>
+  <memory> 64 MB</memory>
+  <hard_drive> 12 GB</hard_drive>
+  <cpu> 650 MHz</cpu>
+  <brand> Hewlett-Packard </brand>
+  <description> Manufacturer Hewlett-Packard</description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="public"> 42_sb_691</seller_name>
+     <seller_rating> 1</seller_rating>
+ </seller_info>
+ <payment_types>Visa, Mastercard, Personal Check, , , 0, Discover, American Express
+ </payment_types>
+ <shipping_info>International Shipping, Buyer Pays Shipping Costs
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid> $2,618.00</current_bid>
+   <time_left> 1 Day, 8 Hrs</time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items>3</num_items>
+<num_bids>0</num_bids>
+<started_at> 11/25/00 9:58:02 PM</started_at>
+<bid_increment> </bid_increment>
+<location> Indianapolis, Utah, United States</location>
+<opened> 11/25/00 9:58:02 PM</opened>
+<closed> 11/28/00 9:58:02 PM</closed>
+<id_num> 316215</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>$2,618.00
+ </highest_bid_amount>
+ <quantity>0</quantity>
+</bid_history>
+<item_info>
+  <memory> 64Mbit SDRAM, expandable to 320MB 3.3V, 60ns</memory>
+  <hard_drive> 12 GB hard disk drive</hard_drive>
+  <cpu> Mobile Intel. 700 MHz Pentium. III processor featuring Intel SpeedStep</cpu>
+  <brand> </brand>
+  <description>Display 15. 0 diagonal (1024 x 768)</description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="public">okcbuy </seller_name>
+     <seller_rating> 0</seller_rating>
+ </seller_info>
+ <payment_types>American Express, Discover, Internet Escrow, iEscrow, MasterCard, Money Order, Visa
+ </payment_types>
+ <shipping_info>Buyer Pays Shipping Costs, FedEx, UPS
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid>$1.00</current_bid>
+   <time_left>1 Day, 17 Hrs </time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items>1</num_items>
+<num_bids>0</num_bids>
+<started_at> $1.00</started_at>
+<bid_increment> $0.10</bid_increment>
+<location> Oklahoma City, Oklahoma, United States</location>
+<opened> 11/14/00 7:27:50 AM</opened>
+<closed> 11/29/00 7:27:50 AM</closed>
+<id_num> 291907</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>$1.00
+ </highest_bid_amount>
+ <quantity>0</quantity>
+</bid_history>
+<item_info>
+  <memory> 64MB 100MHz SDRAM expandable to 768MB</memory>
+  <hard_drive> 8.4GB 5400RPM Ultra ATA hard drive</hard_drive>
+  <cpu> AMD K6-2 500MHz with 3DNow!</cpu>
+  <brand> </brand>
+  <description> Processor: AMD K6-2 500MHz with 3DNow!
+  </description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="private"> bell25</seller_name>
+     <seller_rating> 0</seller_rating>
+ </seller_info>
+ <payment_types>American Express, C.O.D., Discover, Internet Escrow, iEscrow, MasterCard, Money Order, Personal Check, Visa
+ </payment_types>
+ <shipping_info>Buyer Pays Shipping Costs, FedEx, Other Shipping Service, UPS, USPS
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid> $650.00</current_bid>
+   <time_left> 3 Days, 3 Hrs</time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items>1</num_items>
+<num_bids>0</num_bids>
+<started_at> $650.00</started_at>
+<bid_increment> </bid_increment>
+<location> SulphurSprings, Texas, United States</location>
+<opened> 11/15/00 5:10:41 PM</opened>
+<closed> 11/30/00 5:10:41 PM</closed>
+<id_num> 294559</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>$650.00
+ </highest_bid_amount>
+ <quantity>0 </quantity>
+</bid_history>
+<item_info>
+  <memory> 32 mb.</memory>
+  <hard_drive> 10.2 gb.</hard_drive>
+  <cpu> 500 mhz</cpu>
+  <brand> Gateway</brand>
+  <description> A nearly new Gateway Essentials 500 mhz.
+  </description>
+</item_info>
+</listing>
+
+<listing>
+ <seller_info>
+     <seller_name type="private"> lapro8</seller_name>
+     <seller_rating> 0</seller_rating>
+ </seller_info>
+ <payment_types>Money Order
+ </payment_types>
+ <shipping_info>International Shipping, See Shipping Description
+ </shipping_info>
+ <buyer_protection_info>
+ </buyer_protection_info>
+ <auction_info>
+   <current_bid> $320.00</current_bid>
+   <time_left> 4 Days, 21 Hrs</time_left>
+   <high_bidder>
+    <bidder_name> </bidder_name>
+    <bidder_rating> </bidder_rating>
+</high_bidder>
+<num_items>1</num_items>
+<num_bids>0</num_bids>
+<started_at> $320.00</started_at>
+<bid_increment> $5.00</bid_increment>
+<location> Cherkasy, Ukraine</location>
+<opened> 11/27/00 11:18:36 AM</opened>
+<closed> 12/2/00 11:18:36 AM</closed>
+<id_num> 320764</id_num>
+<notes>  </notes>
+</auction_info>
+<bid_history>
+ <highest_bid_amount>$320.00
+ </highest_bid_amount>
+ <quantity>0</quantity>
+</bid_history>
+<item_info>
+  <memory> 64 MB of SDRAM</memory>
+  <hard_drive> 6.4 GB</hard_drive>
+  <cpu> Pentium 300 MHz processor with MMX technology </cpu>
+  <brand> VAIO</brand>
+  <description> A SuperSlim notebook computer</description>
+</item_info>
+</listing>
+</root>

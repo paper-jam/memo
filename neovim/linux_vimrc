@@ -1,0 +1,47 @@
+execute pathogen#infect()
+syntax on
+filetype plugin on
+filetype indent on
+
+" --------------------- mappings ----------------
+"  Give a shortcut key to NERD Tree
+map <F2> :NERDTreeToggle<CR>
+nnoremap <silent> <F3> :TlistToggle<CR>
+
+nmap <F4> :tabnew<CR>
+nmap <F5> :tabprevio1s<CR>
+nmap <F6> :tabnext<CR>
+
+
+" --------------------- mappings ----------------
+set mouse=a
+set history=100
+"set cursorline
+set showcmd
+set ruler
+set wildmenu
+set number
+
+set noexpandtab 
+set tabstop=4
+set shiftwidth=4
+set foldcolumn=1
+set cc=+1,+2 
+compiler ruby
+
+"set list listchars=tab:› ,trail:-,extends:>,precedes:<,eol:¬
+
+" --------- powerline
+set t_Co=256
+set laststatus=2
+"let g:Powerline_symbols = 'fancy'
+"call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+set rtp+=/home/francis/.vim/bundle/powerline/powerline/bindings/vim
+
+" --------------------- colors and font --------
+colorscheme solarized
+set background=dark
+"
+"---------------------- ruby
+autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
+autocmd FileType ruby map <F10> :w<CR>:!ruby %<CR>

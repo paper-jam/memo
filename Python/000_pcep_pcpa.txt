@@ -1,0 +1,59 @@
+-- ==== a apprendre par coeur :
+-- les priorités des opérateurs
+-- tableau caractéristiques  collections : matabilité
+
+# ------ mutable : list, dic, set
+# ------ immutable : int, float, str, tuple, boolean
+
+
+
+-- ==== site pour préparation d'entretien :
+
+- voir les liens sur cette vidéo : https://www.youtube.com/watch?v=oA2syfUZYEo
+
+- educative.io -> voir le code sur les patterns
+-
+
+- Retrouver le livre : python for interview
+
+
+
+-- ===== sites pour passer des exercices en Python
+
+- hackerrank.com
+- leetcode.com
+
+- neetcode.io/
+- www.algoexpert.io/
+- www.educative.io/path/ace-python-coding-interview
+- www.educative.io/courses/grokking-coding-interview-patterns-python
+
+Python quizz and test - 19 video
+https://www.youtube.com/watch?v=-y1i7zN6Djs&list=PLTYALJawAnSC65Xkv6NL08CUSDJ8vioTM
+
+2 -- visionnage de tous les videos téléchargées sur Youtube
+    + https://www.youtube.com/playlist?list=PL0xua4QpVONG2qkFKg3j-UE4TsJSXa6tN
+    + https://www.youtube.com/watch?v=LWE6h9NBmhk
+    + https://www.youtube.com/watch?v=iwqfR-sq9Bw
+    + tout ce qui est das la recherche youtube "python pcap"
+
+3 -- lire :
+    https://www.testpreptraining.com/tutorial/certified-entry-level-python-programmer/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

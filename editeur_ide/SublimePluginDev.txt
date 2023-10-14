@@ -1,0 +1,128 @@
+
+
+
+[P101-02]  what is a package ? ---------------------------------------------------------
+- a collection of file, ressources files that modify or add functionnality
+	- sublime-settings
+	- sublime-keymap
+	- sublime-macro
+	- sublime-build
+	- sublime-snippet
+	- sublime-completions
+
+	- sublime-color-scheme
+	- tmTheme
+	- sublime-theme
+
+	- sublime-command
+	- sublime-menu
+
+	- sublime-syntax
+	- tmLanguahe
+	- sublime-tmLanguage
+
+	- tmPreferences
+
+	- sublime-mousemap
+
+- any files needed
+	- script, documentation, ...
+	-
+
+A package can be installed :
+- as a folder
+- as a sublime package file
+
+Locations
+- C:\appli\sublime\Packages\*.package (shipped with SB, first loaded)
+- C:\Users\Francis\AppData\Roaming\Sublime Text\Installed Packages (installed packages)
+- C:\Users\Francis\AppData\Roaming\Sublime Text\Packages : last packages loaded
+
+Where to put your package
+=> create a folder with the final name, in the packages folder
+=> in the user folder, easy for testing
+
+
+[P101-03] Tools of the Trade: Harnessing the power of the console! ---------------------
+- sublime console
+
+
+[P101-04] What exactly is a Sublime Text plugin? ---------------------------------------
+- a python file stored in a particular file, at the root of a package
+- a plugin define :
+	- actions : commands
+	- reations : event handlers
+
+
+[P101-05] The plugin Lifecycle : how and when sublime loads plugins -------------------
+- loaded, unloaded, available API
+- unloaded : in case of modification or package is placed as ignored
+- plugins are running in a different process than the main program
+- a common pitfail is using a pluging when it's not yet loaded
+
+[P101-06] Getting Sublime Text Platform Information -----------------------------------
+-- following methods do not need the plugin_loaded time
+	--> sublime.version() sublime.platform() sublime.arch() sublime.channel()
+
+
+[P101-07] Sublime Text Plugin terminology explained! ----------------------------------
+- Terminology and Key classes in used in Plugins
+	-> window.new_file()
+	-> sheets (text/image/html)
+		- don't have a lot of functionnality
+		- represents tabs
+	-> views
+		- find/replace dialog is a view
+		- command palette is a view
+		- content of a tab (view.file_name)
+	-> buffer
+		- memory area for a file
+		- we can have 2 or more views for a buffer
+
+	-> settings (voir video : CQ15)
+		- settings attached to a file
+			view.settings().get("syntax")
+
+	-> point
+		- one position in the text
+
+	-> region
+		- text between 2 points
+		- r = sublime.region(0,20)
+		- r.size()) , view.substr(r)
+
+    qpqkfpkqpkfqpkf
+
+	-> secetion
+		- one selection object per view
+		- type(view.sel()) -> <class 'sublime.Selection'>
+		- a selection can be empty, from right to left or left to right
+		- view.sel()[0] -> Region(2585, 2576) is a selection from right to left
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[P101-08]
+[P101-09]
+[P101-10]
+[P101-11]
+[P101-12]
+[P101-13]
+[P101-14]
+[P101-15]
+[P101-16]
+[P101-17]
+[P101-18]
+[P101-19]
+[P101-20]
+[P101-21]

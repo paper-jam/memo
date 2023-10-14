@@ -1,0 +1,33 @@
+----- touche de raccourci
+A : arc
+B : colorier
+C : cercle
+D : décalage
+E : gommer
+F : follow me
+G : créer un groupe     ctrl+g  : exploser groupe
+H : masquer
+I : infos sur l'entité
+J : console ruby
+K : Affichage/style de face/transparence
+L : ligne
+M : move
+N : camera précédente
+O : orbite
+P : pousser-tirer
+Q : rotation
+R : rectangle
+S : scale
+T : mesure
+U : Caméra vue de dessus
+V : supprimer les guides
+W : révéler dernière
+X : révéler tout
+Y : cotation
+Z : zoom  (peu d'utilité car molette souris)
+
+ctrl + A : tout sélectionner
+ctrl + T : aucune sélection
+
+pageUp : Previous Scene
+

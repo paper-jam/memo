@@ -1,0 +1,316 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"str",
+				"string"
+			],
+			[
+				"a",
+				"ascii_letters"
+			],
+			[
+				"is",
+				"isdir"
+			],
+			[
+				"co",
+				"count"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Python_terminus.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python_terminus.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Python_terminus.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"list pac",
+				"Package Control: List Packages"
+			],
+			[
+				"prefe",
+				"Preferences: Settings"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"vpf",
+				"View Package File"
+			],
+			[
+				"vie pa",
+				"View Package File"
+			],
+			[
+				"pvf",
+				"Plugin Development: Profile Events"
+			],
+			[
+				"terminus open",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"vfp",
+				"View Package File"
+			],
+			[
+				"term",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/js - node - npm - svelte - react - solidjs"
+	],
+	"file_history":
+	[
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/js - node - npm - svelte - react - solidjs/techno_JS.sublime-project",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/test2.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/pcap_exam.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/memoPython.sublime-project",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Python/Python.sublime-build",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/test_save.sublime-project",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/12_os_sys.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/14_sys_module.py",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Python_terminus.sublime-build",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Terminus.sublime-settings",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Python/Python.sublime-syntax",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Anaconda/commands/python_build.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/03_tuples.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python_Flask/09_os_path_file_handling.py",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/Anaconda/Anaconda.sublime-settings",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Anaconda.sublime-settings"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.Terminus":
+	{
+		"height": 196.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 272.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "techno_JS.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Francis\\Google Drive\\projet\\MemoAndShortkey\\Python\\memoPython.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 428.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

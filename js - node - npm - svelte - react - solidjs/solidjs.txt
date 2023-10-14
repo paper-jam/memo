@@ -1,0 +1,33 @@
+-- ====== SOLIDJS ================
+
+
+
+-- ===== introduction 
+
+-- Entry point is the render function. It takes 2 arguments, a function wrapping our application code and an existing element in the HTML to mount to:
+render ( function, html element)
+render(() => <App />, document.getElementById('root'));
+
+--  difference between JSX and html 
+- JSX does not have void elements. This means that all elements must have a closing tag or self-close.
+- JSX must return a single Element. if needed use <> </> for multiple top elements
+- JSX doesn't support HTML Comments <!--...--> or special tags like <!DOCTYPE>.
+
+-- Signals, effects, derived signals, memos
+- const [count, setCount] = createSignal(0);
+  - const ["getter", "setter"] = createSignal("initial value");
+  -  createEffect(() => { commande, signaleObservé }
+
+- derived signals  : gain their reactivity from the signal they access
+- Memos            : We can use memos to evaluate a function and store the result until its dependencies change.  
+
+
+-- =====  control flow
+- <
+
+
+
+
+
+
+

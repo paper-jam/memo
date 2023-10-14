@@ -1,0 +1,22 @@
+=sqlplus “/as sysdba”
+
+show conn_name
+
+show parameter inmemory_size
+
+select name, value from v$sga;
+
+ALTER SYSTEM SET inmemory_size = 256m scope=spfile;
+
+shutdown immediate;
+startup;
+
+show parameter inmemory_size
+
+select name, value from v$sga;
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+
+# -- ===== doc 
+# https://learn.microsoft.com/fr-fr/powershell/scripting/windows-powershell/install/windows-powershell-system-requirements?view=powershell-7.2
+
+get-help *
+
+# -- ========== les alias
+$PSVersionTable      # version
+get-ExecutionPolicy  # niveau execution scripts
+set-ExecutionPolicy ... # https://learn.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
+Get-Hotfix | Select-Object HotFixID, InstalledOn, InstalledBy  # list des hotfix installés
+get-psdrive -psprovider filesystem # file system
+get-Localuser | ft name, Enabled,  Description, lastlogon
+get-localGroupMember Administrateurs | ft name # membre du groupe administrateurs
+
+get-clipboard
+get-process | where {$_.ProcessName -notlike }...
+get-netipConfiguration -All
+
+# === fichiers
+get-Location    # pwd 
+get-childitem   # dir
+new-item test.txt # touch
+set-content test.txt "contenu bidon"
+get-content test.txt
+gci | measure  # nombre de fichier dans le dossier 
+gci | select-string 'chaine recherchée'
+
+
+
+
+
+
+
+
+
+
+
+

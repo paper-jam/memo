@@ -1,0 +1,17 @@
+francis@buster64:/usr/sbin$ sudo systemctl disable nginx
+Synchronizing state of nginx.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable nginx
+Removed /etc/systemd/system/multi-user.target.wants/nginx.service.
+
+
+systemctl daemon-reload
+systemctl reset-failed
+
+
+-- ==== removing a service
+/etc/systemd/system/ (and sub directories)
+/usr/local/etc/systemd/system/ (and sub directories)
+~/.config/systemd/user/ (and sub directories)
+/usr/lib/systemd/ (and sub directories)
+/usr/local/lib/systemd/ (and sub directories)
+/etc/init.d/

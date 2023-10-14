@@ -1,0 +1,181 @@
+-- ========= Visual Studio Code shortcuts
+
+-- General
+ctrl shift P        F1 Show Command Palette
+ctrl P              Quick Open, Go to File…
+ctrl shift N        New window/instance
+ctrl shift W        Close window/instance
+ctrl ,              User Settings
+ctrl K ctrl S Keyboard Shortcuts
+
+-- Basic editing
+ctrl d (*)          select current world, and following
+ctrl g              Go to Line...
+
+
+ctrl x              Cut line (empty selection)
+ctrl c              Copy line (empty selection)
+ctrl v              Paste line (empty selection)
+alt  ↑ / ↓          Move line up/down
+shift alt   ↓ / ↑   Copy line up/down
+ctrl shift K        Delete line (or ctrl x )
+ctrl enter          Insert line below
+ctrl shift enter    Insert line above
+ctrl shift \        Jump to matching bracket
+
+ctrl ^		        Indent line
+
+
+
+Home / End          Go to beginning/end of line
+ctrl Home           Go to beginning of file
+ctrl End            Go to end of file
+ctrl ↑ / ↓          Scroll line up/down
+alt PgUp / PgDn     Scroll page up/down
+
+-- folding
+ctrl shift [        Fold (collapse) region
+ctrl shift ]        Unfold (uncollapse) region
+ctrl K ctrl [       Fold (collapse) all subregions
+ctrl K ctrl ]       Unfold (uncollapse) all subregions
+ctrl K ctrl 0       Fold (collapse) all regions
+ctrl K ctrl J       Unfold (uncollapse) all regions
+
+-- comment
+ctrl K ctrl C       Add line comment
+ctrl K ctrl U       Remove line comment
+ctrl /              Toggle line comment
+shift alt A         Toggle block comment
+alt Z               Toggle word wrap
+
+-- Navigation
+ctrl T              Show all Symbols
+ctrl P              Go to File...
+ctrl shift O        Go to Symbol...
+ctrl shift M        Show Problems panel
+F8                  Go to next error or warning
+shift F8            Go to previous error or warning
+ctrl shift Tab      Navigate editor group history
+alt  ← / →          Go back / forward
+ctrl M              Toggle Tab moves focus
+
+-- Search and replace
+ctrl F              Find
+ctrl H              Replace
+F3 / shift F3       Find next/previous
+alt enter           Select all occurences of Find match
+ctrl D              Add selection to next Find match
+ctrl K ctrl D       Move last selection to next Find match
+alt C / R / W       Toggle case-sensitive / regex / whole word
+
+-- Multi-cursor and selection
+alt Click           Insert cursor
+ctrl alt  ↑ / ↓     Insert cursor above / below
+ctrl U              Undo last cursor operation
+shift alt I         Insert cursor at end of each line selected
+ctrl I              Select current line
+ctrl shift L        Select all occurrences of current selection
+ctrl F2             Select all occurrences of current word
+shift alt →         Expand selection
+shift alt ←         Shrink selection
+
+shift alt  (drag mouse)         Column (box) selection
+ctrl shift alt  (arrow key)     Column (box) selection
+ctrl shift alt PgUp/PgDn        Column (box) selection page up/down
+
+-- Rich languages editing
+ctrl Space          Trigger suggestion
+ctrl shift Space    Trigger parameter hints
+shift alt F         Format document
+ctrl K ctrl F       Format selection
+F12                 Go to Definition
+alt F12             Peek Definition
+ctrl K F12          Open Definition to the side
+ctrl .              Quick Fix
+shift F12           Show References
+F2                  Rename Symbol
+ctrl K ctrl X       Trim trailing whitespace
+ctrl K M            Change file language
+
+-- Editor management
+ctrl F4, ctrl W     Close editor
+ctrl K F            Close folder
+ctrl *              Split editor
+ctrl  1 / 2 / 3     Focus into 1st, 2nd or 3rd editor group
+ctrl K ctrl  ←/→    Focus into previous/next editor group
+ctrl shift PgUp /   PgDn Move editor left/right
+ctrl K ← / →        Move active editor group
+
+-- File management
+ctrl N              New File
+ctrl O              Open File...
+ctrl S              Save
+ctrl shift S        Save As...
+ctrl K S            Save All
+ctrl F4             Close
+ctrl K ctrl W       Close All
+ctrl shift T        Reopen closed editor
+ctrl K enter        Keep preview mode editor open
+ctrl Tab            Open next
+ctrl shift Tab      Open previous
+ctrl K P            Copy path of active file
+ctrl K R            Reveal active file in Explorer
+ctrl K O            Show active file in new window/instance
+
+-- Display
+F11                 Toggle full screen
+shift alt 1         Toggle editor layout (horizontal/vertical)
+ctrl  = / -         Zoom in/out
+ctrl B              Toggle Sidebar visibility
+ctrl shift E        Show Explorer / Toggle focus
+ctrl shift F        Show Search
+ctrl shift G        Show Source Control
+ctrl shift D        Show Debug
+ctrl shift X        Show Extensions
+ctrl shift H        Replace in files
+ctrl shift J        Toggle Search details
+ctrl shift U        Show Output panel
+ctrl shift V        Open Markdown preview
+ctrl K V            Open Markdown preview to the side
+ctrl K Z            Zen Mode (Esc Esc to exit)
+
+-- Debug
+F5                  Debug
+ctrl + F5           Start with no debug
+
+F9                  Toggle breakpoint
+F5                  Start/Continue
+shift F5            Stop
+F11 / shift F11     Step into/out
+F10                 Step over
+ctrl K ctrl I       Show hover
+
+-- Integrated terminal
+ctrl ù              Show integrated terminal
+ctrl shift ù        Create new terminal
+ctrl C              Copy selection
+ctrl V              Paste into active terminal
+ctrl ↑ / ↓          Scroll up/down
+shift PgUp / PgDn   Scroll page up/down
+ctrl Home / End     Scroll to top/bottom
+
+-- replacement Expression régulière
+    alt r : active les expressions régulières
+    \t \n : tab
+    \W : tout ce qui n'est pas un caractère
+
+    ctrl alt enter      : tout remplacer
+    ctrl maj 1          : remplacer 1
+
+
+--
+
+
+-- Multiple cursor & selection
+    ctrl alt down       : multiple cursor
+    ctrl shift l        : multiple cursor for selected word
+    ctrl i              : select line
+
+-- navigate
+    ctrl shit e         : explore
+

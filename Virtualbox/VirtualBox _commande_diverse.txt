@@ -1,0 +1,15 @@
+path %PATH%;C:\Program Files\Oracle\VirtualBox
+
+VBoxManage clonehd "D:\VirtualBox VMs\Win10\Win10.vdi" "F:\VirtualPC\Win10_sav.vdi"
+VBoxManage modifyhd "D:\VirtualBox VMs\Win10\Win10.vdi" --resize 30720
+
+-- == info networks
+- BusterVierge
+- busterEquip : 192.168.99.95
+- buster dev : 192.168.99.100
+
+// attacher un support Host complet, disponible pour le guest
+VBoxManage internalcommands createrawvmdk -filename "C:\VM_VirtualBox\Buster64_EFI\PhysicalDrive0.vmdk" -rawdisk \\.\PhysicalDrive0
+
+
+

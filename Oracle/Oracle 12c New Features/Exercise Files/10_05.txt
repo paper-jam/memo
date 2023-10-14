@@ -1,0 +1,23 @@
+sqlplus demo_pdb_admin/password@localhost:1521/demo_pdb
+
+select file_name from dba_data_files;
+
+conn /as sysdba
+
+quit;
+
+rm /oradata/orcl/demo_pdb/system01.dbf
+
+sqlplus "/as sysdba"
+
+quit;
+
+rman target=/
+
+restore pluggable database demo_pdb;
+
+recover pluggable database demo_pdb;
+
+sqlplus "/as sysdba"
+
+alter demo_pdb open;

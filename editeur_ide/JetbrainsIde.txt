@@ -1,0 +1,49 @@
+------- Raccourci Pycharm
+
+-- editeur
+ctrl + suppr            supprime jusqu'à la fin de mot
+ctrl + back             supprime jusqu'au debut du mot
+
+	-- line 
+alt  + maj + bas		move line down
+alt  + maj + haut		move line up
+
+ctrl + d                duplicate line
+ctrl + maj + j          join lines
+ctrl + maj + m          déplace curseur par/crochet/acc
+clic droit              paste from clipbord
+maj + entrée            new line after
+ctrl + alt + entrée     new line before
+maj + tab
+ctrl + maj + w
+
+ctrl + maj + z          redo
+ctrl + maj + c          copy path
+
+alt + maj + ins         column mode selection
+
+(maj) + tab              (un) indent
+
+alt + clic gauche        ajoute cursor
+ctrl + alt + l           reformat code
+
+maj + F6				rename variable
+
+-- nav pane
+esc 			editor pane
+alt + f12		terminal pane
+
+
+--
+ctrl + alt + s  settings
+ctrl + maj + n  goto File
+alt + deb       barre de navigation
+ctrl + e        recent file
+alt + ins       new file
+ctrl + tab      navguer ds les onglets
+alt + -> 		next tab
+alt + <- 		prev tab
+
+
+-- divers
+

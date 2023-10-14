@@ -1,0 +1,359 @@
+--
+
+
+---- installation de Packer
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/ start/packer.nvim
+    --> pas besoin de la ligne ci-dessus car chargement automatique depuis plugins.lua
+    emplacement des plugins : .local/share/nvim
+    emplacement des logs file : .cache/nvim
+
+----- Divers
+    echo stdpath('config')          # emplacement fichier de configuration
+    :h rtp                          # path runtime
+
+    :redir! > vim_keys.txt          # voir le mapping de toutes les touches
+    :silent verbose map
+    :redir END
+
+-- =====================  navigation
+    S-space         list buffers
+
+    S-F             Telescope Find files
+    :bd              close buffer,
+
+    ctrl + w + ←↑↓→     // to navigate between window
+    ctrl + ⇦⇨      horizontal resize
+
+    alt + ←↑↓→         next / previous tab
+    shift + q         close buffer
+
+
+-- =============================  bases
+
+    -- ============= divers
+    u       : undo
+    .       : répète dernière opération
+    ctrl r  : redo
+
+
+    -- ============= motions
+    b B     : début de mot précédent
+    w W     : début de mot suivant
+    e E     : fin de mot suivant
+
+    0       : début de ligne => 1ére col
+    $       : fin de ligne
+    ^       : début de ligne au premier caractère
+
+    gg0     : première ligne, premier caractère
+    G       : dernière ligne, dernier caratère
+    gm      : middle of the screen on same line
+
+    nG      : aller à la ligne n
+    10 ↑    : 10 lignes plus haut
+
+    4fo     : se déplace SUR la 4ème lettre 'o'
+    4Fo     : idem mais en arrière
+
+    4to     : se déplace juste avant la 4ème lettre 'o' rencontrée sur la ligne courante
+    4To     : idem mais en arrière
+
+    -- =============  insertion - remplacement - join
+    i/I     : insère à la position du curseur / en début de ligne
+    a/A     : ajoute après le curseur / à la fin de la ligne
+    o/O     : insertion ligne sous / au-dessus de la ligne courante
+
+    rua     : remplacement la lettre 'u' par la lettre 'A'
+    ctrl+r  : se positionne en mode remplacement
+
+    J       : join line
+
+
+    -- suppression / à combiner avec les motions
+    dd      : supprime ligne courante, reste en mode Normal
+    D       : supprime jusqu'à la fin de la ligne,
+    d↑      : supprime la ligne courante et la ligne du dessus
+    dv↑     : supprime jusqu'au caratère de la ligne au dessus
+    d/mot   : supprime jusqu'à la première occurence de 'mot'
+    d)      : supprime le paragraphe
+    C       : supprime jusqu'à la fin de la ligne et se positionne en mode insertion
+    c + dep : change (supprime et se place en mode insertion)
+    s       : supprime caractère et se positionne en mode insertion
+    S       : supprime la ligne et se positionne en mode insertion
+    x       : suppr caractère après curseur (reste en mode normal)
+    X       : suppr caractère précédent (=backspace)
+
+
+    -- selection
+    vi(   :  contenu entre les parenthèses exclus () *
+    va(   :  contenu entre les parenthèses inclus () *
+    *     :  tous les occurences du mot sous le curseur
+    vip   :  contenu du paragraphe
+    ?? -> parenthèse entourant la position du curseur
+            OU prochaine paire de parenthèse suivante
+
+    -- modificateur pour change, delete ou yank or select
+    a  : around parentheses, bracket...
+    i  : around parentheses, breacket...
+    iw : inner word
+    i[ i( i{ : inner tag
+    i"  i': inner quotes
+    ip : inner paragraph
+    as : a sentence
+
+    f F : déplacement jusqu'à un caractère en avant ou ARRIERE
+    t T : déplacement juste avant un caractère en avant ou ARRIERE
+    / ? : search
+
+    -- divers
+    v : visual mode
+    V : Visual Line
+    ctrl + v :  mode colonne
+    ctrl + q        mode block
+    FINIR ctrl +q ou ctrl +v ???
+
+    -- recherche
+    /texte  : recherche "text" en avant
+    ?       : recherche en arrière
+    n       : suivant
+    N       : précédent
+    <leader> h : clear highlights
+
+    -- copier-coller
+    y + dep : copie
+    yy      : copie toute la ligne
+    yiw     : copie le mot sous le curseur
+    p       : colle après
+    P       : colle avant
+
+    -- rechercher-remplacer
+    :s/foo/bar/g      : remplacement global, sur la ligne en cours
+    :%s/foo/bar/g     : remplacement global, sur toutes les lignes
+    :%s/foo/bar/gc    : remplacement global, sur toutes les lignes, avec confirmation
+    :%s/foo/bar/gci   : remplacement global, sur toutes les lignes, avec confirmation, case insensitive
+    :5,12s/foo/bar/g  : Change each 'foo' to 'bar' for all lines from line 5 to line 12 (inclusive).
+    :.,$s/foo/bar/g   : Change each 'foo' to 'bar' for all lines from the current line (.) to the last line ($) inclusive
+
+    -- ------- recording and playing macro
+    qd  start recording to register d (d can vary from )
+    ...     your complex series of commands
+    q   stop recording
+    @d  execute your macro
+    @@  execute your macro again
+
+
+
+-- =========================== PLUGINS =======================
+
+-- =========== Impatient
+LuaCacheClear
+
+-- ========= toggleterm
+alt *   : toggleterm
+
+
+
+-- ======= surround - adding - replacing - deleting
+-- Adding -> ys
+ysiw"   : add quote around the current word
+ysa")   : add parenthesis
+yst;}   : add accolade from cursor position to next ;
+ysi"th1 : add tag h1 inner ""
+
+-- special - visual mode
+S'      : add ' around selected text
+
+-- replacing
+cs'"    : replace ' with "
+cs"th1  : replace " with <h1>
+csth2   : replace current tag with tag2
+
+-- deleting
+ds"     : delete surrounding ""
+dst     : delete surrounding tag
+dsf     : delete functin call ex : function(param) -> param
+
+
+
+
+yss"         : special surround -> toute les ligne est entre ""
+dss          : supprime les balises aux extrémités
+yssth1       : tte la ligne entre h1
+
+
+
+**finir
+reprendre autre pssibilité ici :
+https://github.com/kylechui/nvim-surround/blob/main/doc/nvim-surround.txt
+
+-- ========= sneak :help sneak
+sbo  ;;     : se positionne sur la première occurrence qui commence par 'bo'. pour les suivantes -> ;
+Sbo  ;;     : idem mais à reculons
+5sMo        : mode vertical
+
+g:sneak#prompt = '>'
+
+
+local opts = { noremap = true, silent = true }
+
+
+
+-- ========== null ls
+:NullLsInfo
+
+-- ========== Telescope
+TODO : telescope.lua --> revoir le keybinding, reprendre celui de la doc (voir vidéo n° 9 à 8h52)
+-> à noter : dans une liste, si on presse ESC ou passe en NORMAL mode, et il est possible d'utiliser les flèches de direction
+-> possibilité d'installer des extensions
+
+ff      find file (ctlr+ k/j ppour monter descendre dans la liste)
+        live grep : error -> picker.lua : 480, et attrinbuer une touche de raccourci
+gr      find references
+ft
+fb      find buffers
+fp      find projets
+
+-- ============ Bufferlines
+
+
+-- ============ null-ls
+nullLsInfo
+
+
+-- ============= CMP ============= A FINIR
+tab             passe du nom de la fonction, à ses params, puis à son code
+ctrl + j/k      down or up in the popup menu
+ctrl + b/f      ??
+ctrl + space    saisie libre sans popup
+ctrl + e        exit completion
+
+-- ============= LSP =============
+:telescope keymaps
+gcc         comment
+gD          goto declaration
+gd          goto definition          -- ctrl + o to go back
+gr          goto reference & fuzzy   -- close : to close list of all references
+ds          find documents symbol
+gl          print error message
+K           info on variable
+<lead>lf    format
+<lead>lr    rename
+<lead>li    LspInfo
+<lead>lI    Mason
+ctrl n      next error
+ctrl p      previous error
+
+# flake8: noqa
+
+
+https://smarttech101.com/nvim-lsp-configure-language-servers-shortcuts-highlights/#install_necessary_plugins_for_nvim_lsp
+
+
+    keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+    keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+    keymap(bufnr, "n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+
+    keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+    keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>lsh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+
+
+
+
+    keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+    keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+    keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+    keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+    keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+    keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+    keymap(bufnr, "n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+    keymap(bufnr, "n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
+    keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
+    keymap(bufnr, "n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+    keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+    keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+
+
+
+-- =================  nvimtree =================
+    <leader> e : toggle
+    alt e      : focus on tree
+    q          : quit - close tree
+    tab        : preview
+    W          : collapse all
+    -          : set root to upper folder
+    a          : create file (create)
+    v          : open in vertical split
+    d          : delete (remove)
+    r          : rename
+    ctrl+r     : full rename
+    k          : toggle file info
+    y          : copy name          to system clipboard
+    Y          : copy path          to system clipboard
+    gy         : copy absolute path to the system clipboard
+    f          : live filter
+    F          : clear Filter
+    E          : expand all
+
+
+    -- ansi que tous les autres !!
+    { key = "<C-e>",                          action = "edit_in_place" },
+    { key = "O",                              action = "edit_no_picker" },
+    { key = "<C-t>",                          action = "tabnew" },
+    { key = "P",                              action = "parent_node" },
+    { key = "<Tab>",                          action = "preview" },
+
+    { key = "C",                              action = "toggle_git_clean" },
+    { key = "I",                              action = "toggle_git_ignored" },
+    { key = "H",                              action = "toggle_dotfiles" },
+    { key = "B",                              action = "toggle_no_buffer" },
+    { key = "U",                              action = "toggle_custom" },
+    { key = "R",                              action = "refresh" },
+    { key = "D",                              action = "trash" },
+    { key = "e",                              action = "rename_basename" },
+    { key = "x",                              action = "cut" },
+    { key = "c",                              action = "copy" },
+    { key = "p",                              action = "paste" },
+    { key = "[e",                             action = "prev_diag_item" },
+    { key = "[c",                             action = "prev_git_item" },
+    { key = "]e",                             action = "next_diag_item" },
+    { key = "]c",                             action = "next_git_item" },
+    { key = "s",                              action = "system_open" },
+    { key = "W",                              action = "collapse_all" },
+    { key = "S",                              action = "search_node" },
+    { key = ".",                              action = "run_file_command" },
+    { key = "g?",                             action = "toggle_help" },
+
+    -- a essayer !!
+    { key = "m",                              action = "toggle_mark" },
+    { key = "bmv",                            action = "bulk_move" },
+
+
+
+
+-- ============================= OBSOLETE ===================
+ 
+-- actions on tab
+    tab new <nomFic>
+    tab new
+    tab previous
+    tab move <pos>
+    ab split
+    tab close
+
+-- nav windows
+    split / vsplit      // to create a new window
+
+
+
+
+
+
+
+
+
+
+
+
+

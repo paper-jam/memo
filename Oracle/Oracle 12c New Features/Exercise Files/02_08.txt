@@ -1,0 +1,18 @@
+sqlplus salesadm/password@localhost:1521/salespdb
+
+column table_name format a30
+column inmemory_compression format a30
+select table_name, inmemory_compression from user_tables;
+
+ALTER TABLE sales_data INMEMORY MEMCOMPRESS FOR CAPACITY LOW;
+
+column table_name format a30
+column inmemory_compression format a30
+select table_name, inmemory_compression from user_tables;
+
+ALTER TABLE sales_data INMEMORY MEMCOMPRESS FOR QUERY HIGH;
+
+column table_name format a30
+column inmemory_compression format a30
+select table_name, inmemory_compression from user_tables;
+

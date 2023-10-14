@@ -1,0 +1,1280 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"My",
+				"My_Meta"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"mistral",
+				"mistral2"
+			],
+			[
+				"get",
+				"get_pressure"
+			],
+			[
+				"abs",
+				"abstractclassmethod"
+			],
+			[
+				"ex",
+				"except"
+			],
+			[
+				"en",
+				"engraving_text"
+			],
+			[
+				"W",
+				"Watch"
+			],
+			[
+				"cla",
+				"classmethod"
+			],
+			[
+				"inter",
+				"interv2"
+			],
+			[
+				"in",
+				"interv"
+			],
+			[
+				"mi",
+				"minute"
+			],
+			[
+				"Ex",
+				"except"
+			],
+			[
+				"Ty",
+				"TypeError"
+			],
+			[
+				"ma",
+				"ma_voiture"
+			],
+			[
+				"appl",
+				"apple_weight"
+			],
+			[
+				"p",
+				"poids"
+			],
+			[
+				"wor",
+				"word"
+			],
+			[
+				"for",
+				"forget_self"
+			],
+			[
+				"__",
+				"__init__"
+			],
+			[
+				"Test",
+				"TestB"
+			],
+			[
+				"Tes",
+				"TestA"
+			],
+			[
+				"Ve",
+				"Vehicle"
+			],
+			[
+				"st",
+				"stdout"
+			],
+			[
+				"is",
+				"issubclass"
+			],
+			[
+				"t",
+				"trange"
+			],
+			[
+				"pl",
+				"platform"
+			],
+			[
+				"read",
+				"readline"
+			],
+			[
+				"class",
+				"classmethod"
+			],
+			[
+				"ass",
+				"ascii_letters"
+			],
+			[
+				"as",
+				"ascii_letters"
+			],
+			[
+				"ch",
+				"child1"
+			],
+			[
+				"c",
+				"child2="
+			],
+			[
+				"s",
+				"symmetric_difference_update"
+			],
+			[
+				"per",
+				"perf_counter"
+			],
+			[
+				"context",
+				"contextlib"
+			],
+			[
+				"ge",
+				"getenv"
+			],
+			[
+				"se",
+				"\"settings\""
+			],
+			[
+				"cal",
+				"calc_cube"
+			],
+			[
+				"th",
+				"Thread"
+			],
+			[
+				"cac",
+				"calc_square"
+			],
+			[
+				"fa",
+				"factorial"
+			],
+			[
+				"pop",
+				"popitem"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"googl",
+				"googletrans"
+			],
+			[
+				"de",
+				"detect_language"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"a",
+				"ascii_letters"
+			],
+			[
+				"co",
+				"count"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\nkubectl get nodes\n\n\nkubectl get nodes\n\n\n\n\n",
+			"file": "/C/Users/Francis/Desktop/data_engineer/AWS_immersion_day/EKS/aws_eks.t.txt",
+			"file_size": 0,
+			"file_write_time": 133294730813990673,
+			"settings":
+			{
+				"buffer_size": 43,
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"paste",
+					null,
+					"AQAAAAAAAAAAAAAAEwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": "\n\n\n\n\n"
+					},
+					"BQAAABMAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAVAAAAAAAAAAAAAAAVAAAAAAAAABYAAAAAAAAAAAAAABYAAAAAAAAAFwAAAAAAAAAAAAAAFwAAAAAAAAAYAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEwAAAAAAAAATAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"paste",
+					null,
+					"AQAAABQAAAAAAAAAJwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFAAAAAAAAAAUAAAAAAAAAAAAAAAAgFlA"
+				]
+			]
+		}
+	],
+	"build_system": "Packages/User/Python Custom.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Memo",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python Custom.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python Custom.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python terminus.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Python Custom.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Python Terminus.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Python Terminus.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Python terminus.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Python terminus.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Python Custom.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python Custom.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Python Custom.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python Terminus.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Python Terminus.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Python_terminus.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python_terminus.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/User/Python_terminus.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"scn",
+				"Convert Case: snake_case"
+			],
+			[
+				"termi",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"select",
+				"Bookmarks: Select Next"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"termo",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"debug ",
+				"Debugger: Clear Console"
+			],
+			[
+				"debu",
+				"Debugger: Open"
+			],
+			[
+				"form",
+				"LSP: Format File"
+			],
+			[
+				"split ",
+				"File: Split View"
+			],
+			[
+				"send ",
+				"Preferences: SendCode Key Bindings"
+			],
+			[
+				"sendcode",
+				"Preferences: SendCode Key Bindings"
+			],
+			[
+				"term op",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"lsp",
+				"LSP: Goto Definition…"
+			],
+			[
+				"cus",
+				"UI: Customize Theme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"customi",
+				"UI: Customize Theme"
+			],
+			[
+				"vpf",
+				"View Package File"
+			],
+			[
+				"custome",
+				"UI: Customize Theme"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"custom",
+				"UI: Customize Theme"
+			],
+			[
+				"select ",
+				"UI: Select Theme"
+			],
+			[
+				"customize ",
+				"UI: Customize Theme"
+			],
+			[
+				"select colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"slect theme",
+				"UI: Select Theme"
+			],
+			[
+				"sele",
+				"UI: Select Theme"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"cust",
+				"UI: Customize Theme"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings"
+			],
+			[
+				"sndcode",
+				"Preferences: SendCode Key Bindings"
+			],
+			[
+				"key ",
+				"Preferences: Key Bindings"
+			],
+			[
+				"project op",
+				"Project Manager: Open Project"
+			],
+			[
+				"select the",
+				"UI: Select Theme"
+			],
+			[
+				"open ter",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"packe",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"vpf ",
+				"View Package File"
+			],
+			[
+				"package con",
+				"Package Control: List Packages"
+			],
+			[
+				"vpg",
+				"View Package File"
+			],
+			[
+				"python",
+				"Build With: Python Terminus"
+			],
+			[
+				"vp",
+				"View Package File"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pack lis",
+				"Package Control: List Packages"
+			],
+			[
+				"v",
+				"View Package File"
+			],
+			[
+				"key bin",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"terminus ope",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"wpf",
+				"View Package File"
+			],
+			[
+				"ter",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"buil",
+				"Build With: Python"
+			],
+			[
+				"keys",
+				"Preferences: Key Bindings"
+			],
+			[
+				"terminus li",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"control ",
+				"Package Control: Install Package"
+			],
+			[
+				"packa remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"packe ins",
+				"Package Control: Install Package"
+			],
+			[
+				"discove",
+				"Package Control: Discover Packages"
+			],
+			[
+				"or",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"ori",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"terminu",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"termin",
+				"Preferences: Terminus Key Bindings"
+			],
+			[
+				"tab new",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"tab",
+				"View: Toggle Tabs"
+			],
+			[
+				"black",
+				"python-black: Format the selected code or the code of the entire file"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pyli",
+				"Preferences: LSP-pyright Settings"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"fold",
+				"Code Folding: Fold"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"forma",
+				"python-black: Format the selected code or the code of the entire file"
+			],
+			[
+				"line",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"spli",
+				"File: Split View"
+			],
+			[
+				"ui sel",
+				"UI: Select Color Scheme"
+			],
+			[
+				"istall",
+				"Package Control: Install Package"
+			],
+			[
+				"ui se",
+				"UI: Select Theme"
+			],
+			[
+				"ui",
+				"UI: Select Theme"
+			],
+			[
+				"ui ",
+				"UI: Select Theme"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"ui select",
+				"UI: Select Color Scheme"
+			],
+			[
+				"list pac",
+				"Package Control: List Packages"
+			],
+			[
+				"set syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"ui : se",
+				"UI: Select Theme"
+			],
+			[
+				"prefe",
+				"Preferences: Settings"
+			],
+			[
+				"vie pa",
+				"View Package File"
+			],
+			[
+				"pvf",
+				"Plugin Development: Profile Events"
+			],
+			[
+				"terminus open",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"vfp",
+				"View Package File"
+			],
+			[
+				"term",
+				"Preferences: Terminus Settings"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 399.0,
+		"history":
+		[
+			"from tqdm.notebook import trange, tqdm",
+			"import time",
+			"exit()",
+			"import sendcode",
+			"terminus_send_string",
+			"view.sel()[0]",
+			"view.sel()[1]",
+			"view.sel()[0]",
+			"len(view.sel())",
+			"type(view.sel())",
+			"view.sel()",
+			"view.sel",
+			"view.sel()",
+			"import sublime",
+			"r = sublime.region(0,20)",
+			"view.sel()",
+			"view.substr(r)",
+			"r",
+			"r = sublime.Region(0,20)",
+			"r = sublime.region(0,20)",
+			"import sublime",
+			"r = sublime.region(0,20)",
+			"view.settings().get(\"syntax\")",
+			"view.settings().syntax()",
+			"view.settings().syntax",
+			"view.settings()",
+			"view.settings(\"syntax\")",
+			"type(x)",
+			"*x",
+			"**x",
+			"x[2]",
+			"x[0]",
+			"x",
+			"x = [view.settings()]",
+			"[view.settings()]",
+			"[(view.settings()]",
+			"type(view.settings())",
+			"view.settings(\"syntax\")",
+			"view.settings()",
+			"view.settings().syntax()",
+			"view.settings.syntax()",
+			"view.file_name()",
+			"window.new_file()",
+			"view.run_command('example')",
+			"a = new exampleCommand()",
+			"a = exampleCommand()",
+			"exampleCommand.run()",
+			"exampleCommand()",
+			"sys.version",
+			"print(sys.executable)",
+			"print(sys.executable())",
+			"import sys",
+			"print('test')",
+			"print(sys.executable())",
+			"print(sys.executable)",
+			"def test()",
+			"dir",
+			"send_code()",
+			"send_code",
+			"x=1",
+			"exit()",
+			"x=1",
+			"x",
+			"dir",
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/__pycache__",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/flask"
+	],
+	"file_history":
+	[
+		"/C/Users/Francis/Desktop/projetPlanning.txt",
+		"/C/Users/Francis/Desktop/data_engineer/AWS_immersion_day/Modern_apps/Modern_apps.txt",
+		"/C/Users/Francis/Desktop/DicoAnglais.txt",
+		"/C/Users/Francis/Desktop/data_engineer/DataEngineer.txt",
+		"/C/Formation/Formation/ApacheSpark/LinkedInLearning_ApacheSparkEssentialTraining/recupBat.txt",
+		"/C/Users/Francis/Downloads/35130_0200D.csv",
+		"/C/Users/Francis/Desktop/verbe_irregulier.sh",
+		"/C/Users/Francis/Google Drive/Perso/jobCVDiplome/job.txt",
+		"/C/Users/Francis/Google Drive/todo.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/4__Network Programming/cars.json",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/4__Network Programming/cars.xml",
+		"/C/Users/Francis/Google Drive/Perso/jobCVDiplome/CV/2023_01_CV_de_base/cv_Francis_JAM.txt",
+		"/C/Users/Francis/Google Drive/Pro/auto-entrepreneur/info.txt",
+		"/C/Users/Francis/Desktop/memoire.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/pcpp_chapter5_metaprogramming.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/test4.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/pcpp_chapter1_oop_foundations.py",
+		"/C/Users/Francis/Desktop/questions aux impôts.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/multidata.pckl",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/pcpp_chapter3_advanced_techniques_exceptions.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test2.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/pcpp_chapter2_oop_advanced.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/PCPP_content.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/110_string.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/pcpp/2_decorator__get__attibute.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test4.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/PCPP_content.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/PCPP_course.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/100_python_basics.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/400_lib_sys.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/135_list.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/002_pcap_content.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/001_pcep_content.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/150_tuples.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/101_variable_bool_operator.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/170_lib_zip_filter_map_yield.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/136_list_comprehension.py",
+		"/C/Users/Francis/Desktop/Certif_python/examen.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/000_pcep_pcpa.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/venv/Lib/site-packages/numpy/__init__.pyi",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/500_exceptions.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/140_dictionnaries.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/160_set.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/a_revoir_pcep.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/305_Oop_heritage.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/200_functions.py",
+		"/C/Users/Francis/Desktop/Certif_python/UdemyPcep/Version 2022_02_06.txt",
+		"/C/Users/Francis/AppData/Local/Temp/Temp1_Udemy PCEP.zip/Udemy PCEP/Practice Test 1/Q105.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/112_fstring.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/400_lib_math_float_int.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/201_scopes.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/310_os_path_file_handling.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/300_Oop_module_package.py",
+		"/C/Users/Francis/Desktop/Certif_python/passage_examen.py",
+		"/C/Users/Francis/Desktop/Certif_python/pcap_exam.py",
+		"/C/dev/python/certification/Section_04/assignment_09.py",
+		"/C/Users/Francis/Desktop/DataEngineer.txt",
+		"/C/Users/Francis/Desktop/Certif_python/progression.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Flask/memoFlask.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/Tmux_Mintty_memo.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Postgresql/postgresql_memo.txt",
+		"/C/Users/Francis/Desktop/Reinstall_SublimeText.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/SublimeKeys.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/VisualStudioCode_raccourci.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/Webstorm.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/JMS - MQ/MemoJMS-MQ.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Java/memo_SpringBoot_security.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Java/J2EE.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/400_lib_random.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/micro.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/graphql/graphql.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Flutter_dart/Flutter.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Oracle/Oracle 12c New Features/Exercise Files/07_02.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Oracle/Oracle 12c New Features/Exercise Files/sales_data.sql",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Oracle/Oracle 12c New Features/Exercise Files/03_01.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Oracle/Oracle 12c New Features/Exercise Files/08_02.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Oracle/Oracle 12c New Features/Exercise Files/02_07.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Oracle/Oracle 12c Database Administration/Oracle 12c Database Administration.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Cloud computing/AWS/AWS_memo.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Git/git.sh",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/AWS/DynamoDb.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Docker/MemoDocker.sh",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/00 - bases/fondementProgrammationObjet.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/helixEditor.txt",
+		"/C/Users/Francis/Desktop/test.py",
+		"/C/dev/python/projet1/test2.py",
+		"/C/Users/Francis/Google Drive/Perso/jobCVDiplome/Nouveau document texte.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test.txt",
+		"/C/dev/python/chatgpt/proj1/openai-quickstart-python/app.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/501_assertions.py",
+		"/C/Users/Francis/AppData/Local/Sublime Text/Package Storage/LSP-pyright/18.12.1/language-server/node_modules/pyright/dist/typeshed-fallback/stdlib/builtins.pyi",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/320_context_manager.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test7.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/220_enumerate_function.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/250_generators.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/tmp.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/210_anonymous_function.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/python_memo.sublime-project",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/000_divers.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/modules.json",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/170_lib_zip_function.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test3.py",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/lifeCycle.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/SublimePluginDev.txt",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/udemy/exercice-04_fonctions-lambdas-avec-pyside-2/enonce.py",
+		"/C/Users/Francis/Desktop/bourse.txt",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/*** unresolved ***",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/HTML/Default.sublime-keymap",
+		"/C/Users/Francis/Desktop/Sample Package File/Python/RegExp (Python).sublime-syntax",
+		"/C/Users/Francis/Desktop/Sample Package File/Python/Console Input Widget.sublime-settings",
+		"/C/Users/Francis/Desktop/Sample Package File/Python/Completion Rules.tmPreferences",
+		"/C/Users/Francis/Desktop/Sample Package File/Python/syntax_test_python.py",
+		"/C/Users/Francis/Desktop/Sample Package File/Python/Dedentation Rules.tmPreferences",
+		"/C/Users/Francis/Desktop/Sample Package File/Python/Python.sublime-build",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Projects/recent.json",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/editeur_ide/SublimeText.txt",
+		"/C/Users/Francis/Desktop/test.txt",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Python Custom.sublime-build",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/PythonREPL.sublime-build",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/terminus_repl.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/test.py",
+		"/C/Users/Francis/Google Drive/projet/MemoAndShortkey/Python/venv/Scripts/activate.bat",
+		"/C/dev/sublime/pluginDev.txt",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Python terminus.sublime-build",
+		"/C/Users/Francis/Desktop/sav_memePython.sublime-project.txt",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/python-black/python-black.sublime-commands",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/User/Terminus.sublime-settings",
+		"/C/Users/Francis/AppData/Roaming/Sublime Text/Packages/LSP-pyright/syntaxes/Python.sublime-syntax"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 129.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ought",
+			"wait",
+			"alten",
+			"code",
+			"leet",
+			"zip",
+			"ord",
+			"in",
+			"keyw",
+			"eval",
+			"keyword",
+			"int(",
+			"super",
+			"delete",
+			"readline",
+			"range",
+			"nest",
+			"is",
+			"len",
+			"input",
+			"complex",
+			"all",
+			"karg",
+			"arg",
+			"count",
+			"'",
+			"re",
+			"Path is",
+			"Scripts"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\""
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Francis/Desktop/data_engineer/AWS_immersion_day/EKS/aws_eks.t.txt",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 43,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9,
+								9
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/Users/Francis/Desktop/data_engineer/AWS_immersion_day/EKS/aws_eks.t.txt",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 49.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Debugger":
+	{
+		"height": 501.0
+	},
+	"output.Debugger Console":
+	{
+		"height": 306.0
+	},
+	"output.Debugger Terminal":
+	{
+		"height": 306.0
+	},
+	"output.LSP Log Panel":
+	{
+		"height": 157.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.Terminus":
+	{
+		"height": 270.0
+	},
+	"output.Terminus 2":
+	{
+		"height": 169.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 380.0
+	},
+	"output.diagnostics":
+	{
+		"height": 169.0
+	},
+	"output.exec":
+	{
+		"height": 375.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "python_memo.sublime-project",
+	"replace":
+	{
+		"height": 60.8
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Francis\\Google Drive\\projet\\MemoAndShortkey\\Python\\python_memo.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 495.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 562.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 339.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 3
+	}
+}

@@ -1,0 +1,21 @@
+-- ========= GRAPHQL
+
+Query or Mutation
+
+
+
+type Person {
+	name:String!
+	age: Int!
+	posts: [Post!]!
+} 
+
+
+type Post {
+	title: String!
+	autor: Person!
+}
+
+
+
+

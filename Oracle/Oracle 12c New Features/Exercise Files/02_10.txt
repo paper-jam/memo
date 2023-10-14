@@ -1,0 +1,11 @@
+alter table sales_data no inmemory;
+
+explain plan for select avg(quantity) from sales_data;
+select plan_table_output from table(dbms_xplan.display('plan_table',null,'basic'));
+
+alter table sales_data inmemory;
+
+explain plan for select avg(quantity) from sales_data;
+select plan_table_output from table(dbms_xplan.display('plan_table',null,'basic'));
+
+

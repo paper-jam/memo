@@ -1,0 +1,29 @@
+-- ====== Windows Terminal
+
+-- affichage
+f11         : full screen
+
+
+-- navigation
+
+ctrl maj n  : nouvelle fenêtre
+
+ctrl alt x      : basculer vers l'onglet x
+ctrl maj d      : dupliquer l'onglet
+ctrl tab        : onglet suivant
+ctrl maj t      : nouvel onglet
+ctrl shift w    : ferme volet ou onglet
+
+alt  maj +     : frationner le volet
+alt  →/←       : passer d'un volet à un autre
+alt maj →/←    : redimensionner le volet
+
+ctrl maj up/down  : deplacement vers le bas/haut
+
+
+ctrl numpad 0  : police initiale
+ctrl maj a     : selectionne tout
+ctrl maj space : ouvrir fenetre deroulante
+ctrl ,         : ouvrir parametre
+
+

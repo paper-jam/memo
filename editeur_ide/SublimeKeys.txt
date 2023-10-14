@@ -1,0 +1,232 @@
+-- ========== SublimeText Folder
+C:\Users\Francis\AppData\Roaming\Sublime Text
+C:\Users\Francis\AppData\Local\Sublime Text
+
+
+
+-- ========= Raccourci SublimeText
+
+-- tools
+	ctrl shift p 		: command palette
+	ctrl i 				: vue recherhe
+	ctrl ù				: vue console
+
+-- view
+	F11 				: plein écran
+	shift F11			: distraction Free Mode
+
+-- nav window
+	ctrl 0			    : focus sur sidebar
+	ctrl shift n 		: nouvelle fenêtre
+	ctrl shift w 		: fermer fenêtre
+	ctrl 0 				: focus sur la sidebar (ne fonctionne pas avec celui du clavie)
+
+-- nav onglet
+	ctrl PgDown			: onglet suivant
+	ctrl PgUp			: onglet précédent
+	ctrl n 				: nouvel onglet
+	ctrl w				: fermer onglet
+	alt x				: vers onglet n°X
+
+-- nav layout / groups
+	ctrl k shift up     : new group (without moving the current file)
+	
+	ctrl k up           : move file to new group
+	ctrl k down         : close group
+		
+	ctrl #              : focus group 1
+	ctrl shift # 		: move file to group #
+		
+	alt shift #         : layout Columns : #
+	
+	alt + keypad1       : layout Columns 1
+	
+
+-- A rajouter
+	https://www.sublimetext.com/docs/multiple_selection_with_the_keyboard.html
+	
+	
+
+-- Fichier
+	ctrl o 		 		: ouvrir
+	ctrl s 		 		: sauvegarder
+	ctrl shift s 		: sauvegarder sous
+	ctrl shift T 		: ouvrir dernier fichier
+
+-- tri
+	F9			: sort lines
+	shift+F9	: sorl Lines case sensitive
+
+===== Dans le texte
+
+- déplacement curseur
+	home/end     	    : deb
+	ctrl right/left		: début/fin de mot
+	alt right/left      : début/fin de mot, prends en compte les caratères spéciaux
+	ctrl g            	: aller à la ligne
+	ctrl up			 	: scroll line up
+	ctrl down			: scroll line Down
+
+-- sélection
+
+	ctrl a 				: select all
+
+	ctrl d*			 	: sélection du mot (puis des mots identiques)
+	ctrl k d* 			: instance suivante du mot sélectionné
+
+	shift+home/end     	: jusqu'au début/fin de ligne
+	ctrl+l* 		   	: de toute la ligne (et ligne suivante)
+
+	ctrl shift j 		: selection de tous les lignes du même niveau d'indentation
+	ctrl shift space	: selection incrémentale
+
+	ctrl m*	 			: parenthèse/crochet/accolade correspondant
+	ctrl shift a* 		: selection du contenu du tag (html)
+
+-- ligne
+	ctrl shift Up/down	: déplace la ligne en haut/bas
+	ctrl shift d 		: duplique ligne vers le bas
+	ctrl enter       	: insère une ligne en dessous
+	ctrl shift enter    : insère une ligne au dessus
+	ctrl shift j  		: joindre ligne avec celle du dessous
+	alt  q				: wrap
+	ctrl alt right/left : indente / désindente
+
+-- suppression
+
+	ctrl + shift + backspace	: supprime jusqu'au début de la ligne
+	ctrl + shift + del 		    : supprime jusqu'à la fin de la ligne
+	ctrl + shift + K        	: supprime une ligne (plus rapide - ctrl + x )
+	ctrl + delete				: supprime un mot jusqu'à sa fin
+	ctrl + backspace			: supprime un mot jusqu'à son début
+	ctrl + t 					: transpose, inverse 2 caractères de part et d'autre du curseur
+
+-- copy paste
+	ctrl c 						: copie la ligne si aucune sélection !!
+	ctrl x						: coupe la ligne si aucune sélection !!
+	ctrl + maj + v 				: colle et indente correctement
+
+-- tag - fold
+	alt+.				: close_tag
+	ctrl alt t 			: close tag attribute
+	ctrl k j            : unfold all
+	ctrl k #            : fold level #
+	ctrl k t 			: fold tag attributes
+	ctrl k m            : fold current level
+
+-- bookmark
+
+	f2				: next_bookmark
+	shift+f2		: prev_bookmark
+	ctrl+f2			: toggle_bookmark
+	ctrl+shift+f2	: clear_bookmarks
+	alt+f2			: select_all_bookmarks
+
+-- marks
+
+	ctrl+k+space	: Set mark
+	ctrl +k+a 		: Select to mark
+	ctrl +k+w 		: Delete to mark
+	ctrl+k+x 		: Swap with mark
+	ctrl+k+y  		: Yank - copie
+
+-- macro
+	ctrl + q 		 : toggle record macro
+	ctrl + shift + q : run last macro
+
+
+-- divers
+	ctrl+/              : ajout/retire commentaire ligne
+	ctrl+shift+l 	 	: split into multiples lines
+
+	ctrl+k+u 			: mise en majuscule
+	ctrl+k+l 			: mise en minuscule
+
+	ctrl+k+v 			: colle depuis l'historique
+
+	ctrl + +			: increase font size
+	ctrl + - 			: decrease font size
+
+	ctrl + z			: undo
+	ctrl + y			: redo-repeat
+	ctrl + u			: soft undo
+	ctrl + shift + u	: soft redo
+
+	ctrl + shift + vers	: paste and indent
+	alt + l/m 			: unident / indent
+
+	shift+right-click	: mode colonne
+
+	ctrl + space 		: autocomplete
+
+
+-- Ctrl + F
+	F3					: Find
+	Ctrl + F3			: Find Next
+	Ctrl + I			: Find previous
+	Ctrl + H			: Incremental find
+	Ctrl + Shift + H 	: Replace
+	Ctrl + F3			: Replace next
+	Alt  + F3			: Quick Find (find current word)
+	Ctrl + E			: Quick find all
+	Ctrl + Shift + E	: Use selection for find
+	Ctrl + Shift + F	: Use selection for replace
+	F4					: Find in files
+	Shift + F4			: Next result (find in files)
+
+		Previous result (find in files)
+
+
+-- =============== Specific to package or file type
+
+
+-- HTML
+	ctrl+alt+shift+F	: reformat (plugin htmlBeautifier)
+	alt + shit + w      : suround with tag
+
+
+-- Anaconda
+	ctrl+alt+f			: find usages
+	ctrl+alt+g			: find definitions
+
+-- Terminus 
+	ctrl+shift+enter 	: 
+	ctrl+enter 			: send selected to terminal ???
+
+
+
+
+-- ========================== LSP
+Feature 						Shortcut 					Command
+Auto Complete 					ctrl space  				auto_complete
+Expand Selection 				unbound 					lsp_expand_selection
+Find References 				shift f12 					lsp_symbol_references
+Follow Link 					unbound 					lsp_open_link
+Format File 					unbound 					lsp_format_document
+Format Selection 				unbound 					lsp_format_document_range
+Goto Declaration 				unbound 					lsp_symbol_declaration
+Goto Definition 				suggested: f12				lsp_symbol_definition
+Goto Diagnostic 				suggested: f8 				lsp_goto_diagnostic (with args: {"uri": "$view_uri"})
+Goto Diagnostic in Project 		suggested: shift f8 		lsp_goto_diagnostic
+Goto Implementation 			unbound			 			lsp_symbol_implementation
+Goto Symbol in Project 			suggested: ctrl shift r 	lsp_workspace_symbols
+Goto Symbol 					ctrl r 						lsp_document_symbols
+Goto Type Definition 			unbound 					lsp_symbol_type_definition
+Hover Popup 					unbound 					lsp_hover
+Insert/Replace Completions 		alt enter 					lsp_commit_completion_with_opposite_insert_mode
+Next Diagnostic 				unbound 					lsp_next_diagnostic
+Previous Diagnostic 			unbound 					lsp_prev_diagnostic
+Rename 							unbound 					lsp_symbol_rename
+Restart Server 					unbound 					lsp_restart_server
+Run Code Action 				unbound 					lsp_code_actions
+Run Code Lens 					unbound 					lsp_code_lens
+Run Refactor Action 			unbound 					lsp_code_actions (with args: {"only_kinds": ["refactor"]})
+Run Source Action 				unbound 					lsp_code_actions (with args: {"only_kinds": ["source"]})
+Show Call Hierarchy 			unbound 					lsp_call_hierarchy
+Show Type Hierarchy 			unbound 					lsp_type_hierarchy
+Signature Help 					ctrl alt space 				lsp_signature_help_show
+Toggle Diagnostics Panel 		ctrl alt m 					lsp_show_diagnostics_panel
+Toggle Log Panel 				unbound 					lsp_toggle_server_panel
+
+
+

@@ -1,0 +1,118 @@
+redis-cli 192.168.99.100
+
+-- ===== data types
+    - String
+    - List
+    - Set
+    - Sorted Set
+    - Hashes
+    - Bitmaps
+    - Hyperlogs
+    - GeoSpacial Indexes
+
+--
+KEYS *      -- toutes les clés de la DB en cours
+SELECT 1    -- passe sur la BDD 1
+
+-- persistance
+-
+
+
+
+-- =====
+set cle:souscle:soussouscle valeur
+get cle
+incr cle
+decr cle
+del cle
+ttl cle         -- timeTo live -1 => pas d'expiration
+expire cle 120  -- la clé expire dans 120 sec
+
+-- LIST
+-- peuvent contenir plusieurs fois le même élémen
+RPUSH maliste "item1"
+LPUSH maliste "item2"
+LRANGE maliste 0 -1     -- recup de tous les items
+LLEN maliste            -- longueur
+LPOP                    -- retire à droire
+RPOP                    -- retire à gauche
+
+-- SET
+-- liste non ordonnées avec éléments uniques
+SADD users "Marie"
+SMEMBERS users          -- liste des clés
+SREM users "Marie"      -- efface un item
+SISMEMBER usesr "Marie" -- verifie si Marie est présente
+SUNION set1 set2        -- fusion de 2 SET
+
+-- SORTED SETS
+ZADD score 10 "John"
+ZADD score 3 "Marie"
+ZRANGE
+ZREVRANGE
+ZRANK
+...
+
+-- HASH
+HSET user:456 username "John"
+HSET user:456 age 10
+HSET user:456 email "john@test.fr"
+HGETALL user:456
+HMET user:457 username "John" age 15 mail "John@test.fr" -- + rapide
+    -- possibilité d'incrémenter chaque champ
+HVALS HKEYS ...
+
+-- GEO : possibilité de calculer les distances entre points ...
+
+-- SUBSCRIBE / PUBLISH
+
+-- ==================
+
+
+#-- ========== REDIS & PYTHON
+
+
+import redis (or import flask_redis)
+r_server = redis.Redis("localhost") # connexion sur db0 d'office
+r_server = redis.StrictRedis(host='localhost', port=6379, db=0) #connexion
+
+# commande base SET GET DEL SETNX TTL EXPIRE
+r_server.set("FR:2018:01", "<h1>code html</h1> ")
+r_server.set("FR:2018:02", "<h1>code html</h1> ")
+r_server.set("FR:2018:03", "<h1>code html</h1> ")
+x = r_server.get("FR:2018:06")
+print (x)
+
+# -- ========= divers
+r_server.set("counter", 1)
+r_server.incr("counter")
+r_server.decr("counter")
+r_server.setnx("2018:01",120)  # set if non exist
+r_server.expire("2018:01",120)
+
+# dégage toute une base
+r_server.flushdb
+
+# A list is a series of ordered values
+# RPUSH, LPUSH, LLEN, LRANGE, LPOP, and RPOP
+
+# A set is similar to a list, except it does not have a specific order and each element may only appear once.
+# SADD, SREM, SISMEMBER, SMEMBERS and SUNION
+r_server.hset("user:1000" , "name", "John Smith")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

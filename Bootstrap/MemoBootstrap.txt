@@ -1,0 +1,69 @@
+
+=> responsive
+- ne pas oublier le tag viewport
+- les containers sont
+    - soit à largeur fixe : container, dépends de la largeur du device
+    - soit toute la largeur du viewport : container-fluid
+- le système de grid
+
+- comment BS connait le device d'affichage, pour les container à largeur fixe
+    -> c'est la largeur
+    XS < 768 px (xtra small) => smartphone  all
+    SM >= 768 px => tablette => 750 = 720 + 15 + 15
+    MD >= 992 px => desktop => 970 = 940 + 15 + 15
+    LG >= 1200 px => large desktop => 1170
+
+- sur un device MD (ou au dessus), on part sur 6 col
+    -> si le device est plus petit, les éléments s'emilent les uns en dessous des autres
+<div id="block1" class="col-md-6" style="border:1px solid red" >
+
+- sur une tablette, 2 éléments par lignes
+<div id="block1" class="col-sm-6" style="border:1px solid red" >
+
+- typographie : bootstrap comporte qq tags ou class de modif
+    - <small></small>
+    - <mark></mark>
+    - class="text-success" ou class="bg-success"
+    - class="text-primary"
+    - class="text-warning"
+    - class="text-danger"
+    - class="has_success"
+    - class="has_error"
+    - class="disabled"
+    - class="input-lg"
+
+
+- ----- ====== Formulaire
+    - <div class = "form-group">
+    - <div class = "form-inline ">  // tous les éléments sur la même ligne
+    - class="checkbox-inline" pour mettre les checkbox en ligne.
+    -
+
+- ====== buttons
+    - https://getbootstrap.com/docs/4.0/components/buttons/
+    - <button type="button" class="btn btn-success">Success</button>
+    - modif des tailles avec btn-lg, btn-md ...
+    - pour qu'un btn prenne toute la place d'une colonne btn-block
+    - active : le bouton est activé, disabled
+    - groupe de boutons : btn-group, btn-group-vertical
+
+-- ====== images
+    - img ... class="img-rounded" "img-circle" "img-thumbnail" "img-responsive"
+    - BS4 : glyphicons remplacés par librairies tierces comme Foont Awesome
+    - ex : <i class="far fa-arrow-alt-circle-right" style="color:navy; font-size:200px "></i>
+
+-- ====== drop down
+    -
+-- ====== tool-tip
+-- ====== modal
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+Hyper Text Transfer Protocol
+
+- GET POST PUT DELETE CONNECT HEAD
+- Stateless : no memory
+- allow sessions with the cookies
+- HTTP woks on Request / respoinse pairs
+
+- version
+    - HTTP 2 : 70 % of transaction
+    - +faster +secure than http1
+    -
+
+- HTTP 1
+    - uncompressed headers
+    - one file at a time
+    - no encryption
+
+- Terminology
+    - browser, User Agent (apps using HTTP)
+    - TCP, IP, URL, resource, Server, proxy
+    - request response / headers / payload
+    - status response code 100 to 500
+    - cache : speed up, ex CSS files
+    - Stateless, cookie -> session
+
+- HTTP flow
+    - TCP connection
+    - browser send message like GET + URL + cookies +...
+    - response from server : data + status code ...
+    - tcp closed
+
+- HTTP2
+    - allow multiplexing : ex html + css + js
+
+
+
+
+- tools
+    - status 304 : data already visted so cached
+

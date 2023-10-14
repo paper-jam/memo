@@ -1,0 +1,27 @@
+https://www.it-connect.fr/virtualisation-les-types-de-connexion-au-reseau
+
+# config bi-reseaux
+# dans virtualbox (5.2.2), crée un réseau host-only
+	# Menu Fichier -> host network manager () (accès différent selon la version de VB)
+		# configure adapter manually adr IP : 192.168.99.99 / masque 255.255.255.0
+		# pour un seul invité, on ne coche pas la case "activer le serveur DHCP"
+	# pour le guest, configuration -> réseau, on ajoute simplement 2 cartes
+		# carte 1 : "réseau privé hôte"
+		# carte 2 : NAT
+	# sur le guest, modif /etc/network/interfaces
+
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# verif du nom de vos interfaces avec la commande "ls /sys/class/net/"
+#Host Only Interface
+auto enp0s3
+iface enp0s3 inet static
+    address  192.168.99.100
+    netmask  255.255.255.0
+
+# NAT interface
+auto enp0s8
+iface enp0s8 inet dhcp

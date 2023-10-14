@@ -1,0 +1,49 @@
+
+-- ======= EMMET
+lorem 			lorem generator
+!  				html5 skeleton
+linkw
+script:src
+input
+#page>div.logo+ul#navigation>li*5>a{Item $}
+jcc : justify content center
+
+-- ========== HTML
+
+
+-- ========== SVG
+- 2 deux images identiques dans une page, possibilité d'utiliser la balise : <use xlink:href="#snowman">
+    https://github.com/jonathantneal/svg4everybody
+    possibilité de définir tous les svg dans un fichier scg avec la balise symbol
+    puis de les appeler avec <use xlink:href="nomFichier.svg#snowman">
+fill = transparent
+
+
+-- ===== FLEXBOX
+- fonctionnement à deux étages : le parent, les enfants
+- dans le CSS parent : display : flex;
+- flex-direction : row (par défaut) ou column
+
+- flex-grow: 1;
+- flex-shrink: 2: tu as le droit de te rétrécir 2 fois plus que les autres
+- flex-basis: 0px ou em; on indique une valeur minimum
+- flex-basis: auto : c'est la valeur initiale de l'élément, cela peut dépendre du texte qu'il contient
+- justify-content: flex-end; (ou flex-start)
+
+-- ======= CSS
+
+id -> #
+class -> .
+h2[title][id]{background-color...}      # touytes les balises h2 qui ont un titre et un ID
+div [id="nom"] {...}                   # div qui ont pour id nom
+
+médias queries : screen, print, ...
+
+
+
+-- ========== json ajax jquery
+https://www.youtube.com/watch?v=VAMz-fcDNhs
+https://www.youtube.com/watch?v=j-S5MBs4y0Q
+https://www.youtube.com/watch?v=wI1CWzNtE-M
+
+

@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"path" : ".",
+			"folder_exclude_patterns":[".idea",".vscode"],
+		}
+	],
+	"settings":	{},
+
+
+	"debugger_configurations":
+	[
+		{
+			"name": "Python: current File",
+			"type": "python",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal"
+			// "processId": "${command:pickProcess}",
+		},
+	],
+}

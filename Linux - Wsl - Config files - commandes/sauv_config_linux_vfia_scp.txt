@@ -1,0 +1,25 @@
+### attention aux adresse IP
+
+scp -P 50702 francis@192.168.56.20:/home/francis/.vimrc .
+scp -P 50702 francis@192.168.56.20:/home/francis/.bash_aliases .
+scp -P 50702 francis@192.168.56.20:/home/francis/.bashrc .
+scp -P 50702 francis@192.168.56.20:/etc/apt/sources.list .
+scp -P 50702 francis@192.168.56.20:/home/francis/.ssh/authorized_keys .
+scp -P 50702 francis@192.168.56.20:/etc/ssh/sshd_config .
+
+# et dans l'autre sens
+
+scp -P 50702 .vimrc francis@192.168.56.22:/home/francis/.vimrc
+
+
+scp -P 50702 .bash_aliases 		francis@192.168.56.22:/home/francis/
+scp -P 50702 .bashrc       		francis@192.168.56.22:/home/francis/
+scp -P 50702 authorized_keys 	francis@192.168.56.22:/home/francis/.ssh/
+
+
+scp -P 50702 sources.list  		francis@192.168.56.21:/etc/apt/
+scp -P 50702 sshd_config        francis@192.168.56.21:/etc/ssh/
+
+scp -P 50702 postgresql-10.4.tar.bz2   francis@92.222.79.98:/home/francis
+
+

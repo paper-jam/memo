@@ -1,0 +1,55 @@
+-- preparation examen : 
+    
+    
+    - chap 3 
+        faire exercice sur la methode after_cancel
+        faire les mini projets tkinter (
+
+
+-- ===== interesting external link : 
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+https://www.sqlite.org/lang.html
+
+
+
+
+-- ========== PCPP content
+
+    Python Advanced 1 (Advanced OOP) -- Samedi
+        - OOP fondations - OK
+        - OOP advanced
+        - Advanced Perspective of Classes and Object-Oriented Programming in Python
+        - Object persistence
+        - Metaprogramming
+
+    Python Advanced 2 (Best Practices and Standardization)*
+        - Introduction to PEP
+        - PEP 20
+        - PEP 8
+        - PEP 257
+        - other PEPS
+
+    Python Advanced 3 (GUI Programming)
+        - TkInterEssentials
+        - Lexicon of widgets and more TkInter essentails
+
+-- Diamnche soir ici
+
+
+    Python Advanced 4 (Network Programming)
+        - Basic concepts of network programming
+        - Introduction to JSON
+        - Using the JSON module in Python
+        - Introduction to XML
+        - HTTP made simple - the request module
+        - CRUD - how to build a simple REST client
+
+    Python Advanced 5 (File Processing and Communicating with a Program's Environment)
+        - sqlite
+        - xml
+        - csv
+        - logging
+        - configparser
+
+-- Merdi ou mercredi soir
+

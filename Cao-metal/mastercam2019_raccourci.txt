@@ -1,0 +1,29 @@
+
+
+-- touches de fonctions
+
+-- général
+ctrl o      open file
+espace      répète dernière opération
+F4          affiche les propriétés
+F5          supprimer les entités que l'on va sélctionner
+alt E       cacher/montrer les entités non-sélectionnées
+ald D       option de cotation
+
+-- vue
+F1          fenêtre de zoom
+alt F1      échelle auto
+alt 1       vue de dessus
+alt 2       vue de face
+alt 3       vue arrière
+alt 4       vue de dessous
+alt 5       vue gauche
+alt 6       vue de droite
+alt 7       vue isométrique
+
+-- affichage
+F9          afficher les axes
+alt F9      afficher les repères
+alt F12     position rotation
+ctrl T      transparence
+

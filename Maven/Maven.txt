@@ -1,0 +1,73 @@
+-- == MAVEN
+POM.XML in the base directory
+
+- Project Object Model
+- structure arborescence
+    - SRC - MAIN
+    - SRC - TEST
+    - TARGET
+
+- artifactID : nom du programme
+- url           : optionnal
+- junit         : pour les test
+- le triplet unique : groupId / artifactId / version
+
+-- == Maven Life Cycle
+- Validate, Compile, Test, Intergration-test, Verify, Install, Deploy ...
+=> à chaque phase est attaché un ou plusieurs goal.
+
+-- == Maven repository
+    - Central repository search.maven.org
+    - local repository on ~/.m2
+
+-- == Categories
+    - licence, contributors, authors, scope, url
+
+-- == Dependencies
+    - reuse existing code/component
+    - scope ->
+        - test
+        - compile (default)
+        - provided : provided by JDK
+        - runtime
+        - system
+
+    - internal dependencies project A <=> project B
+    - external dependencies : Junit , log4j
+    - dependencies can be inherited
+
+-- == Best practices
+    - Grouping common Depndencies Hibernate/JDBC/Spring
+    - indentation /
+
+-- == Core plugins
+    - JAR plugin to create JAR
+    - compiler plugin
+    - surefire plugin
+    - create custom plugin (written in java, ruby, ...)
+    - https://maven.apache.org/plugins/
+
+    - ex : mvn compiler:compile ( mvn plugin:goal )
+    - packaging : mvn jar:jar
+    - reporting : mvn javadoc:javadoc
+    - tools :
+
+    mvn help:describe -Dplugin=archetype
+    mvn install // download and install dependencies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

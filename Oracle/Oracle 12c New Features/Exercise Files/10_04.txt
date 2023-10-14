@@ -1,0 +1,15 @@
+rman target=/
+
+desc v$pdbs;
+
+select con_id,name from v$pdbs;
+
+create table table1 (col1 number, col2 varchar2(20));
+
+insert into table1 values (1,'Hello World!');
+
+select * from table1;
+
+drop table table1;
+
+report schema;

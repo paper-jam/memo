@@ -1,0 +1,208 @@
+-- reste à voir :
+  - quels sont les contraites sur une table
+  - comment faire une sauvegarde
+  - les fonctions
+
+
+
+
+
+Il s’agit du répertoire de configuration client Oracle par défaut pour les applications liées à ce client Instant Client.
+
+Les fichiers de configuration du client Oracle peuvent également être placés dans un autre répertoire accessible. Définissez ensuite la variable d’environnement TNS_ADMIN sur ce nom de
+
+
+
+
+
+-- ===== VM machine
+Database Information:
+Oracle SID    : orclcdb
+Pluggable DB  : orcl
+Pluggable DB  : ords create if required by running:
+    'newpdbords' in the terminal - for ORDS pdb creation.
+         (if 'sqlplus system/oracle@ORDS' connects ORDS pdb has already been installed)
+    'loadstorm' in the terminal for spatial demo data - takes a few minutes.
+
+ALL PASSWORDS ARE : oracle
+
+
+-- ===== installation sur mon PC
+- base SYS, SYSTEM, PDBADMIN
+- localhost:1521        ---> base de données conteneur colocative
+- localhost:1521/XEPDB1 ---> base de données pluggable
+- localhost:5050/em     ---> URL d'EM Express
+- utilisateur 0par défaut : system / pass
+
+
+-- ===== SET PARAMETER
+- les parametres sont sauvergardés dans un fichier binaire
+show parameter sga_target
+show parameter sga_       -- tous les parametres qui commencent pas
+alter system set sga_target=1000m scope=memory|spfile|both  (spfile -> prise en compte au restart)
+create pfile='/home/oracle/my_pfile.ora' from spfile
+
+-- ===== divers SQLPLUS
+DESC nom_table ;  -- décrit la structure de la table
+SHOW user;        -- who am i
+set lines 150;    -- agrandi la longueur du resultset
+
+-- ====== Alert log
+- C:\appli\oracle\product\18.0.0\diag\rdbms\xe\xe\alert_xe.log
+
+-- ===== variables Oracle :
+ORACLE_SID  = id de l'instance
+ORACLE_HOME = path to oracle product
+
+-- ====== différence entre SYS et SYSTEM
+- SYS a le role SYSDBA -> high-level administrative tasks such as backup and recovery.
+- SYSTEM  : day-to-day administrative tasks, no backup, no database upgrade
+
+- SYSDBA  : system privilege is for fully empowered database administrators
+- SYSOPER : system privilege allows a user to perform basic operational tasks, but without the ability to look at user data
+
+-- ====== Modification de prompt SQLplus
+- dans le fichier C:\appli\oracle\product\18.0.0\dbhomeXE\sqlplus\admin\glogin.sql
+set verify off
+set term off
+col con_name new_value _container_name noprint
+select sys_context('userenv', 'con_name') as con_name from dual;
+set sqlprompt "_user'0'_connect_identifier':'_container_name'> '"
+set verify on
+set term on
+
+-- ========== historique version
+  - 2009 : version 11g
+  - 2013 : version 12c
+  - 2018 : version 18
+  - 2019 : version 19c
+
+-- ===== connexion
+  - dans home/network/admin : TNSNAME.ORA
+
+
+
+-- FUNCTION
+CREATE OR REPLACE Function FindCourse
+   ( name_in IN varchar2 )
+   RETURN number
+IS
+   cnumber number;
+
+   cursor c1 is
+   SELECT course_number
+     FROM courses_tbl
+     WHERE course_name = name_in;
+
+BEGIN
+
+   open c1;
+   fetch c1 into cnumber;
+
+   if c1%notfound then
+      cnumber := 9999;
+   end if;
+
+   close c1;
+
+RETURN cnumber;
+
+EXCEPTION
+WHEN OTHERS THEN
+   raise_application_error(-20001,'An error was encountered - '||SQLCODE||' -ERROR- '||SQLERRM);
+END;
+
+
+-- CURSOR
+
+-- litteral
+text literals, integer literals, number, and date/time literals.
+SELECT TO_DATE('2015/04/30', 'yyyy/mm/dd')
+
+
+
+-- variable
+variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value]
+LDescription varchar2(40);
+LTotal CONSTANT numeric(8,1) := 8363934.1;
+
+
+
+-- TRANSACTION
+
+    COMMIT Statement
+    ROLLBACK Statement
+    SET TRANSACTION Statement
+    LOCK TABLE Statement
+
+-- comments
+    --
+    /*  */
+
+-- PL/SQL data Types
+ character, numeric, date/time, LOB and rowid datatypes
+TO_DATE
+TO_NUMBER
+SUBSTR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

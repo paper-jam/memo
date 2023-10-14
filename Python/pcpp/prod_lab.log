@@ -1,0 +1,17 @@
+__main__:DEBUG:2023-06-15 15:42:37,433 -> temperature is < 20 --> 19
+__main__:DEBUG:2023-06-15 15:42:37,434 -> temperature is < 20 --> 9
+__main__:DEBUG:2023-06-15 15:42:37,434 -> temperature is < 20 --> 2
+__main__:DEBUG:2023-06-15 15:42:37,435 -> temperature is < 20 --> 4
+__main__:DEBUG:2023-06-15 15:42:37,435 -> temperature is < 20 --> 1
+__main__:WARNING:2023-06-15 15:42:37,436 -> temperature is between 30 and 35 --> 33
+__main__:DEBUG:2023-06-15 15:42:37,436 -> temperature is < 20 --> 1
+__main__:DEBUG:2023-06-15 15:42:37,438 -> temperature is < 20 --> 11
+__main__:DEBUG:2023-06-15 15:42:37,438 -> temperature is < 20 --> 5
+__main__:DEBUG:2023-06-15 15:42:37,438 -> temperature is < 20 --> 3
+__main__:DEBUG:2023-06-15 15:42:37,439 -> temperature is < 20 --> 3
+__main__:DEBUG:2023-06-15 15:42:37,439 -> temperature is < 20 --> 5
+__main__:DEBUG:2023-06-15 15:42:37,440 -> temperature is < 20 --> 18
+__main__:DEBUG:2023-06-15 15:42:37,440 -> temperature is < 20 --> 16
+__main__:DEBUG:2023-06-15 15:42:37,441 -> temperature is < 20 --> 4
+__main__:DEBUG:2023-06-15 15:42:37,441 -> temperature is < 20 --> 19
+__main__:DEBUG:2023-06-15 15:42:37,442 -> temperature is < 20 --> 13

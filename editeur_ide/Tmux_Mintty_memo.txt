@@ -1,0 +1,51 @@
+-- =================   T-MUX
+
+https://tmuxguide.readthedocs.io/en/latest/tmux/tmux.html
+
+https://github.com/majutsushi/etc/blob/master/tmux/tmux.conf
+https://cassidy.codes/blog/2019-08-03-tmux-colour-theme/
+
+CB c : create a new window
+CB , : change window name
+CB n : nav to next window
+CB p : nav to previous window
+CB w : list window
+CB % : split vertical
+
+CB x : quitter la fenêtre
+ctrl + d : quitter bash
+
+CB + alt -> ou -> : redimensionner la fenêtre
+
+panneau :
+CB o : passe au panneau suivant
+CB q + n° de panneau
+CB + fleches
+CB z : maximize / minimize
+
+tmux                start tmux
+tmux new -s <name>  start tmux new session with <name>
+tmux ls             shows the list of sessions
+tmux a #            attach the detached-session
+tmux a -t <name>    attach the detached-session to <name>
+tmux kill-session –t <name>     kill the session <name>
+tmux kill-server    kill the tmux server
+
+
+
+
+
+
+-- ======= MINTTY
+ctrl + l   : efface écran
+ctrl + d   : exit bash
+ctrl + r   : recherche dans l'historique
+ctrl + e/a : debut ou fin de la ligne de commande
+ESC + .    : rappel l'argument de la dernière commande
+ESC + #    : commente la commande actuelle (et de la sauvegarder ds l'historique)
+ctrl + d/w : efface le mot avant/aprés
+
+
+
+
+

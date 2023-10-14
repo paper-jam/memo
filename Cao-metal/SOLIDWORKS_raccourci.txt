@@ -1,0 +1,99 @@
+http://www.solidcomponents.com 	alan toomi
+https://grabcad.com				idem
+https://www.thingiverse.com/
+
+
+extrusion de matière sur un assemblage
+http://www.lynkoa.com/forum/3d/faire-une-extrusion-dans-un-assemblage
+attention : activation d'une esquisse
+
+
+enter			répéter dernière commande
+ctrl + b 		reconstruire
+ctrl + r 		redessiner
+a
+r 				parcourir les documents récents
+s               barre de raccourcis
+
+
+-- ===== Esquisse
+q               édite l'esquisse sélectionnée
+alt + q         crée une nouvelle esquisse ou édite une esquisse existante
+p               plan d'esquisse
+ctrl + alt +q   quitter l'esquisse sans enregitrer les changements
+
+
+
+-- ===== outils d'esquisse
+r               rectangle
+alt + r         rectangle par son centre
+i               cotes intelligentes
+
+
+-- ========== navigation
+
+F10					barre d'outils
+CTRL + F1 			volet des tâches
+w 					commandes
+a 					alterner entre les options de commandes
+
+ctrl + molette                      déplacement vue
+clic gauche + petit mvt             sélecteur rapide de plan
+
+ctrl + next			onglet suivant   du gestionnaire de commande
+ctrl + prev 		onglet précedent du gestionnaire de commande
+
+x 					filtre des faces
+
+e 					filtres des arêtes
+n 					arête suivante
+y 					accepter l'arête
+v 					filtre des sommets
+
+
+-- ========== arbre
+F9 					zone de l'arbre Feature Manager
+Home 				haute de l'arbre FeatureManager
+End 				bas de l'abre FeatureManager
+c 					developper/ rassembler l'arbre ====> cercle
+ctrl + t 			affichage à plat de l'arbre
+
+-- ========== VISU
+espace				boîte de dialogue Orientation
+ctrl + espace	    sélectionneur de vue
+f 					zoom au mieux
+z 					zoom arrière
+shift + z 			zoom avant
+
+ctrl + shift + z 	vue précédente
+ctrl + 1			plan de face
+ctrl + 2			plan de arrière
+ctrl + 3			plan de gauche
+ctrl + 4			plan de droite
+ctrl + 5			plan de dessus
+ctrl + 6			plan de dessous
+ctrl + 7			vue isométrique
+ctrl + 8			vue normale (pour débuter une esquisse)
+F11 				plein écran
+g 					sélection loupe
+
+shift + tab 		afficher le composant/les corps sur lesquelles le curseur est placé
+
+
+-- =========== outil
+l					ligne
+F3					aimantation instantanée
+t 					cotation
+
+-- ==========
+ctrl + shift + c 	copier l'apparence
+ctrl + shift + v 	coller l'apparence
+
+-- ==========
+r                   fichiers récents
+
+-- ========= TUTo
+Fichier -> propriétés personnalisées
+.sldasm : fichier assemblage
+.sldprt : fichier pièce
+.       : mide en plan

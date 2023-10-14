@@ -1,0 +1,136 @@
+' commenataire
+' alt+F11
+
+
+sub nom_de_fonction()
+
+
+end su
+
+Sheets("Feuil2").Activate
+Range("A8").Select
+Range("A1:A8").Select
+Range("ma_plage").Select
+Cells(8, 1).Select
+Rows("2:6").Select
+Workbooks("Classeur2.xlsx").Sheets("Feuil2").Range("A8").Value = "Exemple de texte"
+Range("A:A").ClearContents
+Range("A1:A8").Font.Size = 18
+Range("A1:A8").Borders.Value = 1
+Sheets("Feuil3").Visible = 0
+
+ With ActiveCell
+        .Borders.Weight = 3
+        .Font.Bold = True
+
+With .Font
+            .Bold = True
+            .Size = 18
+
+Dim ma_variable As Integer
+Dim tab1(4) As String
+Dim tab2(4, 3) As String
+Const TAUX_ANNUEL As Double = 6.87236476641
+Global var1 As Integer
+
+Type invites
+    nom As String
+    prenom As String
+End Type
+Dim p1 As invites
+
+If [CONDITION ICI] Then ' => SI condition validée ALORS
+    'Instructions si vrai
+Else ' => SINON
+    'Instructions si faux
+End If
+
+If IsNumeric(Range("A1")) = False Then 'SI LA VALEUR N'EST PAS NUMERIQUE ...
+If VarType(ma_variable) = vbInteger Then 'SI ma_variable est de type Integer ...
+If ma_variable Like "[BIEN]xemple 1234[4-7]" Then ' => VRAI
+
+While numero <= 12 'TANT QUE la variable numero est <= 12, la boucle est répétée
+        Cells(numero, 1) = numero 'Numérotation
+        numero = numero + 1 'Le numéro est augmenté de 1 à chaque boucle
+Wend
+
+
+Do While [condition]
+        'Instructions
+    Loop
+
+Do
+    'Instructions
+Loop While [condition]
+
+Exit For 'Quitter une boucle For
+Exit Do 'Quitter une boucle Do Loop
+Exit Sub 'Quitter une procédure
+Exit Function 'Quitter une fonction
+
+Sub exemple()
+Private Sub exemple()
+Private Sub boite_de_dialogue(nom As String, Optional prenom, Optional age)
+
+Private Sub calcul_carre(ByRef valeur As Integer)
+Private Sub calcul_carre(ByVal valeur As Integer)
+
+Function carre(nombre)
+    carre = nombre ^ 2 'La fonction "carre" renvoie la valeur de "carre"
+End Function
+
+sub -> procedure
+Function -> fonction
+
+MsgBox([TEXTE], [BOUTONS], [TITRE])
+resultat = InputBox("Texte ?", "Titre")
+
+-- event
+Private Sub Workbook_Open()
+Private Sub Workbook_BeforeClose(Cancel As Boolean)
+Workbook_NewSheet (à l'insertion d'une feuille)
+Workbook_SheetFollowHyperlink (au clic sur un lien)
+
+
+Private Sub UserForm_Initialize()
+    Mon_userform.Height = 100
+    Mon_userform.Width = 100
+End Sub
+
+-- astuves VBA
+https://www.excel-pratique.com/fr/astuces_vba.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

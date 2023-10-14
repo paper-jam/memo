@@ -1,0 +1,20 @@
+-- ========== NPM
+npm list -g --depth=0                       -- liste les modules installés de façon globale
+npm install lodash@4.17.4                   -- install specific version
+npm install lodash --save --save-exact      -- sauvegarde le definition exacte dans package.json
+npm install npm@latest -g                   -- install dernier version NPM
+npm bin                                     -- which npm
+npm init --yes                              -- crée le fichier package.json
+npm i nodemon                               -- permet redémarrage automatique
+npm outdated                                -- liste des modules périmés
+npm install -g nomPaquet                    -- installation globale
+npm list --depth=0                          -- modules de premier niveau
+npm outdated -g --depth=0                   -- modules to update
+npm update nomPaquet 						-- met à jour uniquement nomPaquet 
+
+
+
+npm install --save-dev nodemon              -- uniquement pour le développement
+npm install                                 -- prend en compte package.js pour la liste des paquets à installer
+
+

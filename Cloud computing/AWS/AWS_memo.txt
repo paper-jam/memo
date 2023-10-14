@@ -1,0 +1,111 @@
+Prépartion certifications : 
+https://courses.datacumulus.com/
+https://www.udemy.com/course/aws-certified-database-specialty-dbs/?couponCode=JUL_22_GET_STARTED
+
+
+HA : High avaibility
+ZA : 
+CA : certificates authorities
+Cipher suit : combinaison de chiffrement
+ALB : 
+NLB : Load balancer
+
+Amazon aurora : 
+- End writer -> DNS 
+- end reader -> 
+
+
+SSL : 
+- Secure Socket layer : encrypt connection
+- TLS ransport Layer Security : newer vesion
+- TLS certificates are mailny used but people still refer as SSL
+
+Handshake processus (detail K not required )
+- Public SSL certificates are issued by CA (Certificate Authorities) (Comodo, Symantec, GoDaddy, GlobalSign, Let )
+- SSL certificates have expiration dates
+- Asymetric Encryption (SSL) is CPU expensive
+- a two way SSL is possible : the client have also a certificat
+- => secure communication with symetric key
+
+
+SNI : server name indication 
+- resolve problem of multiple SSL certicates on one web server
+- client must indicate the hostname of the target server in the initial handshake
+- works for ALB & NLB, Cloudfront
+- Does not work for CLB (old generation)
+
+how to prevent MIMMA (Man in the Middle Attack)
+- use HTTPS (SSL/TLS), not HTTP
+- domain name configured with DNSSEC
+- Route 53 support DNSSEC, using KMS
+
+
+- autre vide à voir : 
+TLS
+https://www.youtube.com/watch?v=0TLDTodL7Lc
+
+- AWS
+easy to use
+flexibility
+reliability
+scalibility
+cost-effective
+security ()
+
+----------------------------  AWS service --------------------------------
+compute : EC2 , LAMBDA, Elastic Container Service, Elastic Load Balancer, Lightsail, Elastic Beanstalk
+		most common : 
+			- EC2 : Elastic Cloud Compute : webserice that allows developpers to rent virtual machines and helps to resize the compute capacity
+			- LAMBDA : serverless compute service, excute code for a specific application _ don't need to create a server
+			-  
+storage :
+			- S3 : Simple Storage Service : open cloud-based storage service for online data backup (data is put in buckets)
+			- EBS : Elastic Bloc  Storage : 
+				- high availability storage volume  for persistent data (mainly use with EC2 instances)
+
+
+database :
+			- RDS : Relational Database Service (mysql Postgresql Oracle Maria)
+			- Dynamo DB : NoSql database
+			- elastic search :  
+
+Networking : connecting the pysical etwork to the private Virtual Network
+			- VPC, Route53, Direct Connect, CloudFront,	
+			- VPC : virtual private cloud : to deploy AWS resources (like EC2) into a private Virtual Cloud
+			- Route 53 : DNS mapping service, translate text to IP adress
+			- 
+			- 
+
+Developer tools 
+			- CodeStar, CodeDeploy, CodeBuild, CodePipeline 
+			- CodeStar : IDE online for develop, build and deploy,
+			- CodeBuild : build, test ans continuous scaling
+			- 
+
+
+
+migration
+networking and content delivery
+developers tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

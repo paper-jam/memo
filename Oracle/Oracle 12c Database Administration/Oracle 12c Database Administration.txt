@@ -1,0 +1,133 @@
+-- == Oracle 12 C Database administration
+https://www.linkedin.com/learning/oracle-12c-database-administration/welcome
+
+-- == les 3 composants d'une instance :
+    -  oracle instance (SGA)
+        - In-memory Oracle Binary
+        - Shared Memory Caches (data and metadata)
+        - Oracle Background processes (writing, consistency)
+    - database On-Disk storage
+        - Disk files on SAN / NAS
+            - SAN : Storage Area Network, fiber connection
+            - NAS  : Network attached storage (via Internet)
+    - Server Processes (PGA : Private Global Area)
+        - 1 PGA for each user session
+        - handle client request
+        - execute SQL Statement
+        - reads data from disk or buffer cache
+        - returns result to user
+
+-- == Instance Memory pool
+
+- SGA System Global Area (SGA_MAX_SIZE, SGA_TARGET)
+    - Shared Pool       : Cache non user data (Library Cache, Data Dict, ...)
+    - Buffer Cache      : caches Block of data : can contains 1 or more rows))
+    - Redo Log buffer   : store data changing (tansaction), replicated in the Redo Log Files
+
+- Other pools
+    - SGA : Large pool (backup/recovery operation), Java Pool, Streams pool
+    - PGA : PGA_AGGREGATE_TARGET=20G, amount of memoy available for PGA
+
+- SGA / PGA sizing
+    - SGA_TARGET=64G, SGA_MAX_SIZE=128G
+    - PGA_AGGREGATE_TARGET=20G
+    - SGA >>> PGA
+    - MEMORY_TARGET=128GB -> oracle will automaticaly size PGA and SGA !
+
+-- == 3 - Instance Backgroun processes
+    - Database writer    - DBWn - write ASYNC modified Buffer Cache Block to storage on disk
+    - Log writer         - LGWR - write Redo log buffer to disk - circular way
+    - CkeckPoint process - CKPT - establish data consistency - enable fast recovery
+    - Archive process    - ARCn - copy RedoLog File to safe place
+    - SMON  - system Monitor    - performs system recovery at startup
+    - PMON  - processor monitor - process recovery - if user process fails
+    - RECO  - Recover process   - check distributed transaction on several database
+    - LREG  - Listener Registration Process - Litstener accept remote incoming connection
+        - ORCL : genrical name for Oracle Instance
+    -
+
+-- == 4 - Client connection
+    - Oracle Listener : connection between client and database
+    - 1 listener - n instance
+    - TNSNAMES.ORA (sur poste client)
+        - Hostname
+        - network port (1521)
+        - protocol (tcpip)
+        - service name - unique identifier alias
+    - SQLNET.ORA & LISTENER.ORA (sur serveur)
+    -
+
+-- == 5 - Physical Data Structure
+    - DataFiles : data & metadata
+        - .dbf files, placed in "oradata" folder
+        - organized in Oracle Data Block : default 8Ko
+        - Extent        : collection of Block
+        - Segment       : set of extent
+        - Tablespace    : logical storage space, can span + datafile
+
+    - Special Tablespace
+        - SYSTEM tablespace : dictionnary
+        - SYSAUX tablespace :
+        - UNDO tablespace   : stores previous versions of rows, use for transaction
+        - TEMP tablespace   : use for out in memori in PGA memory
+
+    - RedoLog Files
+        - transaction log, min 2 files, cyclic write,
+        - .log => REDO FILES !! don't delete
+        - Redo Log Group    : increase security
+
+    - Control file
+        - physical structure of the database (name, checkpoint, path file...)
+        - control file multiplexing automatical
+        - back-up => database files, redo files, control files
+
+    - Backup files
+        - database backup : data + redo + control
+        - archive           : redo log copy
+        - to restore        : full backup + archives redo log copy
+
+    - Additionnal storage files
+        - parameter files : binary file for parameter, cannot edit
+            - include this file in backup
+        - password file : password for users with SYSDBA privilege
+            - stored outside of the database
+            - store only the password of the SYSDBA user
+        - alert Log file : message, alerts, error :
+
+-- == 6 - Multitenant database - 5 min
+    - oracle 12C : multitenant architecture
+    - C for cloud or consolidation
+    - 1 instance :  N database
+    - CDB : Container database
+    - PDB : Pluggable database
+    -
+
+-- == 7 - Start and stop database - 6 min
+    - SHUTDOW -> NOMOUNT - MOUNT -> OPEN
+    - SQL > startup
+    - SQL > startup nomount
+    - SQL > startup mount
+    - SQL > alter database open
+
+    - SQL > SHUTDOWN ABORT (brutal, need redo log for restart)
+    - SQL > SHUTDOWN IMMEDIATE (slower but safer)
+    - SQL > SHUTDOWN TRANSACTIONAL
+    - SQL > SHUTDOWN NORMAL (slowest, wait for user to disconnect)
+
+-- == 8 - Install Oracle 12 C Softaware - 30 min
+    - Oracle linux : free
+
+    Oracle Linux 7.5 with the Unbreakable Enterprise Kernel 5: 4.14.35-1818.5.3.el7uek.x86_64
+    or later
+
+    - Prod : 8 cores + 64 Gb + dedicated storage (SAN-NAS)
+    - /etc/hosts : add server name
+    -
+
+
+-- == 9 - Create a database Instance - 17 min
+
+
+-- == 10 - Tools for developpersa and DBAs
+
+-- == 11 - Management

@@ -1,0 +1,90 @@
+-- == MQ 9.2.0.0 IBM MQ advanced for developpers
+
+- compte admin : admin / passw0rd
+
+
+dspmq       -- Display information about queue managers.
+dspmqinst   -- Display installation entries from mqinst.ini on UNIX, Linux, and Windows.
+dspmqcsv    -- The status of a command server is displayed
+runmqsc     -- Run IBM MQ commands on a queue manager.
+
+
+-- quel est le CONNAUTH pour mon serveur MQ
+
+MQ 9.2 MQCC_FAILED MQRC_NOT_AUTHORIZED
+
+SET CHLAUTH('DEV.APP.SVRCONN') TYPE(BLOCKUSER) USERLIST(ALLOWANY)
+
+
+-- channel
+DEV.ADMIN.SVRCONN   CHLTYPE(SVRCONN)
+DEV.APP.SVRCONN     CHLTYPE(SVRCONN)
+
+mqsc disqplay channel
+
+setmqaut -m QM1 -t qmgr -g mqclient +connect +inq
+
+-- quels sont lers droits de francis
+dspmqaut -m QM1 -n DEV.QUEUE.1 -t q -p francis
+
+
+
+setmqaut -m QM1 -t qmgr -p francis +connect +inq
+setmqaut -m QM1 -n DEV.** -t queue -p francis +put +get +browse +inq
+
+
+
+Authentification de connexion : DEV.AUTHINFO
+
+
+
+
+
+-- un utilisateur a t il le drot
+
+MQRC_NOT_AUTHORIZED =
+
+
+
+
+
+-- === MEMO JMS
+
+- JMS 1998 est inclus dans J2EE 13
+- il existe d'autres protocol que JMS : AMQP
+- garantie de délivrance
+- Asynchrone, fiable : message délivré 1 fois et une seule.
+- JMS utilise des MOM : Message Oriented Middleware (asynch)
+    - Apache Active MQ
+    - Rabbit MQ
+    - IBM Websphere
+- JMS implément Queue et Topic
+    Queue : - acknowledge
+            - 1 seul client pour 1 message
+            - à tour de rôle si plusieurs clients
+    Topic : - il peut y avoir plusieurs clients qui consommeront 1 message
+            - le message est délivré à tous les clients connectés
+
+- Un message consommé est supprimé de la FA, mais le broker peut le conserver
+
+- Structure d'un message
+    - En-tête       : date du dépot, adresse de la Q, identiant du message, @destinataire, date expiration/disponibilité
+    - Propriétés    :
+    -
+
+- Consommation de Message
+    - listener JMS avec le méthode "OnMessage"
+
+- Programmation :
+    - connection factory : depend du broker
+    - méthodes :
+        - .createConnection
+        - .createSession
+        - .createQueue("nom de la queue")
+        - .createProducer(destination)
+        - .createTextMessage
+    -
+
+
+
+

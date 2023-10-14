@@ -1,0 +1,44 @@
+WireShark
+
+----- rappel WIFI
+Trame : couche WIFI 802.11
+    Mac header  : 30 octets
+    corps       : 0 à 2312 octets
+    FCS         : 4 octets
+
+C'est le protocol APR qui lie l'@ MAC à l'@ IP.
+
+----- filtre wireshark
+ip.addr == 192.168.1.13
+
+
+ip.addr == 192.168.1.13
+ip.addr = 13.32.147.198)
+ip.addr == 192.168.1.16     source or destination
+dns or http                 dns or http
+tcp.port == 443
+tcp.analysis.flags
+!(arp or dns or icmp)       tous sauf les protocols arp dns icmp
+tcp contains facebook
+http.request
+http.response.code == 200
+(http) && (ip.src == 192.168.1.16)
+
+-- HTTP
+    - ... is connectionless
+    - ... can deliver any sort of data
+    - ... is stateless
+
+    - REQUEST =
+         start line : method  (GET/PUT/DELETE...)+ URI (/test/test/html) + HTTP version (HTTP/1.0)
+         headers : key-value pairs
+
+   - RESPONSE
+        start line : HTTP version + status code (200, 404)
+        headers (key/pair/value)
+        body
+
+
+
+
+

@@ -1,0 +1,130 @@
+-- ========== FLUTTER
+-- sdk flutter -> C:\dev\flutter\sdk\bin
+-- sdk android -> C:\Users\Francis\AppData\Local\Android\Sdk
+
+-- flutter & dart  version : flutter --version
+
+
+
+-- ================================== CALENDAR   ==============
+https://www.syncfusion.com/blogs/post/whats-new-in-2020-volume-4-flutter-event-calendar.aspx
+https://www.syncfusion.com/flutter-widgets/flutter-calendar
+https://flutter.syncfusi²on.com/?_ga=2.78323025.493914683.1637702812-1499043235.1637702806#/event-calendar/resource-view
+
+
+-- =====================
+-- gestion des packages
+# official repository -> www.pub.dev
+flutter pub -h
+flutter pub add nom_du_package      -- ajout package par download
+flutter pub outdated				-- liste les paquet upgradable
+flutter pub get 					-- télécharge les paquets selon pubspec.yaml:dependencies 
+
+
+alternative à flutter : 
+react
+vue js
+scvelte
+
+
+
+
+pubspec.yaml              -- config du projet
+
+-- widgets
+tout est widgets -> représentation possible par un arbre des widgets
+
+materialApp -> universel : Android IOS web
+cupertinoApp -> IOS, mais utilisable sur Android
+
+Un container ne peut contenir qu'un seul widget.
+Ce seul widget peut être de type Stack si besoin d'empiler plusieurs widgets)
+
+
+
+----- ========= REVOIR la Video SUR LES KEYS et faire des exercices
+https://www.youtube.com/watch?v=kn0EOS-ZiIc&t=578s
+
+
+
+
+-- ==================== NULL value
+? s'applique à 
+- declaration de variable,
+- parametre de methodes, 
+- retour de méthodes
+- generic types 
+
+color? favoriteColor				// le ? indique que la valeur peut être nulle
+
+---> problème : une variable nullable peut être donné à un paramètre qui attend une valeur non null
+
+- solution 1
+setBackground(maybeColor ?? Black)  // le ?? affecte une valeur par défaut en cas de 
+
+- solution 2
+setBackground(maybeColor!)			// possibilité de passer en force : attention !!
+
+-- ======= ajout de fonts
+- il faut les ajouter das pubspec.yaml
+
+
+
+Kiub4512##
+
+
+
+
+
+-------- widgets étudiés
+- Scaffold
+- AppBar
+- Center
+- Row
+- Text
+- TextStyle
+- FloatingActionButton
+- Listview
+- ListTile
+- CircleAvatar
+- Checkbox
+- TextButton
+- Stack 			permet d'empiler 
+- Wrap 
+
+A étudier :
+- le state management
+- les inherited widgets
+- l'architecture bloc
+- le package provider
+
+- 
+
+
+
+
+-- StatefulWidget
+-- StatelessWidget
+
+
+-- ====== divers 
+- boucle
+for (...) 	# pas d'accolade possible dans une liste
+
+-- ===== autres pro
+flex txtdirection
+TextDirection.ltr
+child: Image.network('https://picsum.photos/400/300',fit: BoxFit.fitHeight),
+child: Image.asset('assets/images/640.jpg', fit: BoxFit.fitWidth),
+
+
+
+
+-- 
+class MyApp extends StatelessWidget   -- in flutter, almost everything is a widget
+
+Stateless widgets -- l'état dne change pas une fois construit
+Stateful widgets maintain state that might change during the lifetime of the widget
+
+
+
