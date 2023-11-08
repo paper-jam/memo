@@ -1,0 +1,67 @@
+-- #02 Authentication & Authorization
+    - Authentication : http, Forms, certifcate, Tokens..
+    - Authorization  : privileges/authorities, roles
+
+-- #03 Authorities & roles
+    - => plain names
+    - Authorities ->READ_PROFILE, ACCESS_PUBLIC_API
+    - Roles -> ROLE_ADMIN, ROLE_USER, ROLE_SALES
+    - role name must be prefixed by ROLE_
+    - granularity : ROLES > Granted Authorities (GA)
+
+-- #04 HTTP Basic Authentification
+    - Basic -> username & password are encoded (Base64)
+    - HTTP Header Authorization : Basic AFuhhkIhhO33Gd47
+    - simple : no cookies, no session, no login page, no encryption
+    - Basic auth + HTTPS = basic secure solution, the bare minimum
+    - no log out solution, mechanism handled by the browser, not app
+
+-- #05 SSL & HTTPS
+    - custom html page to collect credentials : username + password
+    - client : POST username + pasword
+    - server : if, create SESSION_ID and return cookie
+    - Logout : server invalidate SESSION_ID
+    - SSL is mandatory, if not credentails are conveyed in the clear
+    - not suited for REST API
+
+-- #06 JWT Authentication with token
+    - JWT : JSON Web Token, digitally signed solution
+    - 1 -> User sign in an Authentication server
+    - 2 -> Token JWT is created and returned
+    - the client requests with HEADER Authorization : Bearer {JWT}
+    - JWT structure : header.payload.signature
+    - header,payload and signature are JSON data, in the end encoded
+
+-- #07 SSL & HTTPS
+    - http + ssl = https
+    - SSL Certificates Self-signed : for dev purpose
+    - SSL Certificates Self-signed : buy from Trusted Authority
+
+-- #08
+    -
+
+-- #09
+-- #10
+    - dans le contexte spring par defaut le nom du user est : user
+    - mot de passe visible dans les logs du démarrage
+    dans le properties.xml
+        spring.security.user.name=dan
+        spring.security.user.password=dan123
+
+
+passer directement aux
+    - roles
+    - enable HTTPS / SSL
+    - et # 27 JWT
+
+-- #11
+...
+-- #28
+    - JWT -> activer @crossOrigin
+    - dans le POM.XML, rajouter la dépendance adéquate (par ex : com.auth0 java-jwt)
+-- #13
+-- #14
+-- #15
+-- #16
+-- #13
+

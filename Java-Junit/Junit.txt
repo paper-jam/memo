@@ -1,0 +1,10 @@
+-- ======= JUNIT =========
+
+- Junit 5 requires java 8 or >
+- Junit Jupyter is an alias for Junit 5
+
+- pour une classe de test : 
+    - le nom du package doit être le même : ex : com.healthyCoderApp
+    - 
+
+
