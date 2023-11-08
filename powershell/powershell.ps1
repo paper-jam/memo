@@ -64,8 +64,8 @@ get-Service | Where-Object{ $_.Status -eq "running"}
 
 
 
-https://www.youtube.com/watch?v=Ecdl1pOMtmE
-reprendre à 30:12
+#https://www.youtube.com/watch?v=Ecdl1pOMtmE
+#reprendre à 30:12
 
 
 
@@ -83,7 +83,7 @@ get-Localuser | ft name, Enabled,  Description, lastlogon
 get-localGroupMember Administrateurs | ft name # membre du groupe administrateurs
 
 get-clipboard
-get-process | where {$_.ProcessName -notlike }...
+get-process | where {$_.ProcessName -notlike '' }
 get-netipConfiguration -All
 
 # === fichiers
