@@ -28,11 +28,14 @@ root@localhost: T75kDL#ORaiw
 mysqld.exe --console
 (or START /MIN mysqld.exe --console --defaults-file=C:\appli\mysql\mysql5736\my.ini, as a detached mode )
 
+START /MIN mysqld.exe --console --defaults-file=C:\appli\mysql\my.ini
+
 -- shudown
-mysqladmin -u root -p shutdown
+mysqladmin -p shutdown
 
+-- start mysql
+START /MIN mysqld.exe
 
-START /MIN C:\appli\mysql\mysql5736\bin\mysqld.exe --defaults-file=C:\appli\mysql\mysql5736\my.ini
 
 
 -- install mysql as a service (windows)
