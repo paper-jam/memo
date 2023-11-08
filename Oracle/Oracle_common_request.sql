@@ -1,4 +1,16 @@
 
+
+-- doc oracle
+https://docs.oracle.com/en/database/oracle/oracle-database/23/jjdbc/JDBC-getting-started.html#GUID-6AC53BFD-6723-4D51-BEF1-B4441E6031DD
+
+
+-- attention les dates
+select to_date('07-JUN-16','DD-MON-RR') from dual; -- invalid month
+ALTER SESSION SET NLS_DATE_LANGUAGE = 'AMERICAN';
+select to_date('07-JUN-16','DD-MON-RR') from dual; -- OK
+
+
+
 -- la date du jour
 SELECT CURRENT_DATE from dual;                                  -- date courante
 SELECT nvl(NULL, 'bonjour') FROM dual;                          -- retourne bonjour

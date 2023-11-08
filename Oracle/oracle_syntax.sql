@@ -26,12 +26,16 @@
     explain plan for select * from customers;
     SELECT * from table(dbms_xplan.display);
 
-    SELECT * from /*+ GATHER_PLAN_STATISTICS */customers;
-    SELECT * from table(dbms_xplan.display_cursor(sql_id=>'17vzqf4anm6gm', format=>'ALLSTATS LAST +cost +bytes'));
-    SELECT * from table(dbms_xplan.display_cursor(sql_id=>'17vzqf4anm6gm', format=>'ALLSTATS LAST +cost +bytes +outline'));
-    -- outline -> la ligne 'LEADING' indique l'ordre dans le quel se font les jointures
-    -- liste des plans
-    SELECT * FROM PLAN_TABLE;
+    -- no need to use explain before
+    -- 3 steps : execute request, get id request, show plan
+    select /*+ GATHER_PLAN_STATISTICS */ /*toto*/ co.contact_id, co.email, customers.name  from CONTACTS co inner join CUSTOMERS using (customer_id);
+    select * from v$SQL where sql_text like '%toto%';
+    SELECT * FROM table(DBMS_XPLAN.DISPLAY_CURSOR('f0fyu0r7m028x',format=>'ALLSTATS LAST +cost +bytes +outline'));
+
+    -- dans la section outline_data  -> la ligne 'LEADING' indique l'ordre dans le quel se font les jointures
+    dans SQL developper
+    F10 : explain plan ou F6 ;: autotrace
+
 
 
 -- ========= DECLARING VARIABLE
@@ -53,6 +57,15 @@
     END;
     -- pour info DBMS_OUTPUT.ENABLE/DISABLE/PUT/NEW_LINE/PUT_LINE/GET_LINE/GET_LINES
     -- DBMS_OUTPUT.PUT_LINE(sys.diutil.bool_to_int(vardeTypeBool)); --> affiche 0 ou 1
+
+
+-- ========= select and fetch
+select * from products FETCH NEXT 5 ROWS ONLY;          -- 5 premières lignes
+select * from products FETCH FIRST 5 ROWS ONLY;         -- first = next
+select * from products FETCH FIRST 5 PERCENT ROWS ONLY; -- 5% des lignes
+
+
+
 
 -- =======================  BOUCLE, CONDITION
 
@@ -160,6 +173,16 @@
     -- ================================================= FUNCTION - PROCEDURE - PACKAGE
 
     -- FUNCTION
+
+    -- pour executer une fonction rapide
+    declare
+    v_Return NUMBER;
+    begin
+        v_Return := 1;
+        v_Return := get_total_sales(2016);
+        DBMS_OUTPUT.PUT_LINE('v_Return = ' || v_Return);
+    end;
+
     CREATE OR REPLACE Function FindCourse
        ( name_in IN varchar2 )
        RETURN number
@@ -189,7 +212,7 @@
     END;
 
 
-    -- procedure
+    -- procedure -- (pour executer EXEC proc1(312)    )
     create or replace PROCEDURE proc1 (emp_id IN NUMBER)
     IS
         emp_fname VARCHAR2(20);

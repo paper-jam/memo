@@ -1,3 +1,17 @@
+
+
+
+
+-- ============== most useful command
+mvn dependency:copy-dependencies
+mvn package
+
+mvn help:describe -Dplugin=archetype
+mvn install // download and install dependencies
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+
+
 -- == MAVEN
 POM.XML in the base directory
 
@@ -52,8 +66,8 @@ POM.XML in the base directory
     - reporting : mvn javadoc:javadoc
     - tools :
 
-    mvn help:describe -Dplugin=archetype
-    mvn install // download and install dependencies
+
+
 
 
 

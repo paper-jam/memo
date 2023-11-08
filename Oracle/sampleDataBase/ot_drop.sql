@@ -8,7 +8,7 @@
 --               Credit the site oracletutorial.com explitly in your materials that
 --               use this sample database.
 --------------------------------------------------------------------------------------
-DROP TABLE ot.order_items;
+DROP TABLE ot.order_items;  
 DROP TABLE ot.orders;
 DROP TABLE ot.inventories;
 DROP TABLE ot.products;

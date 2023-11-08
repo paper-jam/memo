@@ -8,11 +8,7 @@
 --               Credit the site oracletutorial.com explitly in your materials that
 --               use this sample database.
 --------------------------------------------------------------------------------------
-
--- sinon ça marche pas !
-ALTER SESSION SET NLS_DATE_LANGUAGE = "ENGLISH";
-
--- disable FK constraints
+-- disable FK constraints 
 ALTER TABLE countries DISABLE CONSTRAINT fk_countries_regions;
 ALTER TABLE locations DISABLE CONSTRAINT fk_locations_countries;
 ALTER TABLE warehouses DISABLE CONSTRAINT fk_warehouses_locations;
